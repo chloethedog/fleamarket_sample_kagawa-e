@@ -2,7 +2,7 @@
 lock "3.15.0"
 
 set :application, "fleamarket_sample_kagawa-e"
-set :repo_url, "git@example.com:chloethedog/fleamarket_sample_kagawa-e.git"
+set :repo_url, "git@github.com:chloethedog/fleamarket_sample_kagawa-e.git"
 
 # githubのデフォルトのブランチがmasterではなくmainになっている場合のみ以下1行のコメントアウトを外して追記してください。 ※1補足
 # set :branch, 'main'
@@ -14,7 +14,7 @@ set :rbenv_ruby, '2.6.5'
 
 # chat-spaceで使ったpemを指定
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['chloe0125.pem']
+                  keys: ['~/.ssh/chloe0125.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
