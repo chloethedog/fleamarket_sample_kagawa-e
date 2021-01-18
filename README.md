@@ -95,7 +95,7 @@ Things you may want to cover:
 
 ### Association
 
-## テーブル
+## comments
 
 |Column|Type|Options|
 |------|----|-------|
