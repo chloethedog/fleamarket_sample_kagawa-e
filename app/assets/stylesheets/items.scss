@@ -1,3 +1,43 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* index全体の部分 */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ヘッダー部分 */
+
+/*div class= A */
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.title-contents {
+  background-color: plum;
+  width: 100vw;
+  background-image: image-url('#');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/* FURIMAが選ばれる3つの理由部分 */
+
+/* 「会員数日本一位」帯部分*/
+
+/* FURIMAの特徴 */
+
+/* ピックアップカテゴリー */
+
+/* ピックアップブランド */
+
+/* 今すぐ無料ダウンロード */
+
+/* フッター部分 */

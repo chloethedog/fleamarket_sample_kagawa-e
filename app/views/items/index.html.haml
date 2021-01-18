@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
+    %title Fleamarket_sample_kagawa-e
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render "shared/header"
+    %div.classA
+      %Section.a
+        .title-contents 人生を変えるフリマアプリ
+      %Section.b
+      %Section.c
+      %Section.d
+      %Section.e
+      %Section.f
+    %div.classB
+    %div.classC
+    = render "shared/footer"
+
+-# /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+-# /* FURIMAが選ばれる3つの理由部分 */
+-# /* 「会員数日本一位」帯部分*/
+-# /* FURIMAの特徴 */
+-# /* ピックアップカテゴリー */
+-# /* ピックアップブランド */
+-# /* 今すぐ無料ダウンロード */
