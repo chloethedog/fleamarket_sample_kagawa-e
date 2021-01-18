@@ -39,13 +39,13 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|explanation|text||
-|state_id|integer||
-|parent_category_id|integer||
-|child_category_id|integer||
-|grandchild_category|integer||
-|size_id|integer||
-|bland|string||
+|explanation|text|null: false|
+|state_id|integer|null: false, foreign_key: true, add_index|
+|parent_category_id|integer|null: false, foreign_key: true, add_index|
+|child_category_id|integer|null: false, foreign_key: true, add_index|
+|grandchild_category|integer|null: false, foreign_key: true, add_index|
+|size_id|integer|foreign_key: true, add_index|
+|bland|string|add_index|
 
 ### Association
 
