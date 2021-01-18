@@ -59,7 +59,7 @@ Things you may want to cover:
 ### Association
 
 
-## item_statesテーブル
+## statesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
