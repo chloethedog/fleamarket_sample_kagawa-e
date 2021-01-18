@@ -97,6 +97,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|nickname|string||
+|profile|text||
+|mail|string||
+|password|string||
+|point|integer||
 
 ### Association
 
