@@ -53,6 +53,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|thumbnail1|string||
+|thumbnail2|string||
+|thumbnail3|string||
+|thumbnail4|string||
+|thumbnail5|string||
+|item_id|integer||
 
 ### Association
 
