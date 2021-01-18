@@ -58,12 +58,6 @@ Things you may want to cover:
 
 ### Association
 
-## sizesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-
-### Association
 
 ## item_statesテーブル
 
@@ -72,19 +66,6 @@ Things you may want to cover:
 
 ### Association
 
-## テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-
-### Association
-
-## テーブル
-
-|Column|Type|Options|
-|------|----|-------|
-
-### Association
 
 ## usersテーブル
 
