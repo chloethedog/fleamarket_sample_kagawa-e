@@ -27,6 +27,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|name|string||
+|seller_id|integer||
+|price|integer||
+|purchase|integer||
+|purchase_id|integer||
 
 ### Association
 
