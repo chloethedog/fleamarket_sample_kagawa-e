@@ -23,49 +23,49 @@ Things you may want to cover:
 
 * ...
 
-## itemテーブル
+## itemsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## item_detailsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## photsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## item_deliveriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## categoriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## sizesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## item_statesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
