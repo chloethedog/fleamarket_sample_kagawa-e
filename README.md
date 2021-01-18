@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## テーブル
+## itemテーブル
 
 |Column|Type|Options|
 |------|----|-------|
