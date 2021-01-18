@@ -66,6 +66,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|delivery_fee|string||
+|delivery_are|string||
+|delivery_method|string||
+|shipment_date|string||
+|item_id|integer||
 
 ### Association
 
