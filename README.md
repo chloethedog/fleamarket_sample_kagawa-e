@@ -37,7 +37,7 @@ Things you may want to cover:
 
 ### Association
 
-## photsテーブル
+## item_photsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
