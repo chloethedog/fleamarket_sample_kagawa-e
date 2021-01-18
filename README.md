@@ -88,6 +88,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|state|string||
 
 ### Association
 
