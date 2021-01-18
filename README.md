@@ -102,7 +102,7 @@ Things you may want to cover:
 
 ### Association
 
-## テーブル
+## favoritesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
