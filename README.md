@@ -27,11 +27,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
-|seller_id|integer||
-|price|integer||
-|purchase|integer||
-|purchase_id|integer||
+|name|string|null: false, add_index|
+|seller_id|integer|null: false, foreign_key: true|
+|price|integer|null: false, add_index|
+|purchase|integer|null: false, add_index|
+|purchase_id|integer|foreign_key: true|
 
 ### Association
 
