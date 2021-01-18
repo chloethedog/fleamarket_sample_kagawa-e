@@ -93,21 +93,21 @@ Things you may want to cover:
 
 ### Association
 
-## テーブル
+## deliveriesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## personsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 
 ### Association
 
-## テーブル
+## cardsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
