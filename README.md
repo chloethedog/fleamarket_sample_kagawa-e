@@ -117,6 +117,12 @@ Things you may want to cover:
 |point|integer|null: false|
 
 ### Association
+- belongs_to :person
+- belongs_to :delivery
+- has_many :items
+- has_many :cards
+- has_many :comments
+- has_many :favorites
 
 ## deliveriesテーブル
 
