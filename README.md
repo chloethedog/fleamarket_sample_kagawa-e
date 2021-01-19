@@ -159,6 +159,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|user_id|integer||
+|item_id|integer||
 
 ### Association
 
