@@ -126,6 +126,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|last_name|string||
+|first_name|string||
+|last_name_ruby|string||
+|first_name_ruby|string||
+|birthday|integer||
+|user_id|||
 
 ### Association
 
