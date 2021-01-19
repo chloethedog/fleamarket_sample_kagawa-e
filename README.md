@@ -104,7 +104,7 @@ Things you may want to cover:
 |state|string|null: false|
 
 ### Association
-
+- has_many :items
 
 ## usersテーブル
 
