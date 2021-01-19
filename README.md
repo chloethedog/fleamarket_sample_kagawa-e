@@ -50,7 +50,7 @@ Things you may want to cover:
 |state_id|integer|null: false, foreign_key: true, add_index|
 |parent_category_id|integer|null: false, foreign_key: true, add_index|
 |child_category_id|integer|null: false, foreign_key: true, add_index|
-|grandchild_category|integer|null: false, foreign_key: true, add_index|
+|grandchild_category|integer|foreign_key: true, add_index|
 |size_id|integer|foreign_key: true, add_index|
 |bland|string|add_index|
 
