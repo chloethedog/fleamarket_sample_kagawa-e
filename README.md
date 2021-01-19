@@ -109,6 +109,16 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|last_name|string||
+|first_name|string||
+|last_name_ruby|string||
+|first_name_ruby|string||
+|postal_code|string||
+|prefectures|string||
+|address|string||
+|address_detail|string||
+|phone_number|integer||
+|user_id|integer||
 
 ### Association
 
