@@ -95,7 +95,7 @@ Things you may want to cover:
 |ancestry|string|add_index|
 
 ### Association
-
+- has_many :items
 
 ## statesテーブル
 
