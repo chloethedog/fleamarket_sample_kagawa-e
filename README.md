@@ -34,6 +34,13 @@ Things you may want to cover:
 |purchase_id|integer|foreign_key: true|
 
 ### Association
+- belongs_to :user
+- belongs_to :item_detail
+- belongs_to :item_phots
+- belongs_to :item_delivery
+- has_many :comments
+- has_many :favorites
+
 
 ## item_detailsテーブル
 
