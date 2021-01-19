@@ -97,11 +97,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string||
+|nickname|string|null: false|
 |profile|text||
-|mail|string||
-|password|string||
-|point|integer||
+|mail|string|null: false, add_index, unique: true|
+|password|string|null: false|
+|point|integer|null: false|
 
 ### Association
 
