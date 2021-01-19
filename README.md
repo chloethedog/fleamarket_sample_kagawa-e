@@ -139,6 +139,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+|user_id|integer||
+|customer_id|string||
+|card_id|string||
 
 ### Association
 
