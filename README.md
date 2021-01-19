@@ -115,6 +115,7 @@ Things you may want to cover:
 |first_name_ruby|string|null: false|
 |postal_code|string|null: false|
 |prefectures|string|null: false|
+|municipality|string|null: false|
 |address|string|null: false|
 |address_detail|string||
 |phone_number|integer|null: false|
