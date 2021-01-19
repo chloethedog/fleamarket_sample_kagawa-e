@@ -129,7 +129,7 @@ Things you may want to cover:
 |------|----|-------|
 |last_name|string|null: false|
 |first_name|string|null: false|
-|last_name_ruby|string||null: false
+|last_name_ruby|string|null: false
 |first_name_ruby|string|null: false|
 |postal_code|string|null: false|
 |prefectures|string|null: false|
