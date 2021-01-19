@@ -22,7 +22,7 @@
 
 .furima-icon {
   width: 10vw;
-  margin-right: 10vw;
+  margin-right: 20px;
 }
 
 .search-form {
@@ -51,19 +51,30 @@
 }
 
 .nav {
-  font-size: 18px;
+  max-width: 1040px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
-  min-width:1040px;
+  // padding: 1vh 0;
+  // max-width:1040px;
+  min-height: 42px;
+  // padding: 15px 0 0;
+  margin: 0 auto;
+  // align-items: center;
 }
 
 .lists-left {
   display: flex;
-  min-width: 200px;
+  align-items: center;
+  font-weight: bolder;
+}
 
+.lists-right li {
+  align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .category-list {
@@ -72,15 +83,31 @@
   color: #333333;
 }
 
+.category-list:hover {
+  color: #0095ee;
+}
 .brand-list {
   text-decoration: none;
   color: #333333;
 }
 
+.brand-list:hover {
+  color: #0095ee;
+}
+
+.fas.fa-list{
+  color: #3ccace;
+  margin-right: 5px;
+}
+.fas.fa-tags {
+  color: #3ccace;
+  margin-right: 5px;
+}
+
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  // align-items: flex-end;
 }
 
 
@@ -97,17 +124,42 @@
   color: #333333;
 }
 
+//ログインボタン
 .login {
   text-decoration: none;
   line-height: 32px;
-  margin-right: 3vw;
+  margin-right: 16px;
   color: #333333;
+  background-color: white;
+  border: 1px solid #0095ee;
+  border-radius: 4px;
+  color: #0095ee;
+  display: block;
+  font-size: 14px;
+  padding: 0 10px;
+  transition: all 0.3s ease-out 0s;
+}
+//カーソルを上においた時
+.login:hover{
+  color: white; /* 文字色を白にする */
+  background-color: #0095ee; /* 背景色をグレー（#c9c9c9）にする */
+  text-decoration: none; /* リンクに出てくる下線を無効にする*/    
 }
 
+
+//新規会員登録ボタン
 .sign-up {
-  text-decoration: none;
-  color: #333333;
+  // text-decoration: none;
+  // color: #333333;
   line-height: 32px;
-  margin-right: 3vw;
+  // margin-right: 3vw;
+  background-color: #3ccace;
+  border: 1px solid #3ccace;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  font-size: 14px;
+  padding: 0 10px;
+  padding-left: 16px;
 }
 
