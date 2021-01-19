@@ -166,6 +166,7 @@ Things you may want to cover:
 |card_id|string|null: false|
 
 ### Association
+- belongs_to :user
 
 ## comments
 
