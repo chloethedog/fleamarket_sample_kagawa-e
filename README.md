@@ -109,16 +109,16 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|last_name|string||
-|first_name|string||
-|last_name_ruby|string||
-|first_name_ruby|string||
-|postal_code|string||
-|prefectures|string||
-|address|string||
+|last_name|string|null: false|
+|first_name|string|null: false|
+|last_name_ruby|string||null: false
+|first_name_ruby|string|null: false|
+|postal_code|string|null: false|
+|prefectures|string|null: false|
+|address|string|null: false|
 |address_detail|string||
-|phone_number|integer||
-|user_id|integer||
+|phone_number|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 
