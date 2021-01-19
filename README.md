@@ -66,11 +66,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|fee|string||
-|are|string||
-|method|string||
-|shipment_date|string||
-|item_id|integer||
+|fee|string|null: false, add_index|
+|are|string|null: false|
+|method|string|null: false|
+|shipment_date|string|null: false|
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 
