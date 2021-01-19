@@ -149,9 +149,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|text|string||
-|user_id|integer||
-|item_id|integer||
+|text|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
 
 ### Association
 
