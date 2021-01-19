@@ -55,6 +55,10 @@ Things you may want to cover:
 |bland|string|add_index|
 
 ### Association
+- belongs_to :item
+- belongs_to :category
+- belongs_to :size
+- belongs_to :state
 
 ## item_photsテーブル
 
