@@ -82,7 +82,6 @@ Things you may want to cover:
 |profile|text||
 |email|string|null: false|
 |encrypted_password|string|null: false|
-|point|integer|null: false|
 
 ### Association
 - belongs_to :person
