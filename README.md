@@ -34,7 +34,7 @@ Things you may want to cover:
 |purchase_id|integer|foreign_key: {to_table: users}|
 |explanation|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
-|state_id|integer|null: false|
+|state|string|null: false|
 |brand|string|add_index|
 |delivery-fee|string|null: false|
 |delivery-are|string|null: false|
