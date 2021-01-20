@@ -36,9 +36,9 @@ Things you may want to cover:
 |category_id|integer|null: false, foreign_key: true|
 |state_id|integer|null: false|
 |brand|string|add_index|
-|delivery-fee_id|integer|null: false|
-|delivery-are_id|integer|null: false|
-|delivery-method_id|integer|null: false|
+|delivery_fee_id|integer|null: false|
+|delivery_are_id|integer|null: false|
+|delivery_method_id|integer|null: false|
 |shipment_date_id|integer|null: false|
 
 ### Association
