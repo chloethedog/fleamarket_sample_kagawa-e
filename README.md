@@ -49,7 +49,7 @@ Things you may want to cover:
 
 
 
-## item_photsテーブル
+## item_photosテーブル
 
 |Column|Type|Options|
 |------|----|-------|
