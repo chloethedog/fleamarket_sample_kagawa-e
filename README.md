@@ -47,9 +47,6 @@ Things you may want to cover:
 - belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
 - has_one :item_photo
 
-
-
-
 ## item_photosテーブル
 
 |Column|Type|Options|
@@ -116,6 +113,3 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-
-
-
