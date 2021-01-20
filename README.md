@@ -44,7 +44,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :item_photo
-- belongs_to_active_hash
+- belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
 - belongs_to :category
 
 
