@@ -29,8 +29,8 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, add_index|
 |seller_id|integer|null: false, foreign_key: { to_table: users}|
-|price|integer|null: false, add_index|
-|purchase|integer|null: false, add_index|
+|price|integer|null: false|
+|purchase|integer|null: false|
 |purchase_id|integer|foreign_key: {to_table: users}|
 
 ### Association
@@ -47,11 +47,11 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |explanation|text|null: false|
-|state_id|integer|null: false, foreign_key: true, add_index|
-|parent_category_id|integer|null: false, foreign_key: true, add_index|
-|child_category_id|integer|null: false, foreign_key: true, add_index|
-|grandchild_category|integer|foreign_key: true, add_index|
-|size_id|integer|foreign_key: true, add_index|
+|state_id|integer|null: false|
+|parent_category_id|integer|null: false, foreign_key: true|
+|child_category_id|integer|null: false, foreign_key: true|
+|grandchild_category|integer|foreign_key: true
+|size_id|integer|foreign_key: true|
 |bland|string|add_index|
 
 ### Association
@@ -77,7 +77,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|fee|string|null: false, add_index|
+|fee|string|null: false|
 |are|string|null: false|
 |method|string|null: false|
 |shipment_date|string|null: false|
@@ -91,7 +91,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|ancestry|string|add_index|
+|ancestry|string||
 
 ### Association
 - has_many :items
@@ -111,7 +111,7 @@ Things you may want to cover:
 |------|----|-------|
 |nickname|string|null: false|
 |profile|text||
-|mail|string|null: false, add_index, unique: true|
+|mail|string|null: false, unique: true|
 |password|string|null: false|
 |point|integer|null: false|
 
