@@ -34,7 +34,7 @@ Things you may want to cover:
 |purchase_id|integer|foreign_key: {to_table: users}|
 |explanation|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
-|state|string|null: false|
+|state|integer|null: false|
 |brand|string|add_index|
 |delivery-fee|string|null: false|
 |delivery-are|string|null: false|
@@ -43,9 +43,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :item_detail
 - belongs_to :item_phots
-- belongs_to :item_delivery
 - has_many :comments
 - has_many :favorites
 - belongs_to :category
