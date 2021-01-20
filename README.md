@@ -87,7 +87,7 @@ Things you may want to cover:
 ### Association
 - has_one :delivery
 - has_many :items
-- has_many :cards
+- belongs_to :cards
 
 ## deliveriesテーブル
 
