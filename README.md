@@ -54,7 +54,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|thumbnail1|string|null: false|
+|thumbnail|string|null: false|
 |item_id|integer|null: false, foreign_key: true|
 
 ### Association
