@@ -85,7 +85,7 @@ Things you may want to cover:
 |first_name|string|null: false|
 |last_name_ruby|string|null: false
 |first_name_ruby|string|null: false|
-|birthday|integer|null: false|
+|birthday|date|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
