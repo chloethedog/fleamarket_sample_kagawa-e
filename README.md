@@ -92,8 +92,6 @@ Things you may want to cover:
 - belongs_to :delivery
 - has_many :items
 - has_many :cards
-- has_many :comments
-- has_many :favorites
 
 ## deliveriesテーブル
 
@@ -122,26 +120,5 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 
-## comments
 
-|Column|Type|Options|
-|------|----|-------|
-|text|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
-
-## favoritesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
 
