@@ -36,6 +36,10 @@ Things you may want to cover:
 |category_id|integer|null: false, foreign_key: true|
 |state_id|integer|null: false|
 |brand|string|add_index|
+|delivery-fee|string|null: false|
+|delivery-are|string|null: false|
+|delivery-method|string|null: false|
+|shipment_date|string|null: false|
 
 ### Association
 - belongs_to :user
