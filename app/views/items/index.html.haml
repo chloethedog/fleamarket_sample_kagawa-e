@@ -16,8 +16,55 @@
           %h2.title-contents 人生を変えるフリマアプリ
           %p.a-b  FURIMAは誰でもかんたんに出品・購入ができる
           %p.a-c  フリマアプリです
+          .store-btn-top
+            = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
+            = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
           %div.a-d
-      %Section.b
+      %Section.serect__reason__contents
+        .reason__intro
+          .reason__intro--subtitle
+            FURIMAが選ばれる3つの理由
+            .subtitle__after 
+          %ul.reasonList
+            %li.reason__list
+              .reason__list--left__pict
+                %span.number
+                  %p 1
+                = image_tag"/assets/pict-reason-01.jpg",width:300,height:'300'
+              %h3.reason__list--left__text
+                %span 3分
+                ですぐに出品
+              %p.reason__list--left__description
+                スマホで入力するだけで簡単に出品できる！
+            %li.reason__list
+              .reason__list--center__pict
+                %span.number
+                  %p 2
+                = image_tag "/assets/pict-reason-02.jpg",width:300,height:'300'
+              %h3.reason__list--center__text
+                %span シンプル
+                で使いやすい
+              %p.reason__list--center__description
+                めんどくさい入力は必要なく、検索も購入もスムーズ！
+            %li.reason__list
+              .reason__list--right__pict
+                %span.number
+                  %p 3
+                = image_tag "/assets/pict-reason-03.jpg",width:300,height:'300'
+              %h3.reason__list--right__text
+                手数料
+                %span 業界最安
+              %p.reason__list--right__description
+                最大3%でお得に出品&amp;購入！
+      %section.Top__middle
+        %div.Top__middle__dl
+          %h2.Toptitle-contents 会員数日本一位
+          %p.Toptitlle-explan  FURIMAは、フリマアプリで最も人気。
+          %p.Toptitlle-explan  出品・購入回数も業界最多です！
+          %p.Toptitlle-explan  欲しかったあの商品に出会えるかもしれません
+          .store-btn-top
+            = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
+            = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
       %Section.c
       %Section.d
       %Section.e

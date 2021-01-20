@@ -3,7 +3,7 @@
   width: 160px;
 }
 
-.footer-contents-area {
+.TopFooter {
   background-image: image-url('/assets/bg-appBanner-pict.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 }
 
 //footer
-.footer {
+.TopFooter__bottom {
   padding: 60px 0;
   text-align: center;
   background-color: #272727;
@@ -77,3 +77,6 @@
 .logo-white {
   width: 160px;
 }
+
+//section.picture
+
