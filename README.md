@@ -43,7 +43,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :item_phots
+- belongs_to :item_photo
 - belongs_to_active_hash
 - belongs_to :category
 
