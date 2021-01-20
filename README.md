@@ -35,7 +35,6 @@ Things you may want to cover:
 |explanation|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
 |state_id|integer|null: false|
-|size_id|integer|foreign_key: true|
 |bland|string|add_index|
 
 ### Association
