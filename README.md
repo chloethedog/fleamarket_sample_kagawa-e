@@ -83,7 +83,6 @@ Things you may want to cover:
 |last_name_ruby|string|null: false
 |first_name_ruby|string|null: false|
 |birthday|date|null: false|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :delivery
