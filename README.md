@@ -46,7 +46,6 @@ Things you may want to cover:
 - belongs_to :item_phots
 - belongs_to_active_hash
 - belongs_to :category
-- belongs_to :state
 
 
 
