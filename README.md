@@ -59,19 +59,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :item
 
-## item_deliveriesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|fee|string|null: false|
-|are|string|null: false|
-|method|string|null: false|
-|shipment_date|string|null: false|
-|item_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :item
-
 ## categoriesテーブル
 
 |Column|Type|Options|
