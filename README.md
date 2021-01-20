@@ -28,10 +28,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, add_index|
-|seller_id|integer|null: false, foreign_key: true|
+|seller_id|integer|null: false, foreign_key: { to_table: users}|
 |price|integer|null: false, add_index|
 |purchase|integer|null: false, add_index|
-|purchase_id|integer|foreign_key: true|
+|purchase_id|integer|foreign_key: {to_table: users}|
 
 ### Association
 - belongs_to :user
