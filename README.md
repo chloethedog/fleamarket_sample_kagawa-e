@@ -85,7 +85,7 @@ Things you may want to cover:
 |birthday|date|null: false|
 
 ### Association
-- belongs_to :delivery
+- has_one :delivery
 - has_many :items
 - has_many :cards
 
