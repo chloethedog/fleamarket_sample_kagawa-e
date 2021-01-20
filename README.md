@@ -43,9 +43,10 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :item_photo
-- belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
 - belongs_to :category
+- belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
+- has_one :item_photo
+
 
 
 
@@ -86,8 +87,8 @@ Things you may want to cover:
 
 ### Association
 - has_one :delivery
-- has_many :items
 - has_one :card
+- has_many :items
 
 ## deliveriesテーブル
 
