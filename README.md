@@ -104,7 +104,7 @@ Things you may want to cover:
 |municipality|string|null: false|
 |address|string|null: false|
 |address_detail|string||
-|phone_number|integer|null: false|
+|phone_number|string||
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
