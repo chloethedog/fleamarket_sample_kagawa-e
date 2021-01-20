@@ -73,14 +73,6 @@ Things you may want to cover:
 ### Association
 - has_many :items
 
-## statesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|state|string|null: false|
-
-### Association
-- has_many :items
 
 ## usersテーブル
 
