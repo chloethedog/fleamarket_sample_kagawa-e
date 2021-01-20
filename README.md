@@ -80,7 +80,7 @@ Things you may want to cover:
 |------|----|-------|
 |nickname|string|null: false|
 |profile|text||
-|mail|string|null: false, unique: true|
+|email|string|null: false|
 |password|string|null: false|
 |point|integer|null: false|
 
