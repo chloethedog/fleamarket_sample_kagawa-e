@@ -82,6 +82,10 @@ Things you may want to cover:
 |profile|text||
 |email|string|null: false|
 |encrypted_password|string|null: false|
+|last_name|string|null: false|
+|first_name|string|null: false|
+|last_name_ruby|string|null: false
+|first_name_ruby|string|null: false|
 |birthday|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
