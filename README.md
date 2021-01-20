@@ -34,9 +34,6 @@ Things you may want to cover:
 |purchase_id|integer|foreign_key: {to_table: users}|
 |explanation|text|null: false|
 |state_id|integer|null: false|
-|parent_category_id|integer|null: false, foreign_key: true|
-|child_category_id|integer|null: false, foreign_key: true|
-|grandchild_category|integer|foreign_key: true
 |size_id|integer|foreign_key: true|
 |bland|string|add_index|
 
