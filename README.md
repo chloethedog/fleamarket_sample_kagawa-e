@@ -35,7 +35,7 @@ Things you may want to cover:
 |explanation|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
 |state_id|integer|null: false|
-|bland|string|add_index|
+|brand|string|add_index|
 
 ### Association
 - belongs_to :user
