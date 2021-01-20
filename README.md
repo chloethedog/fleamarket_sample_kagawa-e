@@ -42,22 +42,6 @@ Things you may want to cover:
 - has_many :favorites
 
 
-## item_detailsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|explanation|text|null: false|
-|state_id|integer|null: false|
-|parent_category_id|integer|null: false, foreign_key: true|
-|child_category_id|integer|null: false, foreign_key: true|
-|grandchild_category|integer|foreign_key: true
-|size_id|integer|foreign_key: true|
-|bland|string|add_index|
-
-### Association
-- belongs_to :item
-- belongs_to :category
-- belongs_to :state
 
 ## item_photsテーブル
 
