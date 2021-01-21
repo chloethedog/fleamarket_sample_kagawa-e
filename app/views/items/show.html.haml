@@ -9,8 +9,9 @@
         .Main-header__top
           .title
             furima
-          .search
-            search
+          .light-box
+            = form_with model: [@item], html: {class: "Search-form"}, local: true do |f|
+              
         .Main-header__bottom
           test
     .wrapper
