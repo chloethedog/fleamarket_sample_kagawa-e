@@ -1,1 +1,32 @@
-<p>hello world</p>
+%head
+  %meta{"charset":"UTF-8"}
+  %link{"href": "style.css", "rel": "stylesheet"}
+  %title Sample
+
+.user
+  .user__header
+  .user__brand
+    %h1 ブランドカテゴリー
+
+  .user__body
+    .user__body--main
+      .body--main_left
+      .body--main_right
+
+  .user__notice
+    %h1 "いますぐダウンロード"
+  .user__footer
+
+
+
+%body
+  .Main
+    %p.UserName hogehoge
+    %ul.Main__menu
+      %li.Main__new-group NEW GROUP
+      %li#featured.Main__editUser EDIT USER
+  .Form
+    %form.Form__contents
+      .Form__inputBox
+        %input.Form__inputText{"placeholder": "type a message", "type": "text"}
+      %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
