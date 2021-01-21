@@ -13,7 +13,7 @@
     %div.classA
       %Section.a
         %div.a-a
-          %h2.title-contents 人生を変えるフリマアプリ
+          %h1.title-contents 人生を変えるフリマアプリ
           %p.a-b  FURIMAは誰でもかんたんに出品・購入ができる
           %p.a-c  フリマアプリです
           .store-btn-top
@@ -25,37 +25,37 @@
           .reason__intro--subtitle
             FURIMAが選ばれる3つの理由
             .subtitle__after 
-          %ul.reasonList
+          %ul.ulreasonList
             %li.reason__list
-              .reason__list--left__pict
+              %div.reason__list--contents
                 %span.number
                   %p 1
                 = image_tag"/assets/pict-reason-01.jpg",width:300,height:'300'
-              %h3.reason__list--left__text
+              %h3.reason__list--text
                 %span 3分
-                ですぐに出品
-              %p.reason__list--left__description
+                %text ですぐに出品
+              %p.reason__list--description
                 スマホで入力するだけで簡単に出品できる！
             %li.reason__list
-              .reason__list--center__pict
+              %div.reason__list--contents
                 %span.number
                   %p 2
                 = image_tag "/assets/pict-reason-02.jpg",width:300,height:'300'
-              %h3.reason__list--center__text
+              %h3.reason__list--text
                 %span シンプル
-                で使いやすい
-              %p.reason__list--center__description
-                めんどくさい入力は必要なく、検索も購入もスムーズ！
-            %li.reason__list
-              .reason__list--right__pict
+                %text で使いやすい
+              %p.reason__list--description
+                %text めんどくさい入力は必要なく、検索も購入もスムーズ！
+            %li.reason__list--lists
+              %div.reason__list--contents
                 %span.number
                   %p 3
                 = image_tag "/assets/pict-reason-03.jpg",width:300,height:'300'
-              %h3.reason__list--right__text
-                手数料
+              %h3.reason__list--text
+                %text 手数料
                 %span 業界最安
-              %p.reason__list--right__description
-                最大3%でお得に出品&amp;購入！
+              %p.reason__list--description
+                %text 10%でお得に出品&購入！
       %section.Top__middle
         %div.Top__middle__dl
           %h2.Toptitle-contents 会員数日本一位
@@ -65,8 +65,33 @@
           .store-btn-top
             = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
             = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
-      %Section.c
-      %Section.d
+      %Section.Feature
+        .Feature__intro
+          .Feature__intro--subtitle
+            FURIMAの特徴
+            .subtitle__after 
+          %ul.FeatureList
+            %li.Feature__list
+              %div.Feature__list--contents
+                = image_tag"/assets/icon-01.png",width:219,height:'337'
+              %h3.Feature__list--text
+                %text 簡単に売り買いできる
+              %p.Feature__list--description
+                スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+            %li.reason__list
+              %div.Feature__list--contents
+                = image_tag "/assets/icon-03.png",width:300,height:'300'
+              %h3.Feature__list--text
+                %text 売上金は即日振り込みに対応
+              %p.Feature__list--description
+                %text 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします！
+            %li.Feature__list--lists
+              %div.Feature__list--contents
+                = image_tag "/assets/icon-04.png",width:300,height:'300'
+              %h3.Feature__list--text
+                %text 様々な支払いに対応
+              %p.Feature__list--description
+                %text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
       %Section.e
       %Section.f
     %div.classB
