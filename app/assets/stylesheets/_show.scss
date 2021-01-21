@@ -137,10 +137,12 @@ header {
     margin: 0 auto;
     padding: 15px 0 0;
     .Header-top {
-
+      position: relative;
+      display: flex;
+      align-items: center;
     }
     .Header-bottom {
-      
+
     }
   }
 }
