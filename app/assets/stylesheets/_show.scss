@@ -136,13 +136,15 @@ header {
     min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
-    .Header-top {
+    &__top {
       position: relative;
       display: flex;
       align-items: center;
     }
-    .Header-bottom {
-
+    &__bottom {
+      font-size: 14px;
+      display: flex;
+      min-height: 42px;
     }
   }
 }
