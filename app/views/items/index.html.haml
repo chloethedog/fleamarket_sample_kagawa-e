@@ -10,8 +10,8 @@
 
   %body
     = render "shared/header"
-    %div.classA
-      %Section.a
+    %div.TopMain
+      %Section.AppDL
         %div.a-a
           %h1.title-contents 人生を変えるフリマアプリ
           %p.a-b  FURIMAは誰でもかんたんに出品・購入ができる
@@ -20,7 +20,7 @@
             = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
             = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
           %div.a-d
-      %Section.serect__reason__contents
+      %Section.Reason
         .reason__intro
           .reason__intro--subtitle
             FURIMAが選ばれる3つの理由
@@ -56,7 +56,7 @@
                 %span 業界最安
               %p.reason__list--description
                 %text 10%でお得に出品&購入！
-      %section.Top__middle
+      %section.AppDL__bottom
         %div.Top__middle__dl
           %h2.Toptitle-contents 会員数日本一位
           %p.Toptitlle-explan  FURIMAは、フリマアプリで最も人気。
@@ -78,23 +78,203 @@
                 %text 簡単に売り買いできる
               %p.Feature__list--description
                 スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
-            %li.reason__list
+            %li.Feature__list
               %div.Feature__list--contents
-                = image_tag "/assets/icon-03.png",width:300,height:'300'
+                = image_tag "/assets/icon-03.png",width:219,height:'337'
               %h3.Feature__list--text
                 %text 売上金は即日振り込みに対応
               %p.Feature__list--description
                 %text 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします！
             %li.Feature__list--lists
               %div.Feature__list--contents
-                = image_tag "/assets/icon-04.png",width:300,height:'300'
+                = image_tag "/assets/icon-04.png",width:219,height:'337'
               %h3.Feature__list--text
                 %text 様々な支払いに対応
               %p.Feature__list--description
                 %text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
-      %Section.e
-      %Section.f
-    %div.classB
+      
+      
+      
+      %Section.NewPickup
+        %h2.NewPickup__tittle ピックアップカテゴリー
+        %div.NewPickup__products
+          .products__textarea
+            = link_to "#" do
+              %h3.prodeucts__text 新規投稿商品
+          %div.products__container
+            
+            
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/339674_s.jpg",width:'184',height:'150'
+                %div.product__sample--text
+                  %h3.Introduction  ロンパース
+                  .details
+                    %ul
+                      %li  1,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+              %end
+            
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)  
+
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+            
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+            
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+            
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+            
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+            
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+
+
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  テレワーク
+                  .details
+                    %ul
+                      %li  1,000,000円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
+     
+      %Section.NewPickup
+        %h2.NewPickup__tittle ピックアップブランド
+        %div.NewPickup__products
+          .products__textarea
+            = link_to "#" do
+              %h3.prodeucts__text アーカイバ
+          %div.products__container
+            
+            
+            %div.container__sample
+              = link_to "#" do
+                %figure.product__sample--img
+                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                %div.product__sample--text
+                  %h3.Introduction  うどん
+                  .details
+                    %ul
+                      %li  500円
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
     = render "shared/footer"
     %div.purchase-btn
       %span.purchase-btn-text 出品する

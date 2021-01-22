@@ -12,7 +12,7 @@ a {
 /*div class= A */
 
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
-.a {
+.AppDL {
   width: 100vw;
   height: 560px;
   background-image: image-url('/assets/bg-mainVisual-pict_pc.jpg');
@@ -63,7 +63,7 @@ ul {
 
 
 }
-.serect__reason__contents {
+.Reason {
   padding: 60px 20px;
 }
 
@@ -159,8 +159,12 @@ ul {
 }
 
 
+
+
+
 /* 「会員数日本一位」帯部分*/
-.Top__middle {
+
+.AppDL__bottom {
   background-image: url("/assets/bg-topMiddleDl-pict.jpg");
   background-position: bottom right;
   height: 400px;
@@ -195,6 +199,8 @@ ul {
 .store-btn-top {
   margin-top: 30px;
 }
+
+
 
 
 
@@ -254,7 +260,7 @@ ul {
 }
 
 .Feature__list {
-  width: 30%;
+  width: 313px;
   margin: 16px 5% 0 0;
   text-align: left;
   display: flex;
@@ -269,13 +275,6 @@ ul {
   flex-direction: column;
   align-items: center;
 }
-.Feature__list--contents {
-  position: relative;
-  margin-bottom: 20px;
-  width: 70%;
-  margin: 0 auto;
-  line-height: 120px;
-}
 
 
 .Feature__list--text {
@@ -287,15 +286,118 @@ ul {
 
 .Feature__list--description {
   margin: 0 0 40px;
+  text-align: center;
+  font-size: 15px;
 }
 
+.Feature_list--contents {
+  text-align: center;
+}
+
+
+
+
+
 /* ピックアップカテゴリー */
-
 /* ピックアップブランド */
+/* 共通 */
+.NewPickup {
+  padding: 80px 0 0;
+  padding-bottom: 40px;
+  background-color: #f8f8f8;
+  height: 100%;
+}
 
-/* 今すぐ無料ダウンロード */
+.NewPickup__tittle {
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: bold;
+}
 
-/* フッター部分 */
+.products__textarea {
+  text-align: center;
+  color: #3ccace;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.products__textarea a {
+  color: #3ccace;
+}
+
+.prodeucts__text {
+  font-weight: bold;
+}
+
+.products__container {
+  max-width: 1020px;
+  margin: 26px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container__sample {
+  padding: 10px;
+  width: 20%;
+  filter: drop-shadow(0px 5px 5px rgb(177, 176, 176))
+}
+
+.container__sample:hover {
+  opacity: 0.5;
+}
+
+.product__sample--img {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  z-index: auto;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: auto;
+  height: 150px;
+  object-fit: cover;
+  
+}
+
+
+
+.product__sample--text {
+  background-color: white;
+  color: #333;
+  padding: 16px;
+}
+
+.Introduction {
+  overflow: hidden;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.details {
+  font-size: 16px;
+}
+
+.details ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 
 //出品するボタン//
 .purchase-btn {
