@@ -1,18 +1,18 @@
 %body
   %header.TopHead
-    .search-bar-contents
+    .search__contents
       = link_to image_tag("/assets/logo.png", class:"furima-icon"), "/"
       %form.search-form{:action => "#"}
         %input.input-box{:placeholder => "キーワードから探す"}/
         %button.search-button
           = link_to image_tag("/assets/icon-search 1.png", class:"search-icon"), "/"
-    .nav
-      %ul.lists-left
+    .TopNav
+      %ul.__lists--left
         = icon('fas', 'list')
         %li= link_to 'カテゴリーから探す', "#", class: "category-list"
         = icon('fas', 'tags')
         %li= link_to 'ブランドから探す', "#", class: "brand-list"
-      %ul.lists-right
+      %ul.__lists--right
         %li= link_to 'ログイン', "#", class: "login"
         %li= link_to '新規会員登録', "#", class: "sign-up"
 

@@ -9,42 +9,45 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  padding: 100px 40px;;
-  // display: flex;
-  // align-items: center;
-}
+  padding: 100px 40px;
 
-//誰でもかんたん、人生を変えるフリマアプリ//
-.ad-footer-explain {
-  display: flex;
-  justify-content: center;
-  text-shadow: 0 0 5px rgba(0,0,0,0.4);
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.4;
-  color: #fff;
-}
+    .footer-text {
+
+//誰でもかんたん、人生を変えるフリマアプリ//      
+      .ad-footer-explain {
+        display: flex;
+        justify-content: center;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+        color: #fff;
+      }
+
 //今すぐ無料ダウンロード！//
-.ad-footer-title {
-  font-size: 35px;
-  text-shadow: 0 0 5px rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  color: #fff;
-}
+      .ad-footer-title {
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: center;
+        color: #fff;
+      }
 
 //ダウンロードアイコン//
-.store-btn {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto 0;
+      .store-btn {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 0;
+
+        .apple-btn,.google-btn {
+          justify-content: center;
+          width: 200px;
+          margin: 0 5px;
+        }
+      }  
+    }
 }
-.apple-btn,.google-btn {
-  // display: flex;
-  justify-content: center;
-  width: 200px;
-  margin: 0 5px;
-}
+
 
 //footer
 .TopFooter__bottom {
@@ -52,31 +55,30 @@
   text-align: center;
   background-color: #272727;
   color: white;
-}
 
-.footer-contents {
-  display: flex;
-  max-width: 840px;
-  margin: 0 auto;
-  justify-content: space-between;
-}
+  .footer-contents {
+    display: flex;
+    max-width: 840px;
+    margin: 0 auto;
+    justify-content: space-between;
 
-.footer-content-head{
-  margin: 0 0 20px;
-  font-size: 16px;
-  font-weight: bold;
-}
+    .footer-content-head{
+      margin: 0 0 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-.footer-link {
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  line-height: 32px;
+    .footer-link {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      line-height: 32px;
+    }
+  }
 }
 
 .logo-white {
   width: 160px;
 }
 
-//section.picture
 

@@ -8,24 +8,30 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
+
+
+
   %body
     = render "shared/header"
     %div.TopMain
       %Section.AppDL
-        %div.a-a
-          %h1.title-contents 人生を変えるフリマアプリ
-          %p.a-b  FURIMAは誰でもかんたんに出品・購入ができる
-          %p.a-c  フリマアプリです
-          .store-btn-top
+        %div.AppDL__title
+          %h1.AppDL__title--top 人生を変えるフリマアプリ
+          %p.text--a  FURIMAは誰でもかんたんに出品・購入ができる
+          %p.text--b  フリマアプリです
+          .AppDL__storebtn
             = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
             = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
-          %div.a-d
+
+
+
+
+
       %Section.Reason
-        .reason__intro
-          .reason__intro--subtitle
+        .Reason__intro
+          .Reason__intro--subtitle
             FURIMAが選ばれる3つの理由
-            .subtitle__after 
-          %ul.ulreasonList
+          %ul.ULreasonList
             %li.reason__list
               %div.reason__list--contents
                 %span.number
@@ -46,7 +52,7 @@
                 %text で使いやすい
               %p.reason__list--description
                 %text めんどくさい入力は必要なく、検索も購入もスムーズ！
-            %li.reason__list--lists
+            %li.reason__list
               %div.reason__list--contents
                 %span.number
                   %p 3
@@ -56,6 +62,11 @@
                 %span 業界最安
               %p.reason__list--description
                 %text 10%でお得に出品&購入！
+
+
+
+
+
       %section.AppDL__bottom
         %div.Top__middle__dl
           %h2.Toptitle-contents 会員数日本一位
@@ -65,12 +76,16 @@
           .store-btn-top
             = link_to image_tag("/assets/google-play-badge.png", class:"apple-btn"), "#"
             = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
+
+
+
+
+            
       %Section.Feature
         .Feature__intro
           .Feature__intro--subtitle
-            FURIMAの特徴
-            .subtitle__after 
-          %ul.FeatureList
+            FURIMAの特徴 
+          %ul.ULFeatureList
             %li.Feature__list
               %div.Feature__list--contents
                 = image_tag"/assets/icon-01.png",width:219,height:'337'
@@ -85,14 +100,13 @@
                 %text 売上金は即日振り込みに対応
               %p.Feature__list--description
                 %text 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします！
-            %li.Feature__list--lists
+            %li.Feature__list
               %div.Feature__list--contents
                 = image_tag "/assets/icon-04.png",width:219,height:'337'
               %h3.Feature__list--text
                 %text 様々な支払いに対応
               %p.Feature__list--description
                 %text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
-      
       
       
       %Section.NewPickup
@@ -119,6 +133,7 @@
                     %p (税込)
               %end
             
+
             %div.container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -252,7 +267,10 @@
                         %i.fa.fa-star
                         0
                     %p (税込)
-     
+
+
+
+
       %Section.NewPickup
         %h2.NewPickup__tittle ピックアップブランド
         %div.NewPickup__products
@@ -275,6 +293,11 @@
                         %i.fa.fa-star
                         0
                     %p (税込)
+
+
+
+
+
     = render "shared/footer"
     %div.purchase-btn
       %span.purchase-btn-text 出品する
