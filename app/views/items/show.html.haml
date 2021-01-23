@@ -10,7 +10,8 @@
           .title
             furima
           .light-box
-            = form_with model: [@item], html: {class: "Search-form"}, local: true do |f|
+            %form.search-form{:action => "#"}
+              %input.input-box{:placeholder => "キーワードから探す"}
               
         .Main-header__bottom
           test
