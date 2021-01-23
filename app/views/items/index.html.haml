@@ -1,16 +1,4 @@
-!!!
 %html
-  %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}
-    %title Fleamarket_sample_kagawa-e
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
-
-
-
   %body
     = render "shared/header"
     .TopMain
@@ -22,11 +10,6 @@
           .AppDL__storebtn
             = link_to image_tag("/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg", class:"apple-btn"),"#"
             = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
-
-
-
-
-
       %Section.Reason
         .Reason__intro
           .Reason__intro--subtitle
@@ -62,11 +45,6 @@
                 %span 業界最安
               .reason__list--description
                 %text 10%でお得に出品&購入！
-
-
-
-
-
       %section.AppDL__second
         .AppDL__second--dl
           .Toptitle-contents 会員数日本一位
@@ -75,12 +53,7 @@
           .Toptitlle-explan  欲しかったあの商品に出会えるかもしれません
           .store-btn-top
             = link_to image_tag("/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg", class:"apple-btn"),"#"
-            = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"
-
-
-
-
-            
+            = link_to image_tag("/assets/google-play-badge.png", class:"google-btn"), "#"  
       %Section.Feature
         .Feature__intro
           .Feature__intro--subtitle
@@ -107,10 +80,6 @@
                 %text 様々な支払いに対応
               .Feature__list--description
                 %text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
-      
-
-      
-      
       %Section.NewPickup
         .NewPickup__tittle ピックアップカテゴリー
         .NewPickup__products
@@ -118,8 +87,6 @@
             = link_to "#" do
               .prodeucts__text 新規投稿商品
           .products__container
-            
-            
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -133,9 +100,6 @@
                         %i.fa.fa-star
                         0
                     %p (税込)
-          
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -149,8 +113,6 @@
                         .fa.fa-star
                         0
                     %p (税込)  
-
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -164,8 +126,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -179,8 +139,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -194,8 +152,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -209,8 +165,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -224,8 +178,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -239,8 +191,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-            
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -254,8 +204,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-
-
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -269,10 +217,6 @@
                         .fa.fa-star
                         0
                     %p (税込)
-
-
-
-
       %Section.NewPickup
         .NewPickup__tittle ピックアップブランド
         .NewPickup__products
@@ -280,8 +224,6 @@
             = link_to "#" do
               .prodeucts__text アーカイバ
           .products__container
-            
-            
             .container__sample
               = link_to "#" do
                 %figure.product__sample--img
@@ -295,21 +237,7 @@
                         .fa.fa-star
                         0
                     %p (税込)
-
-
-
-
-
     = render "shared/footer"
     .purchase-btn
       .purchase-btn--text 出品する
       = link_to (image_tag '/assets/icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
-
--# /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
--# /* FURIMAが選ばれる3つの理由部分 */
--# /* 「会員数日本一位」帯部分*/
--# /* FURIMAの特徴 */
--# /* ピックアップカテゴリー */
--# /* ピックアップブランド */
--# /* 今すぐ無料ダウンロード */
-

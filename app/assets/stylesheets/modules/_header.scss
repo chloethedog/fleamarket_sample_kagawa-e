@@ -1,17 +1,11 @@
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color:#333333;
-}
-
+$color-Fblue: #3ccace;
 
 //トップページ・ヘッダー//
 .TopHead {
   padding: 0 60px;
   background-color: #fff;
   flex-direction: column;
+  text-decoration: none;
 
 //サーチバー//
   .search__contents {
@@ -45,7 +39,7 @@ a {
         width: 5vh;
         border: 0;
         cursor: pointer;
-        background-color: #3ccace;
+        background-color: $color-Fblue;
         padding: 8px;
 
         .search-icon {
@@ -64,6 +58,7 @@ a {
     width: 100%;
     min-height: 42px;
     margin: 0 auto;
+    text-decoration: none;
 
 //カテゴリーから探す・ブランドから探す//
     .__lists--left {
@@ -83,23 +78,18 @@ a {
       }
 
       .fas.fa-list{
-        color: #3ccace;
+        color: $color-Fblue;
         margin-right: 5px;
       }
 
       .fas.fa-tags {
-        color: #3ccace;
+        color: $color-Fblue;
         margin-right: 5px;
       }
 //カーソルを上に乗せた時
-      .category-list:hover {
+      .category-list:hover,.brand-list:hover {
         color: #0095ee;
       }
-      
-      .brand-list:hover {
-        color: #0095ee;
-      }
-
     }
 
 //ログイン機能//
@@ -132,21 +122,19 @@ a {
 //新規会員登録ボタン//
       .sign-up {
         line-height: 32px;
-        background-color: #3ccace;
-        border: 1px solid #3ccace;
+        background-color: $color-Fblue;
+        border: 1px solid $color-Fblue;
         border-radius: 4px;
         color: white;
         display: block;
         font-size: 14px;
         padding: 0 10px;
         padding-left: 16px;
+        text-decoration: none;
       }
     }
   }
 }
-
-
-
 
 //未実装のためコメントアウト//
 
@@ -156,8 +144,6 @@ a {
 //   color: #333333;
 //   font-weight: bold;
 // }
-
-
 // .logout {
 //   text-decoration: none;
 //   color: #333333;

@@ -1,22 +1,19 @@
-/* index全体の部分 */
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style:none;
-}
-
-
-
-
-
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+$color-Fblue: #3ccace;
+
 .TopMain {
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style:none;
+  }
+
 
   .AppDL {
     width: 100vw;
@@ -53,12 +50,7 @@ ul {
   }
 }
 
-
-
-
-
 /* FURIMAが選ばれる3つの理由部分 */
-
 .Reason {
   padding: 60px 20px;
 
@@ -76,7 +68,7 @@ ul {
     content: "";
     width: 70px;
     height: 4px;
-    background-color: #3ccace;
+    background-color: $color-Fblue;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -112,7 +104,7 @@ ul {
           text-align: center;
           margin: 0 5px 0 0;
           padding: 10px 20px;
-          background-color: #3ccace;
+          background-color: $color-Fblue;
           color: #fff;
         }
       }
@@ -125,7 +117,7 @@ ul {
       }
 
       &--text span {
-        color: #3ccace;
+        color: $color-Fblue;
       }
 
       &--description {
@@ -137,12 +129,7 @@ ul {
   }
 }
 
-
-
-
-
 /* 「会員数日本一位」帯部分*/
-
 .AppDL__second {
   background-image: url("/assets/bg-topMiddleDl-pict.jpg");
   background-position: bottom right;
@@ -151,7 +138,7 @@ ul {
   display: flex;
   align-items: center;
   
-  &--dl {
+  .AppDL__second--dl {
     color: #fff;
     text-shadow: 00 0 5px rgba(0,0,0,0.4);
     text-align: left;
@@ -160,14 +147,14 @@ ul {
     margin: 0 auto;
   }
 
-  &--contents {
+  .Toptitle-contents {
     font-size: 27px;
     font-weight: bold;
      line-height: 1.4;
      margin-bottom: 20px;
   }
 
-  &--explan {
+  .Toptitlle-explan {
     font-size: 18px;
     line-height: 1.5;
   }
@@ -177,12 +164,7 @@ ul {
   }
 }
 
-
-
-
-
 /* FURIMAの特徴 */
-
 .Feature {
   padding: 60px 20px;
 
@@ -202,7 +184,7 @@ ul {
         content: "";
         width: 70px;
         height: 4px;
-        background-color: #3ccace;
+        background-color: $color-Fblue;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -228,13 +210,13 @@ ul {
             text-align: center;
           }
 
-          &__list--text {
+          .Feature__list--text {
             font-weight: bold;
             font-size: 19px;
             margin: 38px 0 10px;
           }
 
-          &__list--description {
+          .Feature__list--description {
             margin: 0 0 40px;
             text-align: center;
             font-size: 15px;
@@ -243,10 +225,6 @@ ul {
       }
     }
 }
-
-
-
-
 
 /* ピックアップカテゴリー */
 /* ピックアップブランド */
@@ -266,7 +244,7 @@ ul {
   }
   .products__textarea {
     text-align: center;
-    color: #3ccace;
+    color: $color-Fblue;
     font-size: 24px;
     font-weight: bold;
 
@@ -343,14 +321,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
-
 
 //出品するボタン//
 .purchase-btn {
   width: 120px;
-  background: #3ccace;
+  background: $color-Fblue;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
