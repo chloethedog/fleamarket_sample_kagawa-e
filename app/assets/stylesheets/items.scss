@@ -1,6 +1,5 @@
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 $color-Fblue: #3ccace;
-
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .TopMain {
   * {
     box-sizing: border-box;
@@ -68,7 +67,7 @@ $color-Fblue: #3ccace;
     content: "";
     width: 70px;
     height: 4px;
-    background-color: $color-Fblue;
+    @include BgColor;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -163,6 +162,8 @@ $color-Fblue: #3ccace;
     margin-top: 30px;
   }
 }
+
+
 
 /* FURIMAの特徴 */
 .Feature {
@@ -325,7 +326,7 @@ $color-Fblue: #3ccace;
 
 //出品するボタン//
 .purchase-btn {
-  width: 120px;
+  width: 90px;
   background: $color-Fblue;
   text-align: center;
   border-radius: 4%;

@@ -1,5 +1,8 @@
-$color-Fblue: #3ccace;
-
+// $color-Fblue: #3ccace;
+// @mixin Fcolor {
+//   color: #3ccace;
+// }
+// @include Fcolor;
 //トップページ・ヘッダー//
 .TopHead {
   padding: 0 60px;
@@ -11,7 +14,7 @@ $color-Fblue: #3ccace;
   .search__contents {
     max-width: 1040px;
     width: 100%;
-    min-height: 82px;
+    min-height: 70px;
     margin: 0 auto;
     padding: 15px 0 0;
     display: flex;
@@ -36,10 +39,10 @@ $color-Fblue: #3ccace;
       }
       
       .search-button {
-        width: 5vh;
+        width: 40px;
         border: 0;
         cursor: pointer;
-        background-color: $color-Fblue;
+        @include BgColor;
         padding: 8px;
 
         .search-icon {
@@ -78,12 +81,12 @@ $color-Fblue: #3ccace;
       }
 
       .fas.fa-list{
-        color: $color-Fblue;
+        @include Fcolor;
         margin-right: 5px;
       }
 
       .fas.fa-tags {
-        color: $color-Fblue;
+        @include Fcolor;
         margin-right: 5px;
       }
 //カーソルを上に乗せた時
@@ -123,7 +126,8 @@ $color-Fblue: #3ccace;
       .sign-up {
         line-height: 32px;
         background-color: $color-Fblue;
-        border: 1px solid $color-Fblue;
+        @include Fcolor;
+        border: 1px solid;
         border-radius: 4px;
         color: white;
         display: block;
