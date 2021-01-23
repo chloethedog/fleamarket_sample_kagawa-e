@@ -1,0 +1,54 @@
+.ListingItems
+  .ListingItems__header
+    %h1
+      %a{href: "/"} 
+      %img{src: ""}  
+  .ListingItems__main
+    .Form
+      .Pics
+        %label 出品画像
+        %span.Required 必須
+        %p.Pics-max5 最大５枚までアップロードできます 
+        .PicsUpload
+          .PicsUpload__frame
+            %label#id.ClickLabel{for: ""}
+              .CEN
+                %i.fas.fa-camera
+                %p.CEN__instructions クリックしてファイルをアップロード
+        .PicsHidden
+          %input#id.HiddenField{name: "", type: "file"}
+          %input#id.HiddenField{name: "", type: "file"}      
+          %input#id.HiddenField{name: "", type: "file"}
+          %input#id.HiddenField{name: "", type: "file"}
+          %input#id.HiddenField{name: "", type: "file"}
+      %hr.HorizontalRule          
+      .Description
+        .Description__name
+          %label{for: ""} 商品名
+          %span.Required 必須
+          %input#id{required: required, placeholder: "40文字まで", type: "text", name: ""}
+        .Description__text
+          %label{for: ""} 商品の説明
+          %span.Required 必須
+          %textarea.Description__text-fill{required: required, rows: "7", placeholder: "商品の説明（必須1,000文字以内）"}
+
+        .Description__wordCount
+      %hr.HorizontalRule  
+      .Details
+      %hr.HorizontalRule
+      .Shipping
+      %hr.HorizontalRule
+      .Prices
+      .PutUp
+      .Conditions  
+  .ListingItems__footer
+    .Nav
+      %ul.Terms
+        %li
+          %a{href: "/"}プライバシーポリシー
+        %li
+          %a{href: "/"}フリマ利用規約
+        %li
+          %a{href: "/"}商標取引に関する表記
+    %a.Title{href: "/", onmousedown: "return false;", onselectstart: "return false;"}
+      %img{scr: ""}
