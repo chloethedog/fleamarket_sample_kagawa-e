@@ -26,21 +26,70 @@
         .Description__name
           %label{for: ""} 商品名
           %span.Required 必須
-          %input#id{required: required, placeholder: "40文字まで", type: "text", name: ""}
+          %input#id{required: "required", placeholder: "40文字まで", type: "text", name: ""}
         .Description__text
           %label{for: ""} 商品の説明
           %span.Required 必須
-          %textarea.Description__text-fill{required: required, rows: "7", placeholder: "商品の説明（必須1,000文字以内）"}
-
+          %textarea#id.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
         .Description__wordCount
+          %span 0
+          \/1000
       %hr.HorizontalRule  
       .Details
+        %p.Details__title 商品の詳細
+        .Categries
+          %label{for: ""} カテゴリー
+          %span.Required 必須
+          %select#id.Categories-ancestry{required: "required", name: ""}
+        .Brands
+          %label{for: ""} ブランド
+          %span.Optional 任意
+          %input#id{placeholder: "例）シャネル", type: "text", name: ""}
+        .Condition
+          %label{for: ""} 商品の状態
+          %span.Required 必須
+          %select#id{required: "required", name: ""}
       %hr.HorizontalRule
       .Shipping
+        %p.Shipping__title 
+          配送について
+          %a{href: ""}  
+            %i.far.fa-question-circle
+        .Shipping__WhoPays
+          %label{for: ""} 配送料の負担
+          %span.Required 必須
+          %select#id{required: "required", name: ""}
+        #Shipping__methods 
+        .Shipping__from
+          %label{for: ""} 発送元の地域
+          %span.Required 必須
+          %select#id{required: "required", name: ""} 
+        .Shipping__days
+          %label{for: ""} 発送までの日数
+          %span.Required 必須
+          %select#id{required: "required", name: ""}    
       %hr.HorizontalRule
       .Prices
+        %prices__title 
+          価格（￥300〜9,999,999）
+          %a{href: ""}  
+            %i.far.fa-question-circle
+        .Prices__pricing
+          .Prices__pricing-left
+            %label{for: ""} 販売価格
+            %span.Required 必須
+          %span.YenMark ¥
+          %input#id.Prices__pricing-right{type: "number", placeholder: "0", name: ""}  
+        .Prices__salesCommission
+          .Prices__salesCommission-left 販売手数料（10％）
+          %span.Prices__salesCommission-right ー
+        %hr.HorizontalRule
+        .Prices__profit
+          .Prices__profit-left 販売利益
+          %span.Prices__profit-right ー
       .PutUp
-      .Conditions  
+        
+      .Agreement  
   .ListingItems__footer
     .Nav
       %ul.Terms
