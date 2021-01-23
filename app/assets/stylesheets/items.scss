@@ -30,13 +30,13 @@ ul {
     display: flex;
     align-items: center;
 
-    .AppDL__title {
+    &__title {
       max-width: 1280px;
       width: 100%;
       margin: 0 auto;
       padding: 35px 0 0 0;
 
-      .AppDL__title--top {
+      &--top {
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
         font-size: 60px;
         line-height: 1.2;
@@ -62,7 +62,7 @@ ul {
 .Reason {
   padding: 60px 20px;
 
-  .Reason__intro--subtitle {
+  &__intro--subtitle {
     text-align: center;
     font-size: 26px;
     line-height: 1.4;
@@ -72,7 +72,7 @@ ul {
     position: relative;
   }
 
-  .Reason__intro--subtitle::after {
+  &__intro--subtitle::after {
     content: "";
     width: 70px;
     height: 4px;
@@ -98,7 +98,7 @@ ul {
       flex-direction: column;
       align-items: center;
 
-      .reason__list--contents {
+      &--contents {
         position: relative;
         margin-bottom: 20px;
 
@@ -117,18 +117,18 @@ ul {
         }
       }
     
-      .reason__list--text {
+      &--text {
         font-weight: bold;
         font-size: 24px;
         line-height: 50px;
         margin: 0 0 0 2px;
       }
 
-      .reason__list--text span {
+      &--text span {
         color: #3ccace;
       }
 
-      .reason__list--description {
+      &--description {
         font-size: 18px;
         line-height: 1.5;
         margin: 16px 0 0;
@@ -143,40 +143,38 @@ ul {
 
 /* 「会員数日本一位」帯部分*/
 
-.AppDL__bottom {
+.AppDL__second {
   background-image: url("/assets/bg-topMiddleDl-pict.jpg");
   background-position: bottom right;
   height: 400px;
   background-size: cover;
   display: flex;
   align-items: center;
+  
+  &--dl {
+    color: #fff;
+    text-shadow: 00 0 5px rgba(0,0,0,0.4);
+    text-align: left;
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-}
+  &--contents {
+    font-size: 27px;
+    font-weight: bold;
+     line-height: 1.4;
+     margin-bottom: 20px;
+  }
 
-.Top__middle__dl {
-  color: #fff;
-  text-shadow: 00 0 5px rgba(0,0,0,0.4);
-  text-align: left;
-  max-width: 1040px;
-  width: 100%;
-  margin: 0 auto;
-}
+  &--explan {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 
-.Toptitle-contents {
-  font-size: 27px;
-  font-weight: bold;
-   line-height: 1.4;
-   margin-bottom: 20px;
-}
-
-.Toptitlle-explan {
-  font-size: 18px;
-  line-height: 1.5;
-
-}
-
-.store-btn-top {
-  margin-top: 30px;
+  .store-btn-top {
+    margin-top: 30px;
+  }
 }
 
 
@@ -226,7 +224,7 @@ ul {
           flex-direction: column;
           align-items: center;
 
-          .Feature__list--contents {
+          &--contents {
             text-align: center;
           }
 
@@ -250,50 +248,50 @@ ul {
 
 
 
-
 /* ピックアップカテゴリー */
 /* ピックアップブランド */
 /* 共通 */
+
 .NewPickup {
   padding: 80px 0 0;
   padding-bottom: 40px;
   background-color: #f8f8f8;
   height: 100%;
+
+  &__tittle {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+  .products__textarea {
+    text-align: center;
+    color: #3ccace;
+    font-size: 24px;
+    font-weight: bold;
+
+    .prodeucts__text {
+      font-weight: bold;
+    }
+  }
+  .products__textarea a {
+    color: #3ccace;
+  }
+
+  .products__container {
+    max-width: 1020px;
+    margin: 26px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.NewPickup__tittle {
-  text-align: center;
-  font-size: 28px;
-  line-height: 1.4;
-  font-weight: bold;
-}
-
-.products__textarea {
-  text-align: center;
-  color: #3ccace;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.products__textarea a {
-  color: #3ccace;
-}
-
-.prodeucts__text {
-  font-weight: bold;
-}
-
-.products__container {
-  max-width: 1020px;
-  margin: 26px auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
+//コンテナのサンプル
 .container__sample {
   padding: 10px;
   width: 20%;
   filter: drop-shadow(0px 5px 5px rgb(177, 176, 176))
+  
 }
 
 .container__sample:hover {
@@ -319,10 +317,7 @@ ul {
   z-index: auto;
   height: 150px;
   object-fit: cover;
-  
 }
-
-
 
 .product__sample--text {
   background-color: white;
@@ -362,16 +357,17 @@ ul {
   right: 32px;
   position: fixed;
   padding: 15px;
+
+  &--text {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  &--icon {
+    width: 60%;
+  }
 }
 
-.purchase-btn-text {
-  color: #fff;
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-.purchase-btn-icon {
-  width: 60%;
-}

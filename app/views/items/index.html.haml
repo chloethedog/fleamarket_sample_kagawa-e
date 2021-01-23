@@ -67,8 +67,8 @@
 
 
 
-      %section.AppDL__bottom
-        %div.Top__middle__dl
+      %section.AppDL__second
+        %div.AppDL__second--dl
           %h2.Toptitle-contents 会員数日本一位
           %p.Toptitlle-explan  FURIMAは、フリマアプリで最も人気。
           %p.Toptitlle-explan  出品・購入回数も業界最多です！
@@ -107,6 +107,8 @@
                 %text 様々な支払いに対応
               %p.Feature__list--description
                 %text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+      
+
       
       
       %Section.NewPickup
@@ -283,7 +285,7 @@
             %div.container__sample
               = link_to "#" do
                 %figure.product__sample--img
-                  = image_tag "/assets/pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                  = image_tag "/assets/udon01.png",width:'184',height:'150',class:"img"
                 %div.product__sample--text
                   %h3.Introduction  うどん
                   .details
@@ -300,8 +302,8 @@
 
     = render "shared/footer"
     %div.purchase-btn
-      %span.purchase-btn-text 出品する
-      = link_to (image_tag '/assets/icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon")
+      %span.purchase-btn--text 出品する
+      = link_to (image_tag '/assets/icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
 
 -# /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 -# /* FURIMAが選ばれる3つの理由部分 */
