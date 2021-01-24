@@ -51,4 +51,12 @@
       .main-item
         .main-item__show
           .item-box
-            .item-box__detail
+            .item-name
+              %h2 テレワーク
+            .item-images
+              .item-images-main
+                .item-images-main__images
+                  = image_tag "testtest.jpeg",class: "big-image"
+              .item-images-sub
+                .item-images-sub__images
+                  = image_tag "testtest.jpeg", class: "small-image"
