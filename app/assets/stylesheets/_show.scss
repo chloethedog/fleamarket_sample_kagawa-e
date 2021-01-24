@@ -164,10 +164,16 @@ header {
   width: 100%;
   display: flex;
   margin-bottom: 5px;
-  background-color: red;
   &__input-box {
     width: calc(100% - 26px);
     height: 36px;
     padding: 0 0 0 5px;
+  }
+  &__btn {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background-color: #3CCACE;
+    padding: 8px;
   }
 }
