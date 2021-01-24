@@ -224,3 +224,23 @@ legend {
     }
   }
 }
+.contents-list {
+  margin-left: auto;
+  display: flex;
+  &__favorites {
+    position: relative;
+    cursor: pointer;
+    &-link {
+      align-items: center;
+      color: #333;
+      text-decoration: none;
+      line-height: 32px;
+      .fas {
+        color: #cccccc;
+        font-size: 20px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
