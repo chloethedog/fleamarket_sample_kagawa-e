@@ -127,6 +127,7 @@ legend {
 * {
   box-sizing: border-box;
 }
+// ここから詳細ページの記述
 header {
   padding: 0 60px;
   background-color: #fff;
@@ -156,4 +157,11 @@ header {
       min-height: 42px;
     }
   }
+}
+
+.Search-form {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+  background-color: red;
 }
