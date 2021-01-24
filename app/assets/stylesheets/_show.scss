@@ -261,9 +261,19 @@ legend {
     position: relative;
     cursor: pointer;
     &-link {
-      @include style-search1();
+      @include style-contents1();
       .fas {
-        @include style-contents2()
+        @include style-contents2();
+      }
+    }
+  }
+  &__doing-list {
+    position: relative;
+    cursor: pointer;
+    &-link {
+      @include style-contents1();
+      .fas {
+        @include style-contents1();
       }
     }
   }
