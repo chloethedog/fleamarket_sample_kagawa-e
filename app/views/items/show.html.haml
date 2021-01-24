@@ -42,4 +42,8 @@
               = link_to '#', class: "contents-list__mypage-link" do
                 = image_tag "member_photo_noimage_thumb.png", width: "28", height: "28", alt: "icon"
                 %span.mypage マイページ
-    .wrapper
+    .breadcrumbs
+      .bredcrumbs__signpost
+        = link_to 'フリマ', '#'
+        %i.fas.fa-chevron-right
+        %span.current 商品名
