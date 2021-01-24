@@ -16,30 +16,30 @@
                 = image_tag "icon-search.jpg", width: "19", height:"19", class: "search-icon", alt: "icon"
                 %btn.Submit-btn
         .header-main__bottom
-          %ul.Search-list
+          %ul.search-list
             %li.search-list__category
-              = link_to '#', class: "search-list__category" do
+              = link_to '#', class: "search-list__category-link" do
                 %i.fas.fa-list
                 %span カテゴリーから探す
-            %li.Search-list__brand
-              = link_to '#', class: "search-list__brand" do
+            %li.search-list__brand
+              = link_to '#', class: "search-list__brand-link" do
                 %i.fas.fa-tags
                 %span ブランドから探す
           %ul.contents-list
             %li.contents-list__favorites
-              = link_to '#', class: "favorites-link" do
+              = link_to '#', class: "contents-list__favorites-link" do
                 %i.fas.fa-star
-                %span お気に入り一覧
+                お気に入り一覧
             %li.contents-list__news
-              = link_to '#', class: "news-link" do
+              = link_to '#', class: "contents-list__news-link" do
                 %i.fas.fa-bell
                 %span お知らせ
             %li.contents-list__doing-list  
-              = link_to '#', class: "doing-list-link" do
+              = link_to '#', class: "contents-list__doing-list-link" do
                 %i.fas.fa-check
                 %span やること一覧
             %li.contents-list__mypage
-              = link_to '#', class: "mypage-link" do
+              = link_to '#', class: "contents-list__mypage-link" do
                 = image_tag "member_photo_noimage_thumb.png", width: "28", height: "28", alt: "icon"
-                %span マイページ
+                %span.mypage マイページ
     .wrapper
