@@ -129,7 +129,16 @@ legend {
 * {
   box-sizing: border-box;
 }
-// ここから詳細ページの記述
+@mixin list-style1 () {
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+
 .header {
   padding: 0 60px;
   background-color: #fff;
@@ -195,13 +204,7 @@ legend {
     padding: 0 0 0 16px;
     position: relative;
     &-link {
-      color: #333;
-      text-decoration: none;
-      line-height: 32px;
-      background-position: center right;
-      background-repeat: no-repeat;
-      background-size: 18px;
-      padding-right: 30px;
+      @include list-style1();
       span {
         font-weight: 700;
       }
