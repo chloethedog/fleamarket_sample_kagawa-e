@@ -70,23 +70,23 @@
           %select#id{required: "required", name: ""}    
       %hr.HorizontalRule
       .Prices
-        %prices__title 
+        %p.Prices__title 
           価格（￥300〜9,999,999）
           %a{href: ""}  
             %i.far.fa-question-circle
         .Prices__pricing
-          .Prices__pricing-left
+          .Prices__pricing__left
             %label{for: ""} 販売価格
             %span.Required 必須
           %span.YenMark ¥
-          %input#id.Prices__pricing-right{type: "number", placeholder: "0", name: ""}  
+          %input#id.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
         .Prices__salesCommission
-          .Prices__salesCommission-left 販売手数料（10％）
-          %span.Prices__salesCommission-right ー
+          .Prices__salesCommission__left 販売手数料（10％）
+          %span.Prices__salesCommission__right ー
         %hr.HorizontalRule
         .Prices__profit
-          .Prices__profit-left 販売利益
-          %span.Prices__profit-right ー
+          .Prices__profit__left 販売利益
+          %span.Prices__profit__right ー
       .PutUp
         .PutUp__contents
           %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}

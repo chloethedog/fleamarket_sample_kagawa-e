@@ -17,25 +17,14 @@
       .Description {
         @include frame;
         &__name {
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
-          input { 
+          @include label-span(#ff0211);
+          input {
             @include input;
             height: 48px;
-          }
+          } 
         }
         &__text {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           textarea { 
             @include input;
             padding: 13px 16px;
@@ -56,43 +45,25 @@
           @include title;
         }  
         .Categories {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
-          }
+          } 
         }  
         .Brands {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#bfbfbf);
-          }
+          @include label-span(#bfbfbf);
           input {
             @include input;
             height: 48px;
-          }
+          } 
         }
         .Condition {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
-          }
+          } 
         }  
       }
       .Shipping {
@@ -101,52 +72,28 @@
           @include title;
         }
         &__whoPays {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
           } 
         }
         &__methods {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
           } 
         }  
         &__from {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
           } 
         }
         &__days {
-          margin-top: 32px;
-          label {
-            @include label;
-          }
-          span {
-            @include span(#ff0211);
-          }
+          @include label-span(#ff0211);
           select {
             @include input;
             height: 48px;
@@ -155,10 +102,81 @@
       }
       .Prices {
         @include frame;
-        &__title 
-      }
+        &__title {
+          @include title;
+        }
+        &__pricing {
+          @include prices;
+          padding-top: 0px !important;
+          &__left {
+            @include label-span(#ff0211);  
+            margin-top: 0px;
+            margin-right: auto;
+            white-space: nowrap;
+          }
+          .YenMark {
+            font-size: 14px;
+            margin-right: 8px;
+          }
+          &__right {
+            @include input;
+            max-width: 285px;
+            height: 48px;
+            margin: 0 !important;
+            text-align: right;
+          }
+        }  
+        &__salesCommission {
+          @include prices;
+          &__left {
+            margin-right: auto;
+            font-size: 14px;
+          }
+        }
+        &__profit {
+          @include prices;
+          &__left {
+            margin-right: auto;
+            font-size: 14px;
+            padding-bottom: 0px !important;
+          }
+        }
+      }  
       .PutUp {
         @include frame;
+        &__contents {
+          margin: 0px auto;
+          width: 360px;
+          .NbtnPutup {
+            background: #3CCACE;
+            border: 1px solid #3CCACE;
+            color: #fff;
+            font-size: 17px;
+            min-height: 48px;
+            padding: 0 24px;
+            font-weight: 600;
+            width: 100%;
+            line-height: 48px;
+            border-radius: 4px;
+          }
+          .NbtnDraft {
+            font-size: 17px;
+            min-height: 48px;
+            padding: 0 24px;
+            font-weight: 600;
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20px;background-color: #ccc;
+            color: #333;
+          }
+          .NbtnRtn {
+            
+          }
+        }
+
       }
       .Agreement {
         @include frame;
