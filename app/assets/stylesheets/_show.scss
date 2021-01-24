@@ -206,17 +206,26 @@ body {
   }
 }
 
-.item-box {
+.item {
   background-color: #fff;
   padding: 24px 40px 40px;
+  &-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  &-price {
+    margin: 24px 0 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 46px;
+      font-weight: bold;
+      margin: 0 10px 0 0;
+    }
+  }
 }
-
-.item-name {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-}
-
 .item-images {
   margin: 16px 0 0;
   &-main {
@@ -257,3 +266,4 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
