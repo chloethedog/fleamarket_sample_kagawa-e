@@ -2,6 +2,14 @@
   color: #3ccace;
 }
 
-@mixin BgColor {
+@mixin BGcolor {
   background-color: #3ccace;
+}
+
+@mixin Blue {
+  color: #0095ee;
+}
+
+@mixin BGblue {
+  background-color: #0095ee;
 }

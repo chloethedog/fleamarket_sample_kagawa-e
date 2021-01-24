@@ -1,4 +1,3 @@
-$color-Fblue: #3ccace;
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .TopMain {
   * {
@@ -67,7 +66,7 @@ $color-Fblue: #3ccace;
     content: "";
     width: 70px;
     height: 4px;
-    @include BgColor;
+    @include BGcolor;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -103,7 +102,7 @@ $color-Fblue: #3ccace;
           text-align: center;
           margin: 0 5px 0 0;
           padding: 10px 20px;
-          background-color: $color-Fblue;
+          @include BGcolor;
           color: #fff;
         }
       }
@@ -116,7 +115,7 @@ $color-Fblue: #3ccace;
       }
 
       &--text span {
-        color: $color-Fblue;
+        @include Fcolor;
       }
 
       &--description {
@@ -185,7 +184,7 @@ $color-Fblue: #3ccace;
         content: "";
         width: 70px;
         height: 4px;
-        background-color: $color-Fblue;
+        @include BGcolor;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -245,7 +244,7 @@ $color-Fblue: #3ccace;
   }
   .products__textarea {
     text-align: center;
-    color: $color-Fblue;
+    @include Fcolor;
     font-size: 24px;
     font-weight: bold;
 
@@ -327,7 +326,7 @@ $color-Fblue: #3ccace;
 //出品するボタン//
 .purchase-btn {
   width: 90px;
-  background: $color-Fblue;
+  @include BGcolor;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
