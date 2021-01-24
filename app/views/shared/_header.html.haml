@@ -1,0 +1,27 @@
+%body
+  %header.TopHead
+    .search__contents
+      = link_to image_tag("/assets/logo.png", class:"furima-icon"), "/"
+      %form.search-form{action: "#"}
+        %input.input-box{placeholder:  "キーワードから探す"}/
+        %button.search-button
+          = link_to image_tag("/assets/icon-search 1.png", class:"search-icon"), "/"
+    .TopNav
+      %ul.__lists--left
+        = icon('fas', 'list')
+        %li= link_to 'カテゴリーから探す', "#", class: "category-list"
+        = icon('fas', 'tags')
+        %li= link_to 'ブランドから探す', "#", class: "brand-list"
+      %ul.__lists--right
+        %li= link_to 'ログイン', "#", class: "login"
+        %li= link_to '新規会員登録', "#", class: "sign-up"
+
+-# /*ログイン前、ログイン後でボタンを変えたいが、未実装*/
+      -#   - if user_signed_in?
+      -#     %li= link_to current_user.name, "#", class: "user-nickname"
+      -#     %li= link_to 'ログアウト', "#", class: "logout"
+      -#   - else
+      -#     %li= link_to 'ログイン', "#", class: "login"
+      -#     %li= link_to '新規登録', "#", class: "sign-up"
+
+
