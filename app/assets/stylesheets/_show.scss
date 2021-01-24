@@ -129,10 +129,10 @@ legend {
   box-sizing: border-box;
 }
 // ここから詳細ページの記述
-header {
+.header {
   padding: 0 60px;
   background-color: #fff;
-  .Main-header {
+  &-main {
     max-width: 1040px;
     width: 100%;
     min-height: 82px;
@@ -142,15 +142,15 @@ header {
       position: relative;
       display: flex;
       align-items: center;
-      .title {
-        padding-bottom: 10px;
-        margin-right: 30px;
-        border-radius: 4px;
-      }
-      .light-box {
+    }
+    &__title {
+      padding-bottom: 10px;
+      margin-right: 30px;
+      border-radius: 4px;
+    }
+    &__search-box {
         margin-left: auto;
         width: 100%;
-      }
     }
     &__bottom {
       font-size: 14px;
@@ -160,7 +160,7 @@ header {
   }
 }
 
-.Search-form {
+.search-form {
   width: 100%;
   display: flex;
   margin-bottom: 5px;
@@ -175,10 +175,10 @@ header {
     border: 0;
     background-color: #3CCACE;
     padding: 8px;
-    .Search-icon {
+    .search-icon {
       width: 100%;
     }
-    .Submit-btn {
+    .submit-btn {
       width: calc(100% - 26px);
       height: 36px;
       padding: 0 0 0 5px;
