@@ -40,11 +40,11 @@
                 %span やること一覧
             %li.contents-list__mypage
               = link_to '#', class: "contents-list__mypage-link" do
-                = image_tag "member_photo_noimage_thumb.png", width: "28", height: "28", alt: "icon"
+                = image_tag 'member_photo_noimage_thumb.png', width: "28", height: "28", alt: "icon"
                 %span.mypage マイページ
     .breadcrumbs
       .breadcrumbs__signpost
-        = link_to 'フリマ', '#'
+        = link_to "フリマ", '#'
         %i.fas.fa-chevron-right
         %span.current 商品名
     .main
@@ -56,12 +56,14 @@
               .item-images
                 .item-images-main
                   .item-images-main__images
-                    = image_tag "testtest.jpeg",class: "big-image"
+                    = image_tag 'testtest.jpeg',class: "big-image"
                 .item-images-sub
                   .item-images-sub__images
-                    = image_tag "testtest.jpeg", class: "small-image"
+                    = image_tag 'testtest.jpeg', class: "small-image"
               .item-price
                 %span.item-price__fee ¥1000
                 .item-price__detail
                   %span (税込)
                   %span 送料込み
+              .item-buy-button
+                = link_to "購入画面へ進む", '#', class: "item-buy-button__link" 
