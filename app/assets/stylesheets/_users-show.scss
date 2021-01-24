@@ -40,7 +40,7 @@
   box-sizing: border-box;
 }
 
-.navi__me{
+.navi__me{display: block;
 }
 
 .navi__contents{
@@ -51,7 +51,6 @@
   padding: 10px;
   margin-bottom: 3px;
   position: relative;
-  background-color:#2d8fd;
 }
 
 .list{
@@ -64,12 +63,154 @@
   line-height: 1.5;
   padding: 16px;
   list-style-type: none!important;
+
+  position: relative;
+  display: block;
+  min-height: 48px;
+  font-size: 14px;
 }
 
 .body--main_right{
   width: 700px;
-  background-color: olive;
 }
+
+.right__Upper{
+  width: 700px;
+  height: 200px;
+  background-color: orange;
+  position: relative;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.right__Upper__contents{
+  width: 700px;
+  height: 120px;
+  background-color: plum;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+.content__user{
+  width: 60px;
+  height: 60px;
+  background-color:white;
+  margin: auto;
+}
+
+.right__middle{
+  width: 700px;
+  height: 570px;
+  // background-color: orchid;
+  margin-top: 40px;
+}
+
+.middle__notice{
+  width: 700px;
+  height: 74px;
+  display: flex;
+  // background-color: rgba($color: #000000, $alpha: 1.0);
+}
+
+.tab__active{
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: royalblue;
+}
+
+.tab__active--on{
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: sandybrown;
+}
+
+.middle__notice__list{
+  width: 700px;
+  height: 494px;
+  display: flex;
+  // background-color: seagreen; 
+}
+
+.notice__list__left{
+  width: 50%;
+  height: 100%;
+  background-color: seashell;
+  overflow: scroll;
+}
+
+.left_class{
+  height: 80px;
+  color: royalblue;
+  border-left: solid 6px royalblue;
+  background: white;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 16px;
+  list-style-type: none !important;
+  position: relative;
+  display: block;
+  min-height: 48px;
+  font-size: 20px;
+}
+
+.notice__list__right{
+  width: 50%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.right_class{
+  height: 120px;
+  color: sandybrown;
+  border-left: solid 6px sandybrown;
+  background: white;
+  margin-bottom: 3px;
+  line-height: 1.5;
+  padding: 16px;
+  list-style-type: none !important;
+  position: relative;
+  display: block;
+  min-height: 48px;
+  font-size: 20px;
+}
+
+.right__lower{
+  width: 700px;
+  height: 390px;
+  margin-top: 40px;
+  background-color: paleturquoise;
+  display: block;
+  font-size: 20px;
+}
+
+.trading__now{
+  width: 100%;
+  height: 40%;
+}
+
+.now__tab{
+  display: flex;
+  margin-top: 10px;
+}
+
+.trading__tab{
+  width: 140px;
+  height: 150px;
+  display: block;
+  background: white;
+  margin: 5px 10px;
+}
+
 
 .user__notice{
   width: 100%;
