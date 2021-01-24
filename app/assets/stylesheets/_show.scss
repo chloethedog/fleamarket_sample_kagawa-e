@@ -252,33 +252,45 @@ legend {
 .contents-list {
   margin-left: auto;
   display: flex;
-  &__favorites {
+  li {
     position: relative;
     cursor: pointer;
+  }
+  &__favorites {
+    @include style-contents1();
     &-link {
-      @include style-contents1();
+      @include style-contents2();
       .fas {
-        @include style-contents2();
+        @include style-contents3();
       }
     }
   }
   &__news {
-    position: relative;
-    cursor: pointer;
+    @include style-contents1();
     &-link {
-      @include style-contents1();
+      @include style-contents2();
       .fas {
-        @include style-contents2();
+        @include style-contents3();
       }
     }
   }
   &__doing-list {
-    position: relative;
-    cursor: pointer;
+    @include style-contents1();
     &-link {
-      @include style-contents1();
+      @include style-contents2();
       .fas {
-        @include style-contents1();
+        @include style-contents3();
+      }
+    }
+  }
+  &__mypage {
+    @include style-contents1();
+    &-link {
+      @include style-contents2();
+      display: flex;
+      .mypage {
+        vertical-align: middle;
+        margin-left: 5px;
       }
     }
   }
