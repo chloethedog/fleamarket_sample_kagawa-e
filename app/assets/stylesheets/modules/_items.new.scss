@@ -3,68 +3,165 @@
   &__header {
     height: 128px; 
     text-align: center;
-
   } 
   &__main {
     margin: 0px auto;
     max-width: 700px;
     .ListingForm {
       .ListingPics {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
       }
       .HorizontalRule {
-        border-top-color: #efefef;
-        border-left: 0 solid #efefef;
-        border-bottom: 0 solid #efefef;
-        border-right: 0 solid #efefef;
-        border-top-style: solid;
-        border-top-width: 1px;
-        margin: 0;
+        @include HR;
       } 
       .Description {
-        padding: 40px;
-        background-color: #fff;
-        &__name
-          item_name {
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.4em;
+        @include frame;
+        &__name {
+          label {
+            @include label;
           }
-          %input { 
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: inherit;
-            margin: 0;
-            outline: none;
-            padding: 0 16px;
-            display: inline-flex;
-            width: 100%;
-            margin-top: 16px;
+          span {
+            @include span(#ff0211);
           }
-
+          input { 
+            @include input;
+            height: 48px;
+          }
+        }
+        &__text {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          textarea { 
+            @include input;
+            padding: 13px 16px;
+            resize: vertical;
+          }
+        }
+        &__wordCount {
+          color: #888;
+          font-size: 12px;
+          line-height: 1.4em;
+          text-align: right;
+          margin-top: 16px;
+        }
       }
       .Details {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
+        &__title {
+          @include title;
+        }  
+        .Categories {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          }
+        }  
+        .Brands {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#bfbfbf);
+          }
+          input {
+            @include input;
+            height: 48px;
+          }
+        }
+        .Condition {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          }
+        }  
       }
       .Shipping {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
+        &__title {
+          @include title;
+        }
+        &__whoPays {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          } 
+        }
+        &__methods {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          } 
+        }  
+        &__from {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          } 
+        }
+        &__days {
+          margin-top: 32px;
+          label {
+            @include label;
+          }
+          span {
+            @include span(#ff0211);
+          }
+          select {
+            @include input;
+            height: 48px;
+          } 
+        }
       }
       .Prices {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
+        &__title 
       }
       .PutUp {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
       }
       .Agreement {
-        padding: 40px;
-        background-color: #fff;
+        @include frame;
       }
     }
   }
@@ -83,10 +180,7 @@
         display: flex;
         justify-content: center; 
         text-align: center;
-        
       }
-
-
     }
   }  
 }
