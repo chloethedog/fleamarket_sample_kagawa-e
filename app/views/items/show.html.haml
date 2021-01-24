@@ -2,25 +2,25 @@
 %html{lang: "ja"}
   %head 
     %meta{charset: "utf-8"}
-    %link(rel="stylesheet" href="_movie.scss")
+    %link(rel="stylesheet" href="_show.scss")
   %body
     %header.header
-      .Main-header
-        .Main-header__top
-          .title
+      .header-main
+        .header-main__top
+          .header-main__title
             = image_tag "fulima-og",width: "141", height: "41", class: "top-icon", alt: "top"
-          .light-box
+          .header-main__search-box
             %form.Search-form{:action => "#"}
               %input.Search-form__input-box{:placeholder => "キーワードから探す"}
               %label.Search-form__input-label
                 = image_tag "icon-search.jpg", width: "19", height:"19", class: "Search-icon", alt: "icon"
                 %btn.Submit-btn
-        .Main-header__bottom-list
+        .header-main__bottom
           %ul.Search-list
-            %li.search-list__category
-              = link_to "#" ,class: "#"
-                %i.fas.fa-list-ul
-                %span "カテゴリーから探す"
+            %li
+              = link_to '#', class: "search-list__category" do
+                %i.fas.fa-list
+                %span カテゴリーから探す
             %li.Search-list__brand
           %ul.Contents-list
             %li.Contents-list__favorites
@@ -28,5 +28,3 @@
             %li.Contents-list__doing-list 
             %li.Contents-list__mypage
     .wrapper
-      .Test
-        test
