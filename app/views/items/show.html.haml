@@ -8,11 +8,13 @@
       .Main-header
         .Main-header__top
           .title
-            furima
+            = image_tag "fulima-og",width: "141", height: "41", class: "top-icon", alt: "top"
           .light-box
-            %form.search-form{:action => "#"}
-              %input.input-box{:placeholder => "キーワードから探す"}
-              
+            %form.Search-form{:action => "#"}
+              %input.Search-form__input-box{:placeholder => "キーワードから探す"}
+              %label.search-btn
+                = image_tag "icon-search.jpg", width: "20", height:"20", class: "search-icon", alt: "icon"
+                %btn.Search-form__submit-btn
         .Main-header__bottom
           test
     .wrapper
