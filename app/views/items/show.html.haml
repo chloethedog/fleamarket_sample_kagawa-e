@@ -61,4 +61,7 @@
                   .item-images-sub__images
                     = image_tag "testtest.jpeg", class: "small-image"
               .item-price
-                %span ¥1000
+                %span.item-price__fee ¥1000
+                .item-price__detail
+                  %span (税込)
+                  %span 送料込み
