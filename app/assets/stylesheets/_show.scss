@@ -125,6 +125,7 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+// ここから詳細ページの記述
 * {
   box-sizing: border-box;
 }
@@ -182,6 +183,28 @@ legend {
       width: calc(100% - 26px);
       height: 36px;
       padding: 0 0 0 5px;
+    }
+  }
+}
+
+.search-list {
+  position: relative;
+  display: flex;
+  &__category {
+    line-height: 38px;
+    padding: 0 0 0 16px;
+    position: relative;
+    &-link {
+      color: #333;
+      text-decoration: none;
+      line-height: 32px;
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      padding-right: 30px;
+      span {
+        font-weight: 700;
+      }
     }
   }
 }
