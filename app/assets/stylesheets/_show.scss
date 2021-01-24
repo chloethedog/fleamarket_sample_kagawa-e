@@ -167,8 +167,6 @@
     }
   }
 }
-
-
 .breadcrumbs {
   position: relative;
   border-top: 1px solid #eee;
@@ -192,5 +190,13 @@
     .current {
       font-weight: 600;
     }
+  }
+}
+.main-item {
+  padding: 40px;
+  margin: 0 auto;
+  &__show {
+    width: 700px;
+    margin: 0 auto;
   }
 }
