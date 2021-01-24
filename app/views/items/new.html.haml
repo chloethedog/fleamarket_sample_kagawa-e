@@ -4,18 +4,18 @@
       %a{href: "/"} 
       %img{src: ""}  
   .ListingItems__main
-    .Form
-      .Pics
+    .ListingForm
+      .ListingPics
         %label 出品画像
         %span.Required 必須
         %p.Pics-max5 最大５枚までアップロードできます 
-        .PicsUpload
-          .PicsUpload__frame
+        .ListingPics__upload
+          .PicsFrame
             %label#id.ClickLabel{for: ""}
-              .CEN
+              .FrameCentre
                 %i.fas.fa-camera
-                %p.CEN__instructions クリックしてファイルをアップロード
-        .PicsHidden
+                %p.FrameCentre__instructions クリックしてファイルをアップロード
+        .ListingPics__hidden
           %input#id.HiddenField{name: "", type: "file"}
           %input#id.HiddenField{name: "", type: "file"}      
           %input#id.HiddenField{name: "", type: "file"}
@@ -88,8 +88,12 @@
           .Prices__profit-left 販売利益
           %span.Prices__profit-right ー
       .PutUp
-        
-      .Agreement  
+        .PutUp__contents
+          %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
+          %a.NbtnDraft{href: "#"} 下書きに保存
+          %a.NbtnRtn{href: "/"} もどる
+      .Agreement
+        。  
   .ListingItems__footer
     .Nav
       %ul.Terms
