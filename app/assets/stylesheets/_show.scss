@@ -206,11 +206,18 @@ legend {
   position: relative;
   display: flex;
   &__category {
-    line-height: 38px;
-    padding: 0 0 0 16px;
-    position: relative;
+    @include list-style1();
     &-link {
-      @include list-style1();
+      @include list-style2();
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  &__brand {
+    @include list-style1();
+    &-link {
+      @include list-style2();
       span {
         font-weight: 700;
       }
