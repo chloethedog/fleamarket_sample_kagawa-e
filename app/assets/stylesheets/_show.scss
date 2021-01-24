@@ -130,6 +130,12 @@ legend {
   box-sizing: border-box;
 }
 @mixin list-style1 () {
+  line-height: 38px;
+  padding: 0 0 0 16px;
+  position: relative;
+}
+
+@mixin list-style2() {
   color: #333;
   text-decoration: none;
   line-height: 32px;
