@@ -169,7 +169,7 @@ header {
     height: 36px;
     padding: 0 0 0 5px;
   }
-  &__btn {
+  &__input-label {
     width: 36px;
     height: 36px;
     border: 0;
@@ -177,6 +177,11 @@ header {
     padding: 8px;
     .Search-icon {
       width: 100%;
+    }
+    .Submit-btn {
+      width: calc(100% - 26px);
+      height: 36px;
+      padding: 0 0 0 5px;
     }
   }
 }
