@@ -1,3 +1,4 @@
+
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -164,4 +165,9 @@ header {
   display: flex;
   margin-bottom: 5px;
   background-color: red;
+  &__input-box {
+    width: calc(100% - 26px);
+    height: 36px;
+    padding: 0 0 0 5px;
+  }
 }
