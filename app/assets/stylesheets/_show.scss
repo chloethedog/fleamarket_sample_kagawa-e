@@ -129,13 +129,13 @@ legend {
 * {
   box-sizing: border-box;
 }
-@mixin list-style1 () {
+@mixin style-search1 () {
   line-height: 38px;
   padding: 0 0 0 16px;
   position: relative;
 }
 
-@mixin list-style2() {
+@mixin style-search2() {
   color: #333;
   text-decoration: none;
   line-height: 32px;
@@ -143,6 +143,20 @@ legend {
   background-repeat: no-repeat;
   background-size: 18px;
   padding-right: 30px;
+}
+
+@mixin style-contents1() {
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  line-height: 32px;
+}
+
+@mixin style-contents2() {
+  color: #cccccc;
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .header {
@@ -206,9 +220,9 @@ legend {
   position: relative;
   display: flex;
   &__category {
-    @include list-style1();
+    @include style-search1();
     &-link {
-      @include list-style2();
+      @include style-search2();
       .fas {
         color: #3CCACE;
       }
@@ -218,9 +232,9 @@ legend {
     }
   }
   &__brand {
-    @include list-style1();
+    @include style-search1();
     &-link {
-      @include list-style2();
+      @include style-search2();
       .fas {
         color: #3CCACE;
       }
@@ -237,15 +251,9 @@ legend {
     position: relative;
     cursor: pointer;
     &-link {
-      align-items: center;
-      color: #333;
-      text-decoration: none;
-      line-height: 32px;
+      @include style-contents1();
       .fas {
-        color: #cccccc;
-        font-size: 20px;
-        margin-right: 5px;
-        vertical-align: middle;
+        @include style-contents2();
       }
     }
   }
@@ -253,15 +261,9 @@ legend {
     position: relative;
     cursor: pointer;
     &-link {
-      align-items: center;
-      color: #333;
-      text-decoration: none;
-      line-height: 32px;
+      @include style-search1();
       .fas {
-        color: #cccccc;
-        font-size: 20px;
-        margin-right: 5px;
-        vertical-align: middle;
+        @include style-contents2()
       }
     }
   }
