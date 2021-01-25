@@ -1,3 +1,32 @@
-.b {
-  background-color: yellow;
+.purchases-footer {
+  background-color: whitesmoke;
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 456px;
+  height: 128px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align:center;
+}
+
+.FooterNav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.logo__area {
+  display: block;
+  text-align:center;
+}
+
+.purchases-footer,.FooterNav__list a{
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
 }

@@ -1,7 +1,10 @@
 @import "modules/purchases_header";
 @import "modules/purchases_footer";
+.purchases__body {
+  background-color: whitesmoke;
+}
 
-.a {
-  color: red;
-  background-color: pink;
+.main {
+  height: 400px;
+  background-color: skyblue;
 }

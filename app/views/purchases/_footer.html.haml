@@ -1,1 +1,12 @@
-.b 商品こうにゅう画面 フッター
+%footer.purchases-footer
+  .FooterNav
+    %ul.FooterNav__list
+      %li= link_to 'プライバシーポリシー', "/"
+      %li= link_to 'フリマ利用規約', "/"
+      %li= link_to '特定商取引に関する表記', "/"
+  .logo__area
+    %a.logo__bottom
+      = link_to image_tag("logo.png", class:"logo--furima"),"/items"
+    %p
+      %small ©FURIMA
+//アクションによってリンクの先を場合分けしている様子
