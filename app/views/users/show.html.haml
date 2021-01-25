@@ -46,13 +46,14 @@
         .right__Upper
           .right__Upper__contents
             .content__user
+              = image_tag "member_photo_noimage_thumb.png",width: '60',height:'60'
             %h2 やの
             .content__grades 評価　１００
 
         .right__middle
           %ul.middle__notice
             %li.tab__active  お知らせ
-            %li.tab__active--on  やることリスト
+            %li.tab__active やることリスト
           .middle__notice__list
             %ul.notice__list__left
               %li= link_to 'チャンス', "#", class: "left_class" 
@@ -74,7 +75,7 @@
           %h3 "購入した商品"
           .trading__now
             %ul.now__tab
-              %li=link_to 'うどん', "#", class:"trading__tab"
+              %li=link_to "#"
               %li=link_to 'いつかのうどん', "#", class:"trading__tab"
               %li=link_to '昨日のうどん', "#", class:"trading__tab"
           .trading__past
@@ -83,17 +84,3 @@
   .user__notice
     %h1 "いますぐダウンロード"
   .user__footer
-
-
-
-%body
-  .Main
-    %p.UserName hogehoge
-    %ul.Main__menu
-      %li.Main__new-group NEW GROUP
-      %li#featured.Main__editUser EDIT USER
-  .Form
-    %form.Form__contents
-      .Form__inputBox
-        %input.Form__inputText{"placeholder": "type a message", "type": "text"}
-      %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
