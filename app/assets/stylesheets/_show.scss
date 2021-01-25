@@ -309,6 +309,16 @@ body {
       border: 1px solid #ffb340;
       cursor: pointer;
     }
+    .report-entp {
+      font-size: 14px;
+    }
+    .report-link {
+      padding: 6px 10px;
+      display: inline-block;
+      border-radius: 4px;
+      color: #333;
+      border: 1px solid #333;
+      text-decoration: none;
     }
   }
 }
