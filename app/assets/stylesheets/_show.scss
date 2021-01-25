@@ -283,6 +283,32 @@ body {
       padding: 15px 15px;
       border: 1px solid #dedede;
       font-size: 14px;
+      ul {
+        margin: 10px 0 0;
+        display: flex;
+      }
+      
+    }
+  }
+  &-option {
+    display: flex;
+    justify-content: space-between;
+    ul {
+      margin: 10px 0 0;
+      display: flex;
+    }
+    .favorite-link {
+      color: #0099e8;
+      text-decoration: none;
+    }
+    .favorite-entp {
+      margin-right: auto;
+      padding: 6px 10px;
+      border-radius: 40px;
+      color: #3ccace;
+      border: 1px solid #ffb340;
+      cursor: pointer;
+    }
     }
   }
 }
