@@ -321,6 +321,33 @@ body {
       text-decoration: none;
     }
   }
+  &-comments {
+    padding: 24px;
+    background-color: #fff;
+    margin: 10px 0;
+    text-align: center;
+    .form-message {
+      width: 100%;
+      min-height: 104px;
+      padding: 10px;
+    }
+    .warning-message {
+      padding: 8px;
+      font-size: 14px;
+      background-color: #f8f8f8;
+      margin: 10px 0;
+      text-align: left;
+    }
+    .submit-btn {
+      line-height: 48px;
+      background-color: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      width: 60%;
+      font-size: 18px;
+      border-radius: 100px;
+    }
+  }
 }
 .item-images {
   margin: 16px 0 0;
