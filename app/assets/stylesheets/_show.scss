@@ -246,6 +246,11 @@ body {
       text-decoration: none;
     }
   }
+  &-detail__text {
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
 }
 .item-images {
   margin: 16px 0 0;
