@@ -144,113 +144,39 @@
             .item__seller
               = link_to "出品者さんのその他の商品", "#", class: "item__seller_title"
               .other-item-list
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
+                - 4.times do
+                  /# 後にeach doに変更する
+                  .other-item
+                    = link_to "#" do
+                      %figure.other-item__image
+                        = image_tag 'testtest.jpeg'
+                      .other-item__detail
+                        %h3.other-item__name
+                        .other-item__price
+                          %ul
+                            %li ¥1000
+                            %li
+                              %i.fa.fa-star
+                              4
+                          %p （税込）
             .item-other__category
               = link_to "カテゴリーその他のグッズ", "#", class: "seller-item__title"
               .other-item-list
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
-                .other-item
-                  = link_to "#" do
-                    %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
-                    .other-item__detail
-                      %h3.other-item__name
-                      .other-item__price
-                        %ul
-                          %li ¥1000
-                          %li
-                            %i.fa.fa-star
-                            4
-                        %p （税込）
+                - 4.times do
+                  .other-item
+                    = link_to "#" do
+                      %figure.other-item__image
+                        = image_tag 'testtest.jpeg'
+                      .other-item__detail
+                        %h3.other-item__name
+                        .other-item__price
+                          %ul
+                            %li ¥1000
+                            %li
+                              %i.fa.fa-star
+                              4
+                          %p （税込）
+                
     .TopFooter
       .footer-text
         %p.ad-footer-explain
