@@ -130,6 +130,17 @@
                     = link_to "#", class: "report-link"do
                       %i.fa.fa-flag
                       不適切な商品の通報
+            .item-comments
+              %ul.comments-list
+              = form_with html: {class: "#"} do |f|
+                = f.text_area :text, class: "form-message"
+                %p.warning-message
+                  相手のことを考えて丁寧なコメントを心がけましょう。
+                  %br 
+                  不快な言葉遣いなどは利用制限や退会処分となる事があります。
+                = button_tag type: 'submit', class: "submit-btn" do
+                  %icon.fa.fa-comment 
+                  コメントする
             .item-other-seller
             .item-other-category
                     
