@@ -45,7 +45,7 @@ $usual-color: #3CCACE;
   margin-right: 5px;
   vertical-align: middle;
 }
-
+//ヘッダーについてのscss
 .header {
   padding: 0 60px;
   background-color: #fff;
@@ -178,7 +178,7 @@ $usual-color: #3CCACE;
     }
   }
 }
-
+//パンクズについてのscss
 .breadcrumbs {
   position: relative;
   border-top: 1px solid #eee;
@@ -211,7 +211,7 @@ $usual-color: #3CCACE;
     margin: 0 auto;
   }
 }
-
+//商品情報についてのscss
 .item {
   background-color: #fff;
   padding: 24px 40px 40px;
@@ -353,7 +353,7 @@ $usual-color: #3CCACE;
     }
   }
 }
-
+//商品のイメージ画像についてのscss
 .item-images {
   margin: 16px 0 0;
   &__main {
@@ -394,7 +394,7 @@ $usual-color: #3CCACE;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+//その他の商品についてのscss
 .other-item-title {
   display: block;
   margin: 24px 0 8px;
@@ -463,7 +463,7 @@ $usual-color: #3CCACE;
     }
   }
 }
-
+//チームメンバの作ったフッターをコピー
 .apple-btn,.google-btn {
   width: 160px;
 }
@@ -478,7 +478,7 @@ $usual-color: #3CCACE;
 
     .footer-text {
 
-//誰でもかんたん、人生を変えるフリマアプリ//      
+//誰でもかんたん、人生を変えるフリマアプリ
       .ad-footer-explain {
         display: flex;
         justify-content: center;
@@ -489,7 +489,7 @@ $usual-color: #3CCACE;
         color: #fff;
       }
 
-//今すぐ無料ダウンロード！//
+//今すぐ無料ダウンロード！
       .ad-footer-title {
         font-size: 35px;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
@@ -498,7 +498,7 @@ $usual-color: #3CCACE;
         color: #fff;
       }
 
-//ダウンロードアイコン//
+//ダウンロードアイコン
       .store-btn {
         display: flex;
         justify-content: center;
@@ -544,8 +544,8 @@ $usual-color: #3CCACE;
 }
 
 .purchase-btn {
-  width: 90px;
-  @include BGcolor;
+  width: 120px;
+  background-color: #3CCACE;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
