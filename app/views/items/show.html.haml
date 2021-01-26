@@ -52,25 +52,25 @@
         .main-item__show
           .main-item-list
             .item
-              %h2.item-name 商品名
+              %h2.item__name 商品名
               .item-images
-                .item-images-main
-                  .item-images-main__images
+                .item-images__main
+                  .item-images__main-image
                     = image_tag 'testtest.jpeg',class: "big-image"
-                .item-images-sub
-                  .item-images-sub__images
+                .item-images__sub
+                  .item-images__sub-image
                     = image_tag 'testtest.jpeg', class: "small-image"
-              .item-price
-                %span.item-price__fee ¥1000
-                .item-price__detail
+              .item__price
+                %span.item__price-fee ¥1000
+                .item__price-detail
                   %span (税込)
                   %span 送料込み
-              .item-buy-button
-                = link_to "購入画面へ進む", '#', class: "item-buy-button__link" 
-              .item-text
-                .item-text__text
+              .item__buy-button
+                = link_to "購入画面へ進む", '#', class: "item__buy-button_link" 
+              .item__text
+                .item__text_text
                   testテスト試作
-              .item-detail
+              .item__detail
                 %table
                   %tbody
                     %tr
@@ -117,7 +117,7 @@
                         発送日の目安
                       %td
                         発送日の目安を記載
-              .item-option
+              .item__option
                 %ul
                   = link_to "#", method: :post, class: "favorite-link" do
                     %li.favorite-entp
@@ -130,7 +130,7 @@
                     = link_to "#", class: "report-link"do
                       %i.fa.fa-flag
                       不適切な商品の通報
-            .item-comments
+            .item__comments
               %ul.comments-list
               = form_with html: {class: "#"} do |f|
                 = f.text_area :text, class: "form-message"
@@ -141,8 +141,8 @@
                 = button_tag type: 'submit', class: "submit-btn" do
                   %icon.fa.fa-comment 
                   コメントする
-            .item-seller
-              = link_to "出品者さんのその他の商品", "#", class: "seller-item__title"
+            .item__seller
+              = link_to "出品者さんのその他の商品", "#", class: "item__seller_title"
               .other-item-list
                 .other-item
                   = link_to "#" do
