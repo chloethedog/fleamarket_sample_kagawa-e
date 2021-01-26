@@ -194,7 +194,6 @@ $usual-color: #3CCACE;
     font-size: 14px;
     a {
       color: #333;
-      text-decoration: none;
     }
     .fas {
       margin: 0 5px;
@@ -250,7 +249,6 @@ $usual-color: #3CCACE;
       background-color: $usual-color;
       border: 1px solid $usual-color;
       color: #fff;
-      text-decoration: none;
     }
   }
   &__text_text {
@@ -397,7 +395,7 @@ $usual-color: #3CCACE;
   transform: translate(-50%, -50%);
 }
 
-.item__seller_title {
+.other-item-title {
   display: block;
   margin: 24px 0 8px;
   color: $usual-color;
