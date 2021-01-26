@@ -215,28 +215,28 @@ a {
 .item {
   background-color: #fff;
   padding: 24px 40px 40px;
-  &-name {
+  &__name {
     text-align: center;
     font-weight: bold;
     font-size: 24px;
   }
-  &-price {
+  &__price {
     margin: 24px 0 24px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    &__fee {
+    &-fee {
       font-size: 46px;
       font-weight: bold;
       margin: 0 10px 0 0;
     }
-    &__detail {
+    &-detail {
       font-size: 16px;
     }
   }
-  &-buy-button {
+  &__buy-button {
     margin: 10px 0;
-    &__link {
+    &_link {
       display: block;
       width: 100%;
       line-height: 48px;
@@ -252,12 +252,12 @@ a {
       text-decoration: none;
     }
   }
-  &-text__text {
+  &__text_text {
     line-height: 1.5;
     font-size: 18px;
     margin-bottom: 30px;
   }
-  &-detail {
+  &__detail {
     margin-bottom: 20px;
     table {
       width: 100%;
@@ -295,7 +295,7 @@ a {
       }
     }
   }
-  &-option {
+  &__option {
     display: flex;
     justify-content: space-between;
     ul {
@@ -326,7 +326,7 @@ a {
       text-decoration: none;
     }
   }
-  &-comments {
+  &__comments {
     padding: 24px;
     background-color: #fff;
     margin: 10px 0;
@@ -357,24 +357,24 @@ a {
 
 .item-images {
   margin: 16px 0 0;
-  &-main {
+  &__main {
     width: 300px;
     height: 300px;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
     display: flex;
-    &__images {
+    &-image {
       display: flex;
       position: relative;
     }
   }
-  &-sub{
+  &__sub{
     height: 60px;
     width: 300px;
     margin: 0 auto;
     display: flex;
-    &__images {
+    &-image {
       width: 60px;
       height: 60px;
       position: relative;
@@ -396,7 +396,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.seller-item__title {
+.item__seller_title {
   display: block;
   margin: 24px 0 8px;
   color: #3CCACE;
