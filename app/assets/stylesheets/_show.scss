@@ -464,3 +464,83 @@ a {
     }
   }
 }
+
+.apple-btn,.google-btn {
+  width: 160px;
+}
+
+.TopFooter {
+  background-image: image-url('bg-appBanner-pict.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 100px 40px;
+
+    .footer-text {
+
+//誰でもかんたん、人生を変えるフリマアプリ//      
+      .ad-footer-explain {
+        display: flex;
+        justify-content: center;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+        color: #fff;
+      }
+
+//今すぐ無料ダウンロード！//
+      .ad-footer-title {
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: center;
+        color: #fff;
+      }
+
+//ダウンロードアイコン//
+      .store-btn {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 0;
+
+        .apple-btn {
+          margin: 0 5px;
+        }
+      }  
+    }
+}
+
+//footer
+.TopFooter__bottom {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #272727;
+  color: white;
+
+  .footer-contents {
+    display: flex;
+    max-width: 840px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .footer-content-head{
+      margin: 0 0 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .footer-link {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      line-height: 32px;
+    }
+  }
+}
+
+.logo-white {
+  width: 160px;
+}
+
