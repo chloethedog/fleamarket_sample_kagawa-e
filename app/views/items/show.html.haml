@@ -141,6 +141,48 @@
                 = button_tag type: 'submit', class: "submit-btn" do
                   %icon.fa.fa-comment 
                   コメントする
-            .item-other-seller
-            .item-other-category
+            .item-seller
+              = link_to "出品者さんのその他の商品", "#", class: "seller-item__title"
+              .other-item-list
+                .other-item
+                  = link_to "#" do
+                    %figure.other-item__image
+                      = image_tag 'testtest.jpeg'
+                    .other-item__detail
+                      %h3.other-item__name
+                      .other-item__price
+                        %ul
+                          %li ¥1000
+                          %li
+                            %i.fa.fa-star
+                            4
+                        %p （税込）
+                .other-item
+                  = link_to "#" do
+                    %figure.other-item__image
+                      = image_tag 'testtest.jpeg'
+                    .other-item__detail
+                      %h3.other-item__name
+                      .other-item__price
+                        %ul
+                          %li ¥1000
+                          %li
+                            %i.fa.fa-star
+                            4
+                        %p （税込）
+                .other-item
+                  = link_to "#" do
+                    %figure.other-item__image
+                      = image_tag 'testtest.jpeg'
+                    .other-item__detail
+                      %h3.other-item__name
+                      .other-item__price
+                        %ul
+                          %li ¥1000
+                          %li
+                            %i.fa.fa-star
+                            4
+                        %p （税込）
+                
+            .item-other__category
                     
