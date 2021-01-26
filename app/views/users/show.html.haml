@@ -17,7 +17,7 @@
             %li= link_to '購入した商品・取引中', root_path, class: "list"
             %li= link_to '出品した商品・過去の取引', root_path, class: "list"
             %li= link_to 'ニュース一覧', root_path, class: "list"
-            %li= link_to '評価一覧n', root_path, class: "list"
+            %li= link_to '評価一覧', root_path, class: "list"
             %li= link_to 'ガイド', root_path, class: "list"
             %li= link_to 'お問い合わせ', root_path, class: "list"
           %ul.navi__me
@@ -48,7 +48,7 @@
             %li.tab__active やることリスト
           .middle__notice__list
             %ul.middle__notice__list__left
-              %li= link_to 'アイテムトップページ', "root_path", class: "left_class" 
+              %li= link_to 'アイテムトップページ', root_path, class: "left_class" 
               %li= link_to 'アイテムニュウ', "new_items_path", class: "left_class" 
               %li= link_to '今がチャンス', "#", class: "left_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
@@ -57,9 +57,9 @@
               %li= link_to '今がチャンス', "#", class: "left_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
             %ul.notice__list__right
-              %li= link_to 'ユーザーインデックス', "users_path", class: "right_class" 
-              %li= link_to 'ユーザーNEW', "new_users_path", class: "right_class" 
-              %li= link_to 'ユーザーEDIT', "edit_users_path", class: "right_class" 
+              %li= link_to 'ユーザーインデックス', users_path, class: "right_class" 
+              %li= link_to 'ユーザーNEW', new_user_path, class: "right_class" 
+              %li= link_to 'ユーザーEDIT', edit_user_path, class: "right_class" 
               %li= link_to 'ユーザーコントローラー', "#", class: "right_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "right_class" 
 
@@ -87,5 +87,3 @@
                 = image_tag "fireworks_00020.jpg"
               = link_to "#" do
                 = image_tag "fireworks_00020.jpg"
-
-          .trading__past

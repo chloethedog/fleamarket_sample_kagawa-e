@@ -2,6 +2,20 @@
   box-sizing: border-box;
 }
 
+@mixin hoge($size){
+  font-size: $size;
+  text-decoration: none;
+  color: black;
+  border-left: solid 8px paleturquoise;
+  background: whitesmoke;
+  margin-bottom: 5px;
+  line-height: 2.5;
+  border-radius: 0 15px 15px 0;
+  padding: 0.5em;
+  list-style-type: none!important;
+  display: block;
+}
+
 .user__body{
   width: 100%;
   height: 1555px;
@@ -21,9 +35,10 @@
   }
 }
 
-.navi__me{display: block;
+.navi__me{
+  display: block;
   &__contents{
-    font-size:24px ;
+    font-size: 24px;
     width: 280px;
     height: 53px;
     border-left: solid 6px;
@@ -32,23 +47,9 @@
     position: relative;
   }
   .list{
-    font-size: 15px;
-    text-decoration: none;
-    color: black;
-    border-left: solid 8px paleturquoise;
-    background: whitesmoke;
-    margin-bottom: 5px;
-    line-height: 2.5;
-    border-radius: 0 15px 15px 0;
-    padding: 0.5em;
-    list-style-type: none!important;
-    display: block;
+    @include hoge(15px)
   }
 }
-
-
-
-
 
 .bodymain__right{
   width: 700px;
@@ -109,18 +110,8 @@
 
 
 .left_class, .right_class{
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-  border-left: solid 8px paleturquoise;
-  background: whitesmoke;
-  margin-bottom: 5px;
-  line-height: 2.5;
-  border-radius: 0 15px 15px 0;
-  padding: 0.5em;
-  list-style-type: none!important;
-  display: block;
-}
+  @include hoge(24px)
+ }
 
 .notice__list__right{
   width: 50%;
@@ -163,5 +154,4 @@
     }
   }
 }
-
 
