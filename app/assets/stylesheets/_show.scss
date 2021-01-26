@@ -5,6 +5,10 @@ body {
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   background-color: #f8f8f8;
 }
+a {
+  text-decoration: none;
+  display: inline-block;
+}
 
 @mixin style-search1 () {
   line-height: 38px;
@@ -126,6 +130,7 @@ body {
     }
   }
 }
+
 .contents-list {
   margin-left: auto;
   display: flex;
@@ -172,6 +177,7 @@ body {
     }
   }
 }
+
 .breadcrumbs {
   position: relative;
   border-top: 1px solid #eee;
@@ -287,7 +293,6 @@ body {
         margin: 10px 0 0;
         display: flex;
       }
-      
     }
   }
   &-option {
@@ -349,6 +354,7 @@ body {
     }
   }
 }
+
 .item-images {
   margin: 16px 0 0;
   &-main {
@@ -390,3 +396,71 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.seller-item__title {
+  display: block;
+  margin: 24px 0 8px;
+  color: #3CCACE;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  position: relative;
+}
+.other-item-list {
+  margin: 26px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.other-item {
+  width: 220px;
+  display: inline-block;
+  margin-right: 20px;
+  a {
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    margin: 24px 0 8px;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  &__image {
+    width: 220px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    z-index: auto;
+    img {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: auto;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+  &__detail {
+    background-color: white;
+    color: #333;
+    padding: 16px;
+    h3 {
+      overflow: hidden;
+      line-height: 1.5;
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+  &__price {
+    font-size: 16px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    p {
+      font-size: 10px;
+      text-align: left;
+    }
+  }
+}
