@@ -145,7 +145,7 @@
               = link_to "出品者さんのその他の商品", "#", class: "item__seller_title"
               .other-item-list
                 - 4.times do
-                  /# 後にeach doに変更する
+                  -#後にeach doに変更する
                   .other-item
                     = link_to "#" do
                       %figure.other-item__image
@@ -162,6 +162,7 @@
             .item-other__category
               = link_to "カテゴリーその他のグッズ", "#", class: "seller-item__title"
               .other-item-list
+                -#上と同じくeach doに変更する
                 - 4.times do
                   .other-item
                     = link_to "#" do
@@ -176,7 +177,7 @@
                               %i.fa.fa-star
                               4
                           %p （税込）
-                
+      -# チームメンバーが作ったフッターをコピーして使用、競合を避けるためにこのファイル内に記載
     .TopFooter
       .footer-text
         %p.ad-footer-explain
