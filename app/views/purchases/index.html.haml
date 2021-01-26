@@ -1,7 +1,45 @@
 %body.purchases__body
   = render "purchases/header"
 
-  .main 商品購入確認
+  %main.purchases__main
+    %section.Main__one
+      %h2.Main__one--text  購入内容の確認
+    %section.Main__two
+      %div.infomation
+        %div.infomation__top
+          %figure.infomation__figurea
+            = image_tag "339674_s.jpg",width:'80',height:'80'
+        %div.infomation__middle
+          %p.infomation--product  ロンパース3枚セット  70サイズ
+          %p.infomation__FeePrice
+            %span.information__FeePrice--fee  送料込み（税込み）
+            %span.information__FeePrice--price  ¥2,000
+    %section.Main__three
+      .PaymentAmount
+        %span.text  支払い金額
+        %span#PaymentPrice  ¥2,000
+    %section.Main__four
+      %div.MethodOfPayment
+        %div.MethodOfPayment__a
+          %h3.way  支払い方法
+        %a.MethodOfPayment__b
+          %i.fas.fa-plus-circle
+          %span  登録してください
+    %section.Main__five
+      %div.Address
+        %div.AddressArea
+          %h3.AddressArea__left  配送先
+          %a.AddressArea__right 変更する >
+            
+
+        %div.Address__Information
+          %p  〒760-0019
+          香川県
+          高松市
+          サンポート
+
+          %p 山田 タロウ  
+    %section.Main__six  カード情報を登録してください。
   
 
 

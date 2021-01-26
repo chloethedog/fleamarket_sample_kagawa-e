@@ -1,7 +1,7 @@
 %body
   %header.TopHead
     .search__contents
-      = link_to image_tag("/assets/logo.png", class:"furima-icon"), "item_purchases_path"
+      = link_to image_tag("/assets/logo.png", class:"furima-icon"), "items/:item_id/purchases"
       %form.search-form{action: "#"}
         %input.input-box{placeholder:  "キーワードから探す"}/
         %button.search-button
