@@ -10,13 +10,13 @@ a {
   display: inline-block;
 }
 
-@mixin style-search1 () {
+@mixin search-style1 () {
   line-height: 38px;
   padding: 0 0 0 16px;
   position: relative;
 }
 
-@mixin style-search2() {
+@mixin search-style2() {
   color: #333;
   text-decoration: none;
   line-height: 32px;
@@ -26,19 +26,19 @@ a {
   padding-right: 30px;
 }
 
-@mixin style-contents1() {
+@mixin contents-style1() {
   color: #333;
   padding-left: 16px;
 }
 
-@mixin style-contents2() {
+@mixin contents-style2() {
   align-items: center;
   color: #333;
   text-decoration: none;
   line-height: 32px;
 }
 
-@mixin style-contents3() {
+@mixin contents-style3() {
   color: #cccccc;
   font-size: 20px;
   margin-right: 5px;
@@ -139,36 +139,36 @@ a {
     cursor: pointer;
   }
   &__favorites {
-    @include style-contents1();
+    @include contents-style1();
     &-link {
-      @include style-contents2();
+      @include contents-style2();
       .fas {
-        @include style-contents3();
+        @include contents-style3();
       }
     }
   }
   &__news {
-    @include style-contents1();
+    @include contents-style1();
     &-link {
-      @include style-contents2();
+      @include contents-style2();
       .fas {
-        @include style-contents3();
+        @include contents-style3();
       }
     }
   }
   &__doing-list {
-    @include style-contents1();
+    @include contents-style1();
     &-link {
-      @include style-contents2();
+      @include contents-style2();
       .fas {
-        @include style-contents3();
+        @include contents-style3();
       }
     }
   }
   &__mypage {
-    @include style-contents1();
+    @include contents-style1();
     &-link {
-      @include style-contents2();
+      @include contents-style2();
       display: flex;
       .mypage {
         vertical-align: middle;
