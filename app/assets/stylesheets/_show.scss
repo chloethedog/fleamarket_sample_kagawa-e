@@ -9,7 +9,10 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+//よく使う色を定義
+$usual-color: #3CCACE;
 
+// 競合防止のためファイル内に記載
 @mixin search-style1 () {
   line-height: 38px;
   padding: 0 0 0 16px;
@@ -89,7 +92,7 @@ a {
     width: 36px;
     height: 36px;
     border: 0;
-    background-color: #3CCACE;
+    background-color: $usual-color;
     padding: 8px;
     .search-icon {
       width: 100%;
@@ -106,11 +109,11 @@ a {
   position: relative;
   display: flex;
   &__category {
-    @include style-search1();
+    @include search-style1();
     &-link {
-      @include style-search2();
+      @include search-style2();
       .fas {
-        color: #3CCACE;
+        color: $usual-color;
       }
       span {
         font-weight: 700;
@@ -118,11 +121,11 @@ a {
     }
   }
   &__brand {
-    @include style-search1();
+    @include search-style1();
     &-link {
-      @include style-search2();
+      @include search-style2();
       .fas {
-        color: #3CCACE;
+        color: $usual-color;
       }
       span {
         font-weight: 700;
@@ -246,8 +249,8 @@ a {
       cursor: pointer;
       text-align: center;
       margin: 10px 0;
-      background-color: #3CCACE;
-      border: 1px solid #3CCACE;
+      background-color: $usual-color;
+      border: 1px solid $usual-color;
       color: #fff;
       text-decoration: none;
     }
@@ -345,8 +348,8 @@ a {
     }
     .submit-btn {
       line-height: 48px;
-      background-color: #3CCACE;
-      border: 1px solid #3CCACE;
+      background-color: $usual-color;
+      border: 1px solid $usual-color;
       color: #fff;
       width: 60%;
       font-size: 18px;
@@ -399,7 +402,7 @@ a {
 .item__seller_title {
   display: block;
   margin: 24px 0 8px;
-  color: #3CCACE;
+  color: $usual-color;
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
