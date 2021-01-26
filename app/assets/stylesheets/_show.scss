@@ -21,7 +21,6 @@ $usual-color: #3CCACE;
 
 @mixin search-style2() {
   color: #333;
-  text-decoration: none;
   line-height: 32px;
   background-position: center right;
   background-repeat: no-repeat;
@@ -37,7 +36,6 @@ $usual-color: #3CCACE;
 @mixin contents-style2() {
   align-items: center;
   color: #333;
-  text-decoration: none;
   line-height: 32px;
 }
 
