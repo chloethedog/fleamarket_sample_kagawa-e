@@ -1,19 +1,11 @@
-%head
-  %meta{"charset":"UTF-8"}
-  %link{"href": "style.css", "rel": "stylesheet"}
-  %title Sample
-
 .user
-  .user__header
-  .user__brand
-    %h1 ブランドカテゴリー
 
   .user__body
-    .user__body--main
-      .body--main_left
+    .userbody__main
+      .userbody__main__left
         .left__navi
           %ul.navi__me
-            %li.navi__contents  マイページ
+            %li.navi__me__contents  マイページ
             %li= link_to 'お知らせ', root_path, class: "list"
             %li= link_to 'やることリスト', root_path, class: "list" 
             %li= link_to 'お気に入り一覧', root_path, class: "list"
@@ -29,11 +21,11 @@
             %li= link_to 'ガイド', root_path, class: "list"
             %li= link_to 'お問い合わせ', root_path, class: "list"
           %ul.navi__me
-            %li.navi__contents  フリぺい
+            %li.navi__me__contents  フリぺい
             %li= link_to '売上・振り込み申請', root_path, class: "list"
             %li= link_to 'ポイント', root_path, class: "list"
           %ul.navi__me
-            %li.navi__contents  設定
+            %li.navi__me__contents  設定
             %li= link_to 'プロフィール', root_path, class: "list"
             %li= link_to '発送元・お届け先住所', root_path, class: "list"
             %li= link_to '支払い方法', root_path, class: "list"
@@ -42,22 +34,22 @@
             %li= link_to '電話番号確認', root_path, class: "list"
             %li= link_to 'ログアウト', root_path, class: "list"
 
-      .body--main_right
+      .bodymain__right
         .right__Upper
           .right__Upper__contents
             .content__user
               = image_tag "member_photo_noimage_thumb.png",width: '60',height:'60'
             %h2 やの
-            .content__grades 評価　１００
+            .content__grades 評価  １００
 
         .right__middle
           %ul.middle__notice
             %li.tab__active  お知らせ
             %li.tab__active やることリスト
           .middle__notice__list
-            %ul.notice__list__left
-              %li= link_to 'チャンス', "#", class: "left_class" 
-              %li= link_to 'ポイントがもらえる', "#", class: "left_class" 
+            %ul.middle__notice__list__left
+              %li= link_to 'アイテムトップページ', "root_path", class: "left_class" 
+              %li= link_to 'アイテムニュウ', "new_items_path", class: "left_class" 
               %li= link_to '今がチャンス', "#", class: "left_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
               %li= link_to 'テックキャンプ', "#", class: "left_class" 
@@ -65,22 +57,35 @@
               %li= link_to '今がチャンス', "#", class: "left_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
             %ul.notice__list__right
-              %li= link_to 'やることは', "#", class: "right_class" 
-              %li= link_to '今は', "#", class: "right_class" 
-              %li= link_to 'ありませn', "#", class: "right_class" 
-              %li= link_to 'スクロール', "#", class: "right_class" 
+              %li= link_to 'ユーザーインデックス', "users_path", class: "right_class" 
+              %li= link_to 'ユーザーNEW', "new_users_path", class: "right_class" 
+              %li= link_to 'ユーザーEDIT', "edit_users_path", class: "right_class" 
+              %li= link_to 'ユーザーコントローラー', "#", class: "right_class" 
               %li= link_to 'エントリーお待ちしてます', "#", class: "right_class" 
 
         .right__lower
-          %h3 "購入した商品"
+          %h3 ▼▼▼  購入した商品  ▼▼▼
           .trading__now
-            %ul.now__tab
-              %li=link_to "#"
-              %li=link_to 'いつかのうどん', "#", class:"trading__tab"
-              %li=link_to '昨日のうどん', "#", class:"trading__tab"
+            .now__tab
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+
           .trading__past
-
-
-  .user__notice
-    %h1 "いますぐダウンロード"
-  .user__footer
