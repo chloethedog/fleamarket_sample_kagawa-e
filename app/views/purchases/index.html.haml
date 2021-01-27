@@ -16,20 +16,23 @@
             %span.information__FeePrice--price  ¥2,000
     %section.Main__three
       .PaymentAmount
-        .text  支払い金額
+        .--text  支払い金額
         #PaymentPrice  ¥2,000
     %section.Main__four
       .MethodOfPayment
         .MethodOfPayment__top
-          .way  支払い方法
+          .--way  支払い方法
         .MethodOfPayment__bottom
-          .fas.fa-plus-circle
-            登録してください
+          = link_to "#" do 
+            .fas.fa-plus-circle
+            %span.MethodOfPayment__text 
+              登録してください
     %section.Main__five
       .Address
         .AddressArea
           .AddressArea__left  配送先
-          .AddressArea__right 変更する >
+          %a
+            = link_to '変更する >', "#", class: "AddressArea__right"
         .Address__Information
           %p  〒760-0019
           香川県

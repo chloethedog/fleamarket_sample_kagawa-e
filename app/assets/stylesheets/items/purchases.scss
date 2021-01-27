@@ -90,7 +90,7 @@
   margin-bottom: 24px;
 }
 
-.text,#PaymentPrice {
+.--text,#PaymentPrice {
   font-size: 18px;
   font-weight: 600;
 }
@@ -105,9 +105,13 @@
   align-items: center;
   margin-bottom: 16px;
 
-    &way {
+    &__way {
       font-weight: 600;
     }
+}
+
+.--way {
+  font-weight: 600;
 }
 
 .MethodOfPayment__bottom {
@@ -117,10 +121,11 @@
   opacity: 1;
   pointer-events: auto;
 
-    &fas.fa-plus-circle {
+    &__text {
       margin-right: 4px;
     }
 }
+
 
 .Main__five {
   @include Purchases;
@@ -144,4 +149,10 @@
 
 .Main__six {
   @include Purchases;
+}
+
+a {
+  text-decoration: none;
+  @include Blue;
+
 }
