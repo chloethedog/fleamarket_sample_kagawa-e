@@ -21,4 +21,8 @@
   border-top: 1px solid  whitesmoke;
 }
 
+@mixin BGpurchases {
+  background-color: whitesmoke;
+}
+
 // @include hoge;

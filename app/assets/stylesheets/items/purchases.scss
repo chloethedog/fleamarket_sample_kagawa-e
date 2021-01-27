@@ -1,7 +1,7 @@
 @import "modules/purchases_header";
 @import "modules/purchases_footer";
 .purchases__body {
-  background-color: whitesmoke;
+  @include BGpurchases;
 }
 
 .purchases__main {
@@ -9,21 +9,22 @@
   margin: 0px auto;
   width: 100%;
   background-color: white;
+  font-size: 14px;
 }
 
 .Main__one {
   margin: 0px auto;
   padding: 32px 16px;
   max-width: 375px;
-}
 
-.Main__one--text {
-  text-align: center;
-  font-size: 24px;
-  line-height: 34px;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
+  &--text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .Main__two {
@@ -33,49 +34,47 @@
 .infomation {
   display: flex;
   justify-content: space-between;
-}
 
-.infomation__top {
-  display: flex;
-  justify-content: center;
-  height: 80px;
-  width: 80px;
-  align-items: center;
-}
+    &__top {
+      display: flex;
+      justify-content: center;
+      height: 80px;
+      width: 80px;
+      align-items: center;
 
-.infomation__figurea {
-  border-radius: 4px;
-  display: inline-block;
-  margin: 0;
-  overflow: hidden;
-  height: 80px;
-  width: 80px;
-  position: relative;
+        &__figurea {
+          border-radius: 4px;
+          display: inline-block;
+          margin: 0;
+          overflow: hidden;
+          height: 80px;
+          width: 80px;
+          position: relative;
+        }
+    }
 }
 
 .infomation__middle {
   width: 100%;
   margin-left: 16px;
-}
 
-.infomation--product {
-  font-size: 14px;
-  line-height: 1.4em;
-  margin-bottom: 8px;
+    &--product {
+      line-height: 1.4em;
+      margin-bottom: 8px;
+    }
 }
 
 .infomation__FeePrice {
   text-align: right;
-}
 
-.information__FeePrice--fee {
-  font-size: 12px;
-}
-
-.information__FeePrice--price {
-  font-size: 15px;
-  font-weight: 600;
-  margin-left: 8px;
+    &--fee {
+      font-size: 12px;
+    }
+    &--price {
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
 }
 
 .Main__three {
@@ -100,29 +99,27 @@
   @include Purchases;
 }
 
-.MethodOfPayment__a {
+.MethodOfPayment__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+
+    &way {
+      font-weight: 600;
+    }
 }
 
-.way {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.MethodOfPayment__b {
-  color: #0095ee;
+.MethodOfPayment__bottom {
+  @include Blue;
   display: flex;
   align-items: center;
   opacity: 1;
   pointer-events: auto;
-  font-size: 14px;
-}
 
-.fas.fa-plus-circle {
-  margin-right: 4px;
+    &fas.fa-plus-circle {
+      margin-right: 4px;
+    }
 }
 
 .Main__five {
@@ -134,24 +131,17 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-}
 
-.AddressArea__left {
-  font-size: 14px;
-  font-weight: 600;
-}
+    &__left {
+      font-weight: 600;
+    }
 
-.AddressArea__right {
-  color: #0099e8;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.Address__Information {
-  font-size: 14px;
+    &__right {
+      @include Blue;
+      text-decoration: none;
+    }
 }
 
 .Main__six {
   @include Purchases;
-  font-size: 14px;
 }
