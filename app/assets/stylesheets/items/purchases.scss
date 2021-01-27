@@ -27,10 +27,7 @@
 }
 
 .Main__two {
-  margin: 0px auto;
-  padding: 32px 16px;
-  max-width: 375px;
-  border-top: 1px solid  whitesmoke;
+  @include Purchases;
 }
 
 .infomation {
@@ -82,10 +79,7 @@
 }
 
 .Main__three {
-  margin: 0px auto;
-  padding: 32px 16px;
-  max-width: 375px;
-  border-top: 1px solid  whitesmoke;
+  @include Purchases;
 }
 
 .PaymentAmount {
@@ -103,10 +97,7 @@
 }
 
 .Main__four {
-  border-top: 1px solid  whitesmoke;
-  margin: 0px auto;
-  padding: 32px 16px;
-  max-width:375px;
+  @include Purchases;
 }
 
 .MethodOfPayment__a {
@@ -135,10 +126,7 @@
 }
 
 .Main__five {
-  border-top: 1px solid whitesmoke;
-  margin: 0px auto;
-  padding: 32px 16px;
-  max-width: 375px;
+  @include Purchases;
 }
 
 .AddressArea {
@@ -164,9 +152,6 @@
 }
 
 .Main__six {
-  padding: 32px 16px 56px;
-  border-top: 1px solid whitesmoke;
-  margin: 0 auto;
-  max-width: 375px;
+  @include Purchases;
   font-size: 14px;
 }
