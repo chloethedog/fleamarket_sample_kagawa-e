@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-@mixin hoge($size){
+@mixin show($size){
   font-size: $size;
   text-decoration: none;
   color: black;
@@ -47,7 +47,7 @@
     position: relative;
   }
   .list{
-    @include hoge(15px)
+    @include show(15px)
   }
 }
 
@@ -110,7 +110,7 @@
 
 
 .left_class, .right_class{
-  @include hoge(24px)
+  @include show(24px)
  }
 
 .notice__list__right{
