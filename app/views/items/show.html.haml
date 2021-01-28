@@ -1,0 +1,134 @@
+%body
+  = render "shared/header_at_login"
+  .main
+    .main-item
+      .main-item__show
+        .main-item-list
+          .item
+            %h2.item__name 商品名
+            .item-images
+              .item-images__main
+                .item-images__main-image
+                  = image_tag 'testtest.jpeg',class: "big-image"
+              .item-images__sub
+                .item-images__sub-image
+                  = image_tag 'testtest.jpeg', class: "small-image"
+            .item__price
+              %span.item__price-fee ¥1000
+              .item__price-detail
+                %span (税込)
+                %span 送料込み
+            .item__buy-button
+              = link_to "購入画面へ進む", '#', class: "item__buy-button_link" 
+            .item__text-box
+              .item__text
+                testテスト試作
+            .item__detail
+              %table
+                %tbody
+                  %tr
+                    %th 
+                      出品者
+                    %td 
+                      = link_to "出品者", "#", class: "#"
+                  %tr
+                    %th
+                      カテゴリー
+                    %td 
+                      = link_to "親カテゴリー", "#", class: "#"
+                      %br
+                      = link_to ">小カテゴリー", "#", class: "#"
+                      %br
+                      = link_to ">孫カテゴリー", "#", class: "#"
+                  %tr
+                    %th 
+                      ブランド
+                    %td 
+                      ブランドを記載
+                  %tr 
+                    %th 
+                      商品の状態
+                    %td 
+                      商品の状態を記載
+                  %tr 
+                    %th 
+                      配送料の負担
+                    %td 
+                      配送料の負担方法を記載
+                  %tr 
+                    %th
+                      配送の方法
+                    %td 
+                      配送の方法を記載
+                  %tr 
+                    %th 
+                      発送元の地域
+                    %td 
+                      香川県
+                  %tr 
+                    %th 
+                      発送日の目安
+                    %td
+                      発送日の目安を記載
+            .item__option
+              %ul
+                = link_to "#", method: :post, class: "favorite-link" do
+                  %li.favorite-entp
+                    %i.fa.fa-star
+                    お気に入り
+                    %span
+                      1
+              %ul
+                %li.report-entp
+                  = link_to "#", class: "report-link"do
+                    %i.fa.fa-flag
+                    不適切な商品の通報
+          .item__comments
+            %ul.comments-list
+            = form_with html: {class: "#"} do |f|
+              = f.text_area :text, class: "form-message"
+              %p.warning-message
+                相手のことを考えて丁寧なコメントを心がけましょう。
+                %br 
+                不快な言葉遣いなどは利用制限や退会処分となる事があります。
+              = button_tag type: 'submit', class: "submit-btn" do
+                %icon.fa.fa-comment 
+                コメントする
+          .item__seller
+            = link_to "出品者さんのその他の商品", "#", class: "other-item-title"
+            .other-item-list
+              - 4.times do
+                -#後にeach doに変更する
+                .other-item
+                  = link_to "#" do
+                    %figure.other-item__image
+                      = image_tag 'testtest.jpeg'
+                    .other-item__detail
+                      %h3.other-item__name
+                      .other-item__price
+                        %ul
+                          %li ¥1000
+                          %li
+                            %i.fa.fa-star
+                            4
+                        %p （税込）
+          .item-other__category
+            = link_to "カテゴリーその他のグッズ", "#", class: "other-item-title"
+            .other-item-list
+              -#上と同じくeach doに変更する
+              - 4.times do
+                .other-item
+                  = link_to "#" do
+                    %figure.other-item__image
+                      = image_tag 'testtest.jpeg'
+                    .other-item__detail
+                      %h3.other-item__name
+                      .other-item__price
+                        %ul
+                          %li ¥1000
+                          %li
+                            %i.fa.fa-star
+                            4
+                        %p （税込）
+  = render "shared/footer"
+  = render "shared/purchase_btn"
