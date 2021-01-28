@@ -8,7 +8,7 @@
       .infomation
         .infomation__top
           %figure.infomation__figurea
-            = image_tag "339674_s.jpg",width:'80',height:'80'
+            = image_tag "339674_s.jpg",class: "figure-img"
         .infomation__middle
           .infomation--product  ロンパース3枚セット  70サイズ
           %p.infomation__FeePrice
@@ -32,7 +32,7 @@
         .AddressArea
           .AddressArea__left  配送先
           %a
-            = link_to '変更する >', "#", class: "AddressArea__right"
+            = link_to '変更する >', root_path, class: "AddressArea__right"
         .Address__Information
           %p  〒760-0019
           香川県

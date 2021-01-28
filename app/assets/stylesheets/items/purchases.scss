@@ -47,11 +47,14 @@
           display: inline-block;
           margin: 0;
           overflow: hidden;
-          height: 80px;
-          width: 80px;
           position: relative;
         }
     }
+}
+
+.figure-img {
+  width: 80px;
+  height: 80px;
 }
 
 .infomation__middle {
