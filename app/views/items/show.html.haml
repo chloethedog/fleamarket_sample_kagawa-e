@@ -20,8 +20,8 @@
                 %span 送料込み
             .item__buy-button
               = link_to "購入画面へ進む", '#', class: "item__buy-button_link" 
-            .item__text
-              .item__text_text
+            .item__text-box
+              .item__text
                 testテスト試作
             .item__detail
               %table
@@ -130,8 +130,5 @@
                             %i.fa.fa-star
                             4
                         %p （税込）
-    -# チームメンバーが作ったフッターをコピーして使用、競合を避けるためにこのファイル内に記載
   = render "shared/footer"
-  .purchase-btn
-    .purchase-btn--text 出品する
-    = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
+  = render "shared/purchase_btn"

@@ -24,6 +24,32 @@ $usual-color: #3CCACE;
 .item {
   background-color: #fff;
   padding: 24px 40px 40px;
+  &-images {
+    margin: 16px 0 0;
+    &__main {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      &-image {
+        display: flex;
+        position: relative;
+      }
+    }
+    &__sub{
+      height: 60px;
+      width: 300px;
+      margin: 0 auto;
+      display: flex;
+      &-image {
+        width: 60px;
+        height: 60px;
+        position: relative;
+      }
+    }
+  }
   &__name {
     text-align: center;
     font-weight: bold;
@@ -60,7 +86,7 @@ $usual-color: #3CCACE;
       color: #fff;
     }
   }
-  &__text_text {
+  &__text {
     line-height: 1.5;
     font-size: 18px;
     margin-bottom: 30px;
@@ -112,13 +138,12 @@ $usual-color: #3CCACE;
     }
     .favorite-link {
       color: #0099e8;
-      text-decoration: none;
     }
     .favorite-entp {
       margin-right: auto;
       padding: 6px 10px;
       border-radius: 40px;
-      color: #3ccace;
+      color: $usual-color;
       border: 1px solid #ffb340;
       cursor: pointer;
     }
@@ -131,7 +156,6 @@ $usual-color: #3CCACE;
       border-radius: 4px;
       color: #333;
       border: 1px solid #333;
-      text-decoration: none;
     }
   }
   &__comments {
@@ -159,33 +183,6 @@ $usual-color: #3CCACE;
       width: 60%;
       font-size: 18px;
       border-radius: 100px;
-    }
-  }
-}
-//商品のイメージ画像についてのscss
-.item-images {
-  margin: 16px 0 0;
-  &__main {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    &-image {
-      display: flex;
-      position: relative;
-    }
-  }
-  &__sub{
-    height: 60px;
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    &-image {
-      width: 60px;
-      height: 60px;
-      position: relative;
     }
   }
 }
@@ -238,10 +235,6 @@ $usual-color: #3CCACE;
     margin: 0;
     z-index: auto;
     img {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       width: 100%;
       z-index: auto;
       height: 150px;
@@ -269,31 +262,6 @@ $usual-color: #3CCACE;
     p {
       font-size: 10px;
       text-align: left;
-      
     }
-  }
-}
-
-
-.purchase-btn {
-  width: 120px;
-  background-color: #3CCACE;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-
-  &--text {
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    text-decoration: none;
-    margin-bottom: 5px;
-  }
-  
-  &--icon {
-    width: 60%;
   }
 }
