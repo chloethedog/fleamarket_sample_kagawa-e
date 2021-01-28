@@ -13,3 +13,36 @@
 @mixin BGblue {
   background-color: #0095ee;
 }
+// 商品詳細ページで使用
+@mixin search-style1 () {
+  line-height: 38px;
+  padding: 0 0 0 16px;
+  position: relative;
+}
+
+@mixin search-style2() {
+  color: #333;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+
+@mixin contents-style1() {
+  color: #333;
+  padding-left: 16px;
+}
+
+@mixin contents-style2() {
+  align-items: center;
+  color: #333;
+  line-height: 32px;
+}
+
+@mixin contents-style3() {
+  color: #cccccc;
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
