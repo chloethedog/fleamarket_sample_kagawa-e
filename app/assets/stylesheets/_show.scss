@@ -1,14 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-  background-color: #f8f8f8;
-}
-a {
-  text-decoration: none;
-  display: inline-block;
-}
+@import "modules/item_detail_page";
 //よく使う色を定義
 $usual-color: #3CCACE;
 
