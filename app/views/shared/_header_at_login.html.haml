@@ -1,0 +1,43 @@
+%header.header
+  .header-main
+    .header-main__top
+      .header-main__title
+        = image_tag "fulima-og",width: "141", height: "41", class: "top-icon", alt: "top"
+      .header-main__search-box
+        %form.search-form{:action => "#"}
+          %input.search-form__input-box{:placeholder => "キーワードから探す"}
+          %label.search-form__input-label
+            = image_tag "icon-search.jpg", width: "19", height:"19", class: "search-icon", alt: "icon"
+            %btn.Submit-btn
+    .header-main__bottom
+      %ul.search-list
+        %li.search-list__category
+          = link_to '#', class: "search-list__category-link" do
+            %i.fas.fa-list
+            %span カテゴリーから探す
+        %li.search-list__brand
+          = link_to '#', class: "search-list__brand-link" do
+            %i.fas.fa-tags
+            %span ブランドから探す
+      %ul.contents-list
+        %li.contents-list__favorites
+          = link_to '#', class: "contents-list__favorites-link" do
+            %i.fas.fa-star
+            お気に入り一覧
+        %li.contents-list__news
+          = link_to '#', class: "contents-list__news-link" do
+            %i.fas.fa-bell
+            %span お知らせ
+        %li.contents-list__doing-list  
+          = link_to '#', class: "contents-list__doing-list-link" do
+            %i.fas.fa-check
+            %span やること一覧
+        %li.contents-list__mypage
+          = link_to '#', class: "contents-list__mypage-link" do
+            = image_tag 'member_photo_noimage_thumb.png', width: "28", height: "28", alt: "icon"
+            %span.mypage マイページ
+.breadcrumbs
+  .breadcrumbs__signpost
+    = link_to "フリマ", '#'
+    %i.fas.fa-chevron-right
+    %span.current 商品名
