@@ -27,3 +27,37 @@
   list-style-type: none!important;
   display: block;
 }
+
+// 商品詳細ページで使用
+@mixin search-style1 () {
+  line-height: 38px;
+  padding: 0 0 0 16px;
+  position: relative;
+}
+
+@mixin search-style2() {
+  color: $black-color;
+  line-height: 32px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding-right: 30px;
+}
+
+@mixin contents-style1() {
+  color: $black-color;
+  padding-left: 16px;
+}
+
+@mixin contents-style2() {
+  align-items: center;
+  color: $black-color;
+  line-height: 32px;
+}
+
+@mixin contents-style3() {
+  color: #cccccc;
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
