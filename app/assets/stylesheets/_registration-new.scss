@@ -1,7 +1,19 @@
+.Header{
+  width: 1440px;
+  height: 128px;
+  background-color: blue;
+}
+
 .Main{
   width: 1440px;
   height: 1798px;
   background-color: palegreen;
+}
+
+.MainWrapper{
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 .MainHeader{
@@ -10,8 +22,22 @@
   background-color: palevioletred;
 }
 
+.MainHeader__title{
+
+}
+
+.Footer{
+  width: 1440px;
+  height: 220px;
+  background-color: blue;
+}
+
+
+
+
+
 .MainField{
-  
+
 }
 
 
