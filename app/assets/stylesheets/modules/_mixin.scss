@@ -21,7 +21,7 @@
 }
 
 @mixin search-style2() {
-  color: #333;
+  color: $black-color;
   line-height: 32px;
   background-position: center right;
   background-repeat: no-repeat;
@@ -30,13 +30,13 @@
 }
 
 @mixin contents-style1() {
-  color: #333;
+  color: $black-color;
   padding-left: 16px;
 }
 
 @mixin contents-style2() {
   align-items: center;
-  color: #333;
+  color: $black-color;
   line-height: 32px;
 }
 
