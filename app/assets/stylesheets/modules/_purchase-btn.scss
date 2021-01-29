@@ -1,6 +1,7 @@
+//出品するボタン//
 .purchase-btn {
   width: 120px;
-  background-color: #3CCACE;
+  @include BGcolor;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -15,8 +16,9 @@
     text-decoration: none;
     margin-bottom: 5px;
   }
-  
-  &--icon {
-    width: 60%;
-  }
+}
+
+.purchase-btn--icon {
+  width: auto;
+  height: 50px;
 }

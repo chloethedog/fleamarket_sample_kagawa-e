@@ -327,28 +327,3 @@
   align-items: center;
   justify-content: space-between;
 }
-
-//出品するボタン//
-.purchase-btn {
-  width: 90px;
-  @include BGcolor;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-
-  &--text {
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    text-decoration: none;
-    margin-bottom: 5px;
-  }
-}
-
-.purchase-btn--icon {
-  width: 185px;
-  height: 50px;
-}
