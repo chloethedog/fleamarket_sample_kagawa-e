@@ -1,0 +1,161 @@
+@import "modules/purchases_header";
+@import "modules/purchases_footer";
+.purchases__body {
+  @include BGpurchases;
+}
+
+.purchases__main {
+  max-width: 700px;
+  margin: 0px auto;
+  width: 100%;
+  background-color: white;
+  font-size: 14px;
+}
+
+.Main__one {
+  margin: 0px auto;
+  padding: 32px 16px;
+  max-width: 375px;
+
+  &--text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.Main__two {
+  @include Purchases;
+}
+
+.infomation {
+  display: flex;
+  justify-content: space-between;
+
+    &__top {
+      display: flex;
+      justify-content: center;
+      height: 80px;
+      width: 80px;
+      align-items: center;
+
+        &__figurea {
+          border-radius: 4px;
+          display: inline-block;
+          margin: 0;
+          overflow: hidden;
+          position: relative;
+        }
+    }
+}
+
+.figure-img {
+  width: 80px;
+  height: 80px;
+}
+
+.infomation__middle {
+  width: 100%;
+  margin-left: 16px;
+
+    &--product {
+      line-height: 1.4em;
+      margin-bottom: 8px;
+    }
+}
+
+.infomation__FeePrice {
+  text-align: right;
+
+    &--fee {
+      font-size: 12px;
+    }
+    &--price {
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+}
+
+.Main__three {
+  @include Purchases;
+}
+
+.PaymentAmount {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.--text,#PaymentPrice {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Main__four {
+  @include Purchases;
+}
+
+.MethodOfPayment__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+    &__way {
+      font-weight: 600;
+    }
+}
+
+.--way {
+  font-weight: 600;
+}
+
+.MethodOfPayment__bottom {
+  @include Blue;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  pointer-events: auto;
+
+    &__text {
+      margin-right: 4px;
+    }
+}
+
+
+.Main__five {
+  @include Purchases;
+}
+
+.AddressArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+    &__left {
+      font-weight: 600;
+    }
+
+    &__right {
+      @include Blue;
+      text-decoration: none;
+    }
+}
+
+.Main__six {
+  @include Purchases;
+}
+
+a {
+  text-decoration: none;
+  @include Blue;
+
+}
