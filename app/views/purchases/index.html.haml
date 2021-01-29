@@ -23,7 +23,7 @@
         .MethodOfPayment__top
           .--way  支払い方法
         .MethodOfPayment__bottom
-          = link_to "#" do 
+          = link_to root_path do 
             .fas.fa-plus-circle
             %span.MethodOfPayment__text 
               登録してください
@@ -31,8 +31,7 @@
       .Address
         .AddressArea
           .AddressArea__left  配送先
-          %a
-            = link_to '変更する >', root_path, class: "AddressArea__right"
+          = link_to '変更する >', root_path, class: "AddressArea__right"
         .Address__Information
           %p  〒760-0019
           香川県
