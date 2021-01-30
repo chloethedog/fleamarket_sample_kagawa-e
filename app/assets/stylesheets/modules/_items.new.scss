@@ -1,5 +1,10 @@
 .ListingItems {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   background: whitesmoke;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   &__header {
     height: 128px; 
     text-align: center;
@@ -8,6 +13,8 @@
     margin: 0px auto;
     max-width: 700px;
     .ListingForm {
+      margin: 0;
+      padding: 0;
       .ListingPics {
         @include frame;
       }
@@ -24,6 +31,7 @@
           } 
         }
         &__text {
+          margin-top: 32px;
           @include label-span(#ff0211);
           textarea { 
             @include input;
