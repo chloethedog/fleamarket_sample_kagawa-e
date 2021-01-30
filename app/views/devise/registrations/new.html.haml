@@ -4,36 +4,109 @@
 
 
   %main.Main
-    .MainWrapper
-      .MainHeader
-        .MainHeader__title
-          %h2 会員情報入力
-      .MainField
-        .MainField__user
-          .MainField__user__nickname
-          .MainField__user__email
-          .MainField__user__password
-          .MainField__user__passwordconfirmation
-          .MainField__user__identity
-          .MainField__user__name
-            .MainField__user__firstname
-            .MainField__user__lastname
-          .MainField__user__kananame
-            .MainField__user__kaanafirstname
-            .MainField__user__kanalastname
-          .MainField__user__birthday
-            .MainField__user__birthdayyear
-            .MainField__user__birthdaymonth
-            .MainField__user__birthdayday
-          .MainField__user__shippingaddress
-          .MainField__user__postalcode
-          .MainField__user__prefectures
-          .MainField__user__municipality
-          .MainField__user__address
-          .MainField__user__buildingname
-          .MainField__user__phonenumber
-          .Signup
-  %footer.Footer
+    %section.MainWrapper
+      %h2.MainHeaderTitle 会員情報入力
+      %form.NewUser
+        .FormContainer
+          .FormGroup
+            %label.Category ニックネーム
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"例） フリマ太郎"}
+          .FormGroup
+            %label.Category メールアドレス
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"PC・携帯どちらでも可"}
+          .FormGroup
+            %label.Category パスワード
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"6文字以上の半角英数字"}
+          .FormGroup
+            %label.Category パスワード
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"上記と同じものを入力してください"}  
+          .FormGroup
+            %label.Category 
+            %h3.Exposition 本人確認
+            %p.ExpositionSentence 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ご協力ください。他のお客さまに公開されることはありません。
+          .FormGroup
+            .FormGroupA
+              %label.Category お名前（全角）
+              %span.Sticker 必須
+              %input.InputDefault{:name => "email", :placeholder =>"例）　香川"}
+              %input.InputDefault{:name => "email", :placeholder =>"例）　太郎"}
+          .FormGroup
+            .FormGroupB
+              %label.Category お名前（カナ）
+              %span.Sticker 必須
+              %input.InputDefault{:name => "email", :placeholder =>"例）　カガワ"}
+              %input.InputDefault{:name => "email", :placeholder =>"例）　タロウ"}
+          .FormGroup
+            .FormGroupC
+              %label.Category 生年月日
+              %span.Sticker 必須
+              %input.InputDefault{:name => "email", :placeholder =>"年"}
+              %input.InputDefault{:name => "email", :placeholder =>"月"}
+              %input.InputDefault{:name => "email", :placeholder =>"日"}
+              %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          .FormGroup
+            %p 配送先住所
+          .FormGroup
+            %label.Category 郵便番号
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"例）　760-8639"}  
+          .FormGroup
+            %label.Category 都道府県
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"選択してください"}  
+          .FormGroup
+            %label.Category 市区町村
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"例）高松市"}  
+          .FormGroup
+            %label.Category 番地
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"サンポート2−１"}  
+          .FormGroup
+            %label.Category 建物名
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"例）高松シンボルタワータワー棟４・５階"}  
+          .FormGroup
+            %label.Category 電話番号
+            %span.Sticker 必須
+            %input.InputDefault{:name => "email", :placeholder =>"例）087-822-0111"}  
+          .FormGroup
+            %label.Category 登録する  
+          
+      -# .MainHeader
+      -#   .MainHeader__title
+      -#     %h2 会員情報入力
+-#       .MainField
+-#         .MainField__user
+-#           .MainField__user__nickname
+-#             %pテスト
+-#           .MainField__user__email
+-#           .MainField__user__password
+-#           .MainField__user__passwordconfirmation
+-#           .MainField__user__identity
+-#           .MainField__user__name
+-#             .MainField__user__firstname
+-#             .MainField__user__lastname
+-#           .MainField__user__kananame
+-#             .MainField__user__kaanafirstname
+-#             .MainField__user__kanalastname
+-#           .MainField__user__birthday
+-#             .MainField__user__birthdayyear
+-#         .MainField__user__birthdaymonth
+-#         .MainField__user__birthdayday
+-#       .MainField__user__shippingaddress
+-#       .MainField__user__postalcode
+-#       .MainField__user__prefectures
+-#       .MainField__user__municipality
+-#       .MainField__user__address
+-#       .MainField__user__buildingname
+-#       .MainField__user__phonenumber
+-#       .Signup
+-#   %footer.Footer
 
 
 

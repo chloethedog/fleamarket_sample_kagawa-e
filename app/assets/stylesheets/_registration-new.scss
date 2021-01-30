@@ -5,50 +5,107 @@
 }
 
 .Main{
-  width: 1440px;
-  height: 1798px;
-  background-color: palegreen;
+  display: block;
 }
 
-.MainWrapper{
-  width: 700px;
-  margin: 0 auto;
-  background-color: #fff;
-}
+  .MainWrapper{
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
 
-.MainHeader{
-  width: 700px;
-  height: 97px;
-  background-color: palevioletred;
-}
+    .MainHeaderTitle{
+      font-size: 22px;
+      padding: 32px;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;  
+    }
 
-.MainHeader__title{
+    .NewUser{
+      padding: 40px 40px 64px;
+      border-top: 1px solid #f5f5f5;
+    }
 
-}
+      .FormContainer{
+        margin: 0 auto;
+        max-width: 343px;
+     }
 
-.Footer{
-  width: 1440px;
-  height: 220px;
-  background-color: blue;
-}
+        .FormGroup{
+          width: 343px;
+          height: 77px;
+          margin: 0;
+        }
+
+        .Category {
+          cursor: default;
+        }
+
+        .Sticker {
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+          background-color: #EA352D;
+        }
+
+        .InputDefault{
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          width: 100%;
+          margin: 8px 0 0;
+        }
+
+        .Exposition{
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .ExpositionSentence{
+          margin: 8px 0 0;
+          padding: 0;
+        }
 
 
 
 
 
-.MainField{
-
-}
 
 
 
 
 
-* {
-  box-sizing: border-box;
-}
+// .MainHeader__title{
+//   font-size: 22px;
+//   padding: 32px;
+//   font-weight: bold;
+//   line-height: 1.5;
+//   text-align: center;
+// }
 
-p{
-  font-size: 20px;
-  background-color: palegoldenrod;
-}
+// .MainField{
+//   width: 700px;
+//   height: 1701px;
+//   background-color: papayawhip;
+// }
+
+// .MainField__user{
+//   width: 343px;
+//   height: 1596px;
+//   background-color:peru;
+// }
+
+
+// .Footer{
+//   width: 1440px;
+//   height: 220px;
+//   background-color: blue;
+// }
