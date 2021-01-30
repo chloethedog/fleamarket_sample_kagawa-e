@@ -1,3 +1,4 @@
+//トップページで使用
 @mixin Fcolor {
   color: #3ccace;
 }
@@ -13,6 +14,32 @@
 @mixin BGblue {
   background-color: #0095ee;
 }
+
+@mixin Show($size){
+  font-size: $size;
+  text-decoration: none;
+  color: black;
+  border-left: solid 8px #3ccace;
+  background: whitesmoke;
+  margin-bottom: 5px;
+  line-height: 2.5;
+  border-radius: 0 15px 15px 0;
+  padding: 0.5em;
+  list-style-type: none!important;
+  display: block;
+}
+//商品購入ページで使用
+@mixin Purchases {
+  margin: 0px auto;
+  padding: 32px 16px;
+  max-width: 375px;
+  border-top: 1px solid  whitesmoke;
+}
+
+@mixin BGpurchases {
+  background-color: whitesmoke;
+}
+
 // 商品詳細ページで使用
 @mixin search-style1 () {
   line-height: 38px;
