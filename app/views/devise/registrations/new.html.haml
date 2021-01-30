@@ -11,7 +11,7 @@
           .FormGroup
             %label.Category ニックネーム
             %span.Sticker 必須
-            %input.InputDefault{:name => "email", :placeholder =>"例） フリマ太郎"}
+            %input.InputDefault{:name => "email", :placeholder =>"例) フリマ太郎"}
           .FormGroup
             %label.Category メールアドレス
             %span.Sticker 必須
@@ -30,16 +30,18 @@
             %p.ExpositionSentence 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ご協力ください。他のお客さまに公開されることはありません。
           .FormGroup
             .FormGroupA
-              %label.Category お名前（全角）
-              %span.Sticker 必須
-              %input.InputDefault{:name => "email", :placeholder =>"例）　香川"}
-              %input.InputDefault{:name => "email", :placeholder =>"例）　太郎"}
+              .FormGroupdiv
+                %label.Category お名前(全角)
+                %span.Sticker 必須
+              %input.InputDefaultA{:name => "email", :placeholder =>"例)香川"}
+              %input.InputDefaultB{:name => "email", :placeholder =>"例)太郎"}
           .FormGroup
             .FormGroupB
-              %label.Category お名前（カナ）
-              %span.Sticker 必須
-              %input.InputDefault{:name => "email", :placeholder =>"例）　カガワ"}
-              %input.InputDefault{:name => "email", :placeholder =>"例）　タロウ"}
+              .FormGroupdiv
+                %label.Category お名前カナ(全角)
+                %span.Sticker 必須
+              %input.InputDefaultA{:name => "email", :placeholder =>"例)カガワ"}
+              %input.InputDefaultB{:name => "email", :placeholder =>"例)タロウ"}
           .FormGroup
             .FormGroupC
               %label.Category 生年月日
@@ -47,13 +49,13 @@
               %input.InputDefault{:name => "email", :placeholder =>"年"}
               %input.InputDefault{:name => "email", :placeholder =>"月"}
               %input.InputDefault{:name => "email", :placeholder =>"日"}
-              %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+              %p.p2 ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .FormGroup
-            %p 配送先住所
+            %h3.h3title 配送先住所
           .FormGroup
             %label.Category 郵便番号
             %span.Sticker 必須
-            %input.InputDefault{:name => "email", :placeholder =>"例）　760-8639"}  
+            %input.InputDefault{:name => "email", :placeholder =>"例)760-8639"}  
           .FormGroup
             %label.Category 都道府県
             %span.Sticker 必須
@@ -65,17 +67,17 @@
           .FormGroup
             %label.Category 番地
             %span.Sticker 必須
-            %input.InputDefault{:name => "email", :placeholder =>"サンポート2−１"}  
+            %input.InputDefault{:name => "email", :placeholder =>"例）サンポート2-1"}  
           .FormGroup
             %label.Category 建物名
-            %span.Sticker 必須
-            %input.InputDefault{:name => "email", :placeholder =>"例）高松シンボルタワータワー棟４・５階"}  
+            %span.StickerA 任意
+            %input.InputDefault{:name => "email", :placeholder =>"例）高松シンボルタワータワー棟4・5階"}  
           .FormGroup
             %label.Category 電話番号
             %span.Sticker 必須
-            %input.InputDefault{:name => "email", :placeholder =>"例）087-822-0111"}  
+            %input.InputDefault{:name => "email", :placeholder =>"例）0878220111"}  
           .FormGroup
-            %label.Category 登録する  
+            %label.CategoryT 登録する  
           
       -# .MainHeader
       -#   .MainHeader__title
