@@ -36,19 +36,25 @@
               %input.InputDefaultA{:name => "email", :placeholder =>"例)香川"}
               %input.InputDefaultB{:name => "email", :placeholder =>"例)太郎"}
           .FormGroup
-            .FormGroupB
+            .FormGroup
               .FormGroupdiv
                 %label.Category お名前カナ(全角)
                 %span.Sticker 必須
               %input.InputDefaultA{:name => "email", :placeholder =>"例)カガワ"}
               %input.InputDefaultB{:name => "email", :placeholder =>"例)タロウ"}
           .FormGroup
-            .FormGroupC
-              %label.Category 生年月日
-              %span.Sticker 必須
-              %input.InputDefault{:name => "email", :placeholder =>"年"}
-              %input.InputDefault{:name => "email", :placeholder =>"月"}
-              %input.InputDefault{:name => "email", :placeholder =>"日"}
+            .FormGroup
+              .FormGroupdiv
+                %label.Category 生年月日
+                %span.Sticker 必須
+              .FormGroupdiv2
+                %input.InputDefaultA{:name => "email", :placeholder =>"--   ^"}
+                %p 年
+                %input.InputDefaultA{:name => "email", :placeholder =>"--   ^"}
+                %p 月
+                %input.InputDefaultB{:name => "email", :placeholder =>"--   ^"}
+                %p 日
+
               %p.p2 ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .FormGroup
             %h3.h3title 配送先住所
@@ -77,11 +83,13 @@
             %span.Sticker 必須
             %input.InputDefault{:name => "email", :placeholder =>"例）0878220111"}  
           .FormGroup
-            %label.CategoryT 登録する  
+            %label.CategoryT 登録する
+
+  %footer.Footer
           
-      -# .MainHeader
-      -#   .MainHeader__title
-      -#     %h2 会員情報入力
+-# .MainHeader
+-#   .MainHeader__title
+-#     %h2 会員情報入力
 -#       .MainField
 -#         .MainField__user
 -#           .MainField__user__nickname
