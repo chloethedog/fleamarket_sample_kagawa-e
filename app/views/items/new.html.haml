@@ -1,8 +1,5 @@
 .ListingItems
   .ListingItems__header
-    %h1
-      %a{href: "/"} 
-      %img{src: ""}  
   .ListingItems__main
     .ListingForm
       .ListingPics
@@ -11,26 +8,26 @@
         %p.Pics-max5 最大5枚までアップロードできます 
         .ListingPics__upload
           .PicsFrame
-            %label#id.ClickLabel{for: ""}
+            %label.ClickLabel{for: ""}
               .FrameCentre
                 %i.fas.fa-camera
                 %p.FrameCentre__instructions クリックしてファイルをアップロード
         .ListingPics__hidden
-          %input#id.HiddenField{name: "", type: "file"}
-          %input#id.HiddenField{name: "", type: "file"}      
-          %input#id.HiddenField{name: "", type: "file"}
-          %input#id.HiddenField{name: "", type: "file"}
-          %input#id.HiddenField{name: "", type: "file"}
+          %input.HiddenField{name: "", type: "file"}
+          %input.HiddenField{name: "", type: "file"}      
+          %input.HiddenField{name: "", type: "file"}
+          %input.HiddenField{name: "", type: "file"}
+          %input.HiddenField{name: "", type: "file"}
       %hr.HorizontalRule          
       .Description
         .Description__name
           %label{for: "item_name"} 商品名
           %span.Required 必須
-          %input#id{required: "required", placeholder: "40文字まで", type: "text", name: ""}
+          %input{required: "required", placeholder: "40文字まで", type: "text", name: ""}
         .Description__text
           %label{for: ""} 商品の説明
           %span.Required 必須
-          %textarea#id.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
+          %textarea.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
         .Description__wordCount
           %span 0
           \/1000
@@ -40,15 +37,15 @@
         .Categories
           %label{for: ""} カテゴリー
           %span.Required 必須
-          %select#id.Categories-ancestry{required: "required", name: "", placeholder: "選択してください"} 
+          %select.Categories-ancestry{required: "required", name: "", placeholder: "選択してください"}
         .Brands
           %label{for: ""} ブランド
           %span.Optional 任意
-          %input#id{placeholder: "例）シャネル", type: "text", name: ""}
+          %input{placeholder: "例）シャネル", type: "text", name: ""}
         .Condition
           %label{for: ""} 商品の状態
           %span.Required 必須
-          %select#id{required: "required", name: ""}
+          %select{required: "required", name: ""}
       %hr.HorizontalRule
       .Shipping
         %p.Shipping__title 
@@ -58,16 +55,16 @@
         .Shipping__whoPays
           %label{for: ""} 配送料の負担
           %span.Required 必須
-          %select#id{required: "required", name: ""}
+          %select{required: "required", name: ""}
         #Shipping__methods 
         .Shipping__from
           %label{for: ""} 発送元の地域
           %span.Required 必須
-          %select#id{required: "required", name: ""} 
+          %select{required: "required", name: ""} 
         .Shipping__days
           %label{for: ""} 発送までの日数
           %span.Required 必須
-          %select#id{required: "required", name: ""}    
+          %select{required: "required", name: ""}    
       %hr.HorizontalRule
       .Prices
         %p.Prices__title 
@@ -79,7 +76,7 @@
             %label{for: ""} 販売価格
             %span.Required 必須
           %span.YenMark ¥
-          %input#id.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
+          %input.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
         .Prices__salesCommission
           .Prices__salesCommission__left 販売手数料（10%）
           %span.Prices__salesCommission__right ー
@@ -108,15 +105,3 @@
             %a{href: ""} 加盟店規約 
             に同意したことになります。
   .ListingItems__footer
-    .Nav
-      %ul.Terms
-        %li
-          %a{href: "/"}プライバシーポリシー
-        %li
-          %a{href: "/"}フリマ利用規約
-        %li
-          %a{href: "/"}商標取引に関する表記
-    %a.Title{href: "/", onmousedown: "return false;", onselectstart: "return false;"}
-      %img{scr: ""}
-    %p 
-      %small ©︎FURIMA

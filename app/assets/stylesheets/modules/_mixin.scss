@@ -22,7 +22,6 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-family: inherit;
   margin: 0;
   outline: none;
   padding: 0 16px;
@@ -86,10 +85,10 @@
 @mixin btn($backgroundColor, $borderColor, $fontColor) {
   font-size: 17px;
   min-height: 48px;
+  line-height: 48px;
   padding: 0 24px;
   font-weight: 600;
   width: 100%; 
-  line-height: 48px;
   border-radius: 4px;
   box-sizing: border-box;
   background: $backgroundColor;
@@ -103,13 +102,6 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-
-@mixin p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px
 }
 
 @mixin a {

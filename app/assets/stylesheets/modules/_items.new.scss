@@ -1,15 +1,12 @@
 .ListingItems {
   box-sizing: border-box;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   background: whitesmoke;
   font-size: 14px;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   &__header {
-    height: 128px; 
-    text-align: center;
-  } 
+  }        
   &__main {
     margin: 0px auto;
     max-width: 700px;
@@ -199,7 +196,7 @@
         }
         &__profit {
           @include prices;
-          padding-bottom: 0px !important;
+          padding-bottom: 0px;
           &__left {
             margin-right: auto;
             font-size: 14px;
@@ -223,22 +220,20 @@
           }
           .NbtnRtn {
             @include btnSetting; 
-          }
+          }  
           a {
             @include a;
           }
         }
       }
       .Agreement {
+        line-height:0;
         padding-bottom: 32px;
         background-color: #fff;
         &__contents {
           margin: 0px 40px 32px;
           font-size: 12px;
           line-height: 1.4em; 
-          p {
-            @include p;
-          } 
           a {
             @include a;
           }
@@ -247,6 +242,5 @@
     }
   }   
   &__footer {
-
   }  
 }
