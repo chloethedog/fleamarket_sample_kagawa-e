@@ -4,7 +4,7 @@
   line-height: 1.4em;
 }
 
-@mixin span($color) {
+@mixin span($color: #ff0211) {
   background-color: $color;
   color: #fff;
   font-size: 12px;
@@ -31,7 +31,7 @@
   margin-top: 16px;
 }
 
-@mixin label-span($color) {
+@mixin label-span($color: #ff0211) {
   label {
     font-size: 14px;
     font-weight: 600;
@@ -81,4 +81,38 @@
   display: flex;
   height: 46px;
   padding: 12px 0px;
+}
+
+@mixin btn($backgroundColor, $borderColor, $fontColor) {
+  font-size: 17px;
+  min-height: 48px;
+  padding: 0 24px;
+  font-weight: 600;
+  width: 100%; 
+  line-height: 48px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: $backgroundColor;
+  border: 1px solid $borderColor;
+  color: $fontColor;
+}
+
+@mixin btnSetting {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+@mixin p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px
+}
+
+@mixin a {
+  color: #0099e8;
+  text-decoration: none;
 }

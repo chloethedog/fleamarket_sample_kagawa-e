@@ -8,7 +8,7 @@
       .ListingPics
         %label 出品画像
         %span.Required 必須
-        %p.Pics-max5 最大５枚までアップロードできます 
+        %p.Pics-max5 最大5枚までアップロードできます 
         .ListingPics__upload
           .PicsFrame
             %label#id.ClickLabel{for: ""}
@@ -40,7 +40,7 @@
         .Categories
           %label{for: ""} カテゴリー
           %span.Required 必須
-          %select#id.Categories-ancestry{required: "required", name: ""}
+          %select#id.Categories-ancestry{required: "required", name: "", placeholder: "選択してください"} 
         .Brands
           %label{for: ""} ブランド
           %span.Optional 任意
@@ -71,7 +71,7 @@
       %hr.HorizontalRule
       .Prices
         %p.Prices__title 
-          価格（￥300〜9,999,999）
+          価格（¥300〜9,999,999）
           %a{href: ""}  
             %i.far.fa-question-circle
         .Prices__pricing
@@ -81,7 +81,7 @@
           %span.YenMark ¥
           %input#id.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
         .Prices__salesCommission
-          .Prices__salesCommission__left 販売手数料（10％）
+          .Prices__salesCommission__left 販売手数料（10%）
           %span.Prices__salesCommission__right ー
         %hr.HorizontalRule
         .Prices__profit
