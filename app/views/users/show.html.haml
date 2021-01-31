@@ -1,0 +1,93 @@
+.user
+  = render "shared/header"
+  .user__body
+    .userbody__main
+      .userbody__main__left
+        .left__navi
+          %ul.navi__me
+            %li.navi__me__contents  マイページ
+            %li= link_to 'お知らせ', "#", class: "list"
+            %li= link_to 'やることリスト', "#", class: "list" 
+            %li= link_to 'お気に入り一覧', "#", class: "list"
+            %li= link_to '出品する', "#", class: "list"
+            %li= link_to '下書き一覧', "#", class: "list"
+            %li= link_to '出品した商品・出品中', "#", class: "list"
+            %li= link_to '出品した商品・取引中', "#", class: "list"
+            %li= link_to '出品した商品・売却済み', "#", class: "list"
+            %li= link_to '購入した商品・取引中', "#", class: "list"
+            %li= link_to '出品した商品・過去の取引', "#", class: "list"
+            %li= link_to 'ニュース一覧', "#", class: "list"
+            %li= link_to '評価一覧', "#", class: "list"
+            %li= link_to 'ガイド', "#", class: "list"
+            %li= link_to 'お問い合わせ', "#", class: "list"
+          %ul.navi__me
+            %li.navi__me__contents  フリぺい
+            %li= link_to '売上・振り込み申請', "#", class: "list"
+            %li= link_to 'ポイント', "#", class: "list"
+          %ul.navi__me
+            %li.navi__me__contents  設定
+            %li= link_to 'プロフィール', "#", class: "list"
+            %li= link_to '発送元・お届け先住所', "#", class: "list"
+            %li= link_to '支払い方法', "#", class: "list"
+            %li= link_to 'メール/パスワード', "#", class: "list"
+            %li= link_to '本人情報', "#", class: "list"
+            %li= link_to '電話番号確認', "#", class: "list"
+            %li= link_to 'ログアウト', "#", class: "list"
+
+      .bodymain__right
+        .right__Upper
+          .right__Upper__contents
+            .content__user
+              = image_tag "member_photo_noimage_thumb.png",width: '60',height:'60'
+            %h2 やの
+            .content__grades 評価  １００
+
+        .right__middle
+          %ul.middle__notice
+            %li.tab__active  お知らせ
+            %li.tab__active やることリスト
+          .middle__notice__list
+            %ul.middle__notice__list__left
+              %li= link_to 'アイテムトップページ', "#", class: "left_class" 
+              %li= link_to 'アイテムニュウ', "#", class: "left_class" 
+              %li= link_to '今がチャンス', "#", class: "left_class" 
+              %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
+              %li= link_to 'テックキャンプ', "#", class: "left_class" 
+              %li= link_to 'ポイントがもらえる', "#", class: "left_class" 
+              %li= link_to '今がチャンス', "#", class: "left_class" 
+              %li= link_to 'エントリーお待ちしてます', "#", class: "left_class" 
+            %ul.notice__list__right
+              %li= link_to 'ユーザーインデックス', "#", class: "right_class" 
+              %li= link_to 'ユーザーNEW', "#", class: "right_class" 
+              %li= link_to 'ユーザーEDIT', "#", class: "right_class" 
+              %li= link_to 'ユーザーコントローラー', "#", class: "right_class" 
+              %li= link_to 'エントリーお待ちしてます', "#", class: "right_class" 
+
+        .right__lower
+          %h3 ▼▼▼  購入した商品  ▼▼▼
+          .trading__now
+            .now__tab
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "member_photo_noimage_thumb.png"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+              = link_to "#" do
+                = image_tag "fireworks_00020.jpg"
+  = render "shared/footer"
+  .purchase-btn
+    .purchase-btn--text 出品する
+    = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
