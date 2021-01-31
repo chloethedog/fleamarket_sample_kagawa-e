@@ -71,6 +71,30 @@ describe "user" do
       user.valid?
       expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
     end
+
+    it "is invalid without last name" do
+      user = build(:user, last_name: "")
+      user.valid?
+      expect(user.errors[:last_name]).to include("can't be blank")
+    end
+
+    it "is invalid without first name" do
+      user = build(:user, first_name: "")
+      user.valid?
+      expect(user.errors[:first_name]).to include("can't be blank")
+    end
+
+    it "is invalid without full-width last name" do
+      user = build(:user, last_name: "test")
+      user.valid?
+      expect(user.errors[:last_name]).to include("に全角文字を使用してください")
+    end
+
+    it "is invalid without full-width first name" do
+      user = build(:user, first_name: "test")
+      user.valid?
+      expect(user.errors[:first_name]).to include("に全角文字を使用してください")
+    end
   end
 
 end
