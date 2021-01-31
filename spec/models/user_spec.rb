@@ -95,6 +95,62 @@ describe "user" do
       user.valid?
       expect(user.errors[:first_name]).to include("に全角文字を使用してください")
     end
+
+    it "is invalid without last name ruby" do
+      user = build(:user, last_name_ruby: "")
+      user.valid?
+      expect(user.errors[:last_name_ruby]).to include("can't be blank")
+    end
+
+    it "is invalid without first name ruby" do
+      user = build(:user, first_name_ruby: "")
+      user.valid?
+      expect(user.errors[:first_name_ruby]).to include("can't be blank")
+    end
+
+    it "last name ruby is invalid in kanji" do
+      user = build(:user, last_name_ruby: "試験")
+      user.valid?
+      expect(user.errors[:last_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "first name ruby is invalid in kanji" do
+      user = build(:user, first_name_ruby: "試験")
+      user.valid?
+      expect(user.errors[:first_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "last name ruby is invalid in katakana" do
+      user = build(:user, last_name_ruby: "テスト")
+      user.valid?
+      expect(user.errors[:last_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "first name ruby is invalid in katakana" do
+      user = build(:user, first_name_ruby: "テスト")
+      user.valid?
+      expect(user.errors[:first_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "last name ruby is invalid in ABC" do
+      user = build(:user, last_name_ruby: "test")
+      user.valid?
+      expect(user.errors[:last_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "first name ruby is invalid in ABC" do
+      user = build(:user, first_name_ruby: "test")
+      user.valid?
+      expect(user.errors[:first_name_ruby]).to include("に全角ひらがなを使用してください")
+    end
+
+    it "is invalid without a birthday" do
+      user = build(:user, birthday: "")
+      user.valid?
+      expect(user.errors[:birthday]).to include("can't be blank")
+    end
+
+
   end
 
 end
