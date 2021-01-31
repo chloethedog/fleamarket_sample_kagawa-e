@@ -1,5 +1,6 @@
 .ListingItems
   .ListingItems__header
+    = render "purchases/header"
   .ListingItems__main
     .ListingForm
       .ListingPics
@@ -13,11 +14,14 @@
                 %i.fas.fa-camera
                 %p.FrameCentre__instructions クリックしてファイルをアップロード
         .ListingPics__hidden
-          %input.HiddenField{name: "", type: "file"}
-          %input.HiddenField{name: "", type: "file"}      
-          %input.HiddenField{name: "", type: "file"}
-          %input.HiddenField{name: "", type: "file"}
-          %input.HiddenField{name: "", type: "file"}
+          .HiddenField
+            .Preview
+              .Preview__upper
+              .Preview__lower
+                .Preview__lower__update
+                  %span.PhotoUpdate 編集
+                .Preview__lower__delete
+                  %span.PhotoDelete　削除
       %hr.HorizontalRule          
       .Description
         .Description__name
@@ -37,7 +41,13 @@
         .Categories
           %label{for: ""} カテゴリー
           %span.Required 必須
-          %select.Categories-ancestry{required: "required", name: "", placeholder: "選択してください"}
+          %select.Categories__parent{required: "required", name: ""}
+          %select.Categories__child{required: "required", name: ""}
+          %select.Categories__grandChild{required: "required", name: ""}
+        .Size
+          %label{for: ""} サイズ
+          %span.Required 必須
+          %select{required: "required", name: ""}
         .Brands
           %label{for: ""} ブランド
           %span.Optional 任意
@@ -56,7 +66,10 @@
           %label{for: ""} 配送料の負担
           %span.Required 必須
           %select{required: "required", name: ""}
-        #Shipping__methods 
+        .Shipping__methods 
+          %label{for: ""} 配送の方法
+          %span.Required 必須
+          %select{required: "required", name: ""}
         .Shipping__from
           %label{for: ""} 発送元の地域
           %span.Required 必須
@@ -105,3 +118,4 @@
             %a{href: ""} 加盟店規約 
             に同意したことになります。
   .ListingItems__footer
+    = render "purchases/footer"
