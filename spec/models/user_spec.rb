@@ -145,7 +145,7 @@ describe "user" do
     end
 
     it "is invalid without a birthday" do
-      user = build(:user, birthday: "")
+      user = build(:user, birthday: "test")
       user.valid?
       expect(user.errors[:birthday]).to include("can't be blank")
     end
