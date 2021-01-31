@@ -42,6 +42,35 @@ describe "user" do
       user.valid?
       expect(user.errors[:email]).to include("は＠とドメインを含む必要があります")
     end
+
+    it "is invalid without a password" do
+      user = build(:user, password: "")
+      user.valid?
+      expect(user.errors[:password]).to include("can't be blank")
+    end
+
+    it "is invalid without a password_confirmation" do
+      user = build(:user, password_confirmation: "")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("can't be blank")
+    end
+
+    it "is invalid without entry the same password" do
+      user = build(:user, password: "test0000", password_confirmation: "test0001")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
+
+    it "password of 7 characters or more is valid" do
+      user = build(:user, password: "test000", password_confirmation: "test000")
+      expect(user).to be_valid
+    end
+    
+    it "passwords of 6 characters or less is invalid" do
+      user = build(:user, password: "test00", password_confirmation: "test00")
+      user.valid?
+      expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
+    end
   end
 
 end
