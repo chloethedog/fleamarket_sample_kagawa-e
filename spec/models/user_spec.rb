@@ -15,14 +15,14 @@ describe "user" do
     it "is invalid without a email address" do
       user = build(:user, email: "")
       user.valid?
-      expect(user.errors[:email]).to include("can't be blank")
+      expect(user.errors[:email]).to include("は空で入力しないでください。")
     end
 
     it "is invalid with a duplicate email address" do
       user = create(:user)
       user = build(:user)
       user.valid?
-      expect(user.errors[:email]).to include("has already been taken")
+      expect(user.errors[:email]).to include("は既に登録されています。")
     end
 
     it "is invalid with Email addresses without @ and domain" do
@@ -46,7 +46,7 @@ describe "user" do
     it "is invalid without a password" do
       user = build(:user, password: "")
       user.valid?
-      expect(user.errors[:password]).to include("can't be blank")
+      expect(user.errors[:password]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without a password_confirmation" do
@@ -58,7 +58,7 @@ describe "user" do
     it "is invalid without entry the same password" do
       user = build(:user, password: "test0000", password_confirmation: "test0001")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+      expect(user.errors[:password_confirmation]).to include("パスワードが間違っています。")
     end
 
     it "password of 7 characters or more is valid" do
