@@ -8,19 +8,28 @@ class User < ApplicationRecord
   has_one :card 
   has_many :items
 
-  validates :nickname, :birthday ,presence: true
-
-  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は＠とドメインを含む必要があります'}
+  validates :email, uniqueness: { case_sensitive: false }, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は＠とドメインを含む必要があります'}
                     
   validates :password, confirmation: true
-  validates :password, :password_confirmation ,presence: true ,length: { minimum: 7 }
+  validates :password, :password_confirmation ,length: { minimum: 7,message: "は7文字以上で入力してください"}
 
-  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: 'に全角文字を使用してください'} do
+  with_options presence: {message: 'は空で入力しないでください。'} do
+    validates :nickname
+    validates :birthday
+    validates :password
+    validates :password_confirmation
+    validates :last_name
+    validates :first_name
+    validates :first_name_ruby
+    validates :last_name_ruby
+  end
+
+  with_options format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: 'に全角文字を使用してください'} do
     validates :last_name
     validates :first_name
   end
   
-  with_options presence: true, format: { with: /\A[ぁ-ん-]+\z/, message: 'に全角ひらがなを使用してください'} do
+  with_options format: { with: /\A[ぁ-ん-]+\z/, message: 'に全角ひらがなを使用してください'} do
     validates :last_name_ruby
     validates :first_name_ruby
   end

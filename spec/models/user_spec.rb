@@ -9,7 +9,7 @@ describe "user" do
     it "is invalid without a nickname" do
       user = build(:user, nickname: "")
       user.valid?
-      expect(user.errors[:nickname]).to include("can't be blank")
+      expect(user.errors[:nickname]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without a email address" do
@@ -52,7 +52,7 @@ describe "user" do
     it "is invalid without a password_confirmation" do
       user = build(:user, password_confirmation: "")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("can't be blank")
+      expect(user.errors[:password_confirmation]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without entry the same password" do
@@ -69,19 +69,19 @@ describe "user" do
     it "passwords of 6 characters or less is invalid" do
       user = build(:user, password: "test00", password_confirmation: "test00")
       user.valid?
-      expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
+      expect(user.errors[:password]).to include("は7文字以上で入力してください")
     end
 
     it "is invalid without last name" do
       user = build(:user, last_name: "")
       user.valid?
-      expect(user.errors[:last_name]).to include("can't be blank")
+      expect(user.errors[:last_name]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without first name" do
       user = build(:user, first_name: "")
       user.valid?
-      expect(user.errors[:first_name]).to include("can't be blank")
+      expect(user.errors[:first_name]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without full-width last name" do
@@ -99,13 +99,13 @@ describe "user" do
     it "is invalid without last name ruby" do
       user = build(:user, last_name_ruby: "")
       user.valid?
-      expect(user.errors[:last_name_ruby]).to include("can't be blank")
+      expect(user.errors[:last_name_ruby]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without first name ruby" do
       user = build(:user, first_name_ruby: "")
       user.valid?
-      expect(user.errors[:first_name_ruby]).to include("can't be blank")
+      expect(user.errors[:first_name_ruby]).to include("は空で入力しないでください。")
     end
 
     it "last name ruby is invalid in kanji" do
@@ -147,7 +147,7 @@ describe "user" do
     it "is invalid without a birthday" do
       user = build(:user, birthday: "test")
       user.valid?
-      expect(user.errors[:birthday]).to include("can't be blank")
+      expect(user.errors[:birthday]).to include("は空で入力しないでください。")
     end
 
 
