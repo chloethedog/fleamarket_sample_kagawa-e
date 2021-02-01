@@ -40,5 +40,10 @@ describe "delivery" do
       expect(delivery).to be_valid
     end
 
+    it "valid without user_id" do
+      delivery = build(:delivery, user_id: "")
+      expect(delivery).to be_valid
+    end
+
   end
 end

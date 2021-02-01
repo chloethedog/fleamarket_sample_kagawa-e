@@ -7,7 +7,7 @@ FactoryBot.define do
     address {"サンポート2-1"}
     address_detail {"高松シンボルタワー タワー棟4・5階"}
     phone_number {"087-822-0111"}
-    user_id {""}
+    user_id {"1"}
   end
 
 end
