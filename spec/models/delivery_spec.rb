@@ -9,25 +9,25 @@ describe "delivery" do
     it "is invalid without postal_code" do
       delivery = build(:delivery, postal_code: "")
       delivery.valid?
-      expect(delivery.errors[:postal_code]).to include("can't be blank")
+      expect(delivery.errors[:postal_code]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without prefecture_id" do
       delivery = build(:delivery, prefectures_id: "")
       delivery.valid?
-      expect(delivery.errors[:prefectures_id]).to include("can't be blank")
+      expect(delivery.errors[:prefectures_id]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without municipality" do
       delivery = build(:delivery, municipality: "")
       delivery.valid?
-      expect(delivery.errors[:municipality]).to include("can't be blank")
+      expect(delivery.errors[:municipality]).to include("は空で入力しないでください。")
     end
 
     it "is invalid without address" do
       delivery = build(:delivery, address: "")
       delivery.valid?
-      expect(delivery.errors[:address]).to include("can't be blank")
+      expect(delivery.errors[:address]).to include("は空で入力しないでください。")
     end
 
     it "valid without address_detail" do
