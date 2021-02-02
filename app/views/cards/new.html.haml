@@ -1,3 +1,21 @@
 %body.card-registration
   = render "purchases/header"
+  %main.card-registration__main
+    %section.card-registration__title
+      %h2 支払い方法
+    = form_with url: "#", id: "card_form" do
+      .card_form
+        .input-form
+          .input-form__form-title
+            %label カード番号
+            %span 必須
+          .input-form__input-box
+            %input 
+            = image_tag 'visa-c.svg', class: 'card-company'
+            = image_tag 'mastercard.svg', class: 'card-company'
+            = image_tag 'saison.svg', class: 'card-company'
+            = image_tag 'jcb.svg', class: 'card-company'
+            = image_tag 'american_express.svg', class: 'card-company'
+            = image_tag 'dinersclub.svg', class: 'card-company'
+            = image_tag 'discover.svg', class: 'card-company'
   = render "purchases/footer"
