@@ -1,1 +1,22 @@
 .user
+  = render "shared/header"
+  .user__body
+    .userbody__main
+      .userbody__main__left
+        = render "users/left_navi"
+      .bodymain__right
+        .payment-method
+          %section.payment-method__title
+          .payment-method__card-list
+            %section.payment-method__card-registration
+              = link_to "#", class: "payment-method__card-link" do
+                %icon.far.fa-credit-card
+                クレジットカードを追加する
+            %section.payment-method__detail
+              = link_to "#" do
+                %span 支払い方法について
+                %icon.fas.fa-angle-right
+  = render "shared/footer"
+  .purchase-btn
+    .purchase-btn--text 出品する
+    = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
