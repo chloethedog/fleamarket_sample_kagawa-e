@@ -68,15 +68,15 @@
                 display: flex;
                 text-align: center;
                 &__update {
-                  text-align
+                  @include PicLower;
                   .PicUpdate {
-                  @include PicLower-btn
+                    @include PicLower-btn;
                   }
                 }
                 &__delete {
                   @include PicLower;
-                  .PicDelete {
-                    @include PicLower-btn
+                 .PicDelete {
+                    @include PicLower-btn;
                   }
                 }
               }             
