@@ -1,4 +1,8 @@
 class Item < ApplicationRecord
+  belongs_to :user
+  belongs_to :category
+  belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
+  has_one :item_photo
 
   with_options presence: true do
     validates :name
