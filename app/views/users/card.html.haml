@@ -7,12 +7,13 @@
       .bodymain__right
         .payment-method
           %section.payment-method__title
+            %h2 支払い方法
           .payment-method__card-list
-            %section.payment-method__card-registration
+            %section.payment-method__section
               = link_to "#", class: "payment-method__card-link" do
                 %icon.far.fa-credit-card
                 クレジットカードを追加する
-            %section.payment-method__detail
+            %section.payment-method__section.TAR
               = link_to "#" do
                 %span 支払い方法について
                 %icon.fas.fa-angle-right
