@@ -10,7 +10,7 @@
             %h2 支払い方法
           .payment-method__card-list
             %section.payment-method__section
-              = link_to "#", class: "payment-method__card-link" do
+              = link_to new_card_path, class: "payment-method__card-link" do
                 %icon.far.fa-credit-card
                 クレジットカードを追加する
             %section.payment-method__section.TAR
