@@ -11,7 +11,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :state_id,           null: false
       t.string :brand
       t.integer :delivery_fee_id,    null: false
-      t.integer :delivery_are_id,    null: false
+      t.integer :delivery_area_id,    null: false
       t.integer :delivery_method_id, null: false
       t.integer :shipment_date_id,   null: false
       t.timestamps
