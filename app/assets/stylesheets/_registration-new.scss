@@ -1,5 +1,6 @@
-%body{
+@import "modules/sessions-detail";
 
+%body{
 }
 
 .Header{
@@ -87,29 +88,12 @@
         }
 
         .InputDefaultA{
-          box-sizing: border-box;
-          height: 48px;
-          width: calc(50% - 6px);
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          margin: 8px 0 0;
+         @include Inputplace;
           margin-right: 7.5px;
         }
 
         .InputDefaultB{
-          box-sizing: border-box;
-          height: 48px;
-          width: calc(50% - 6px);
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
+          @include Inputplace;
           margin: 8px 0 0;
         }
 
@@ -152,7 +136,8 @@
           border-radius: 4px;
           transition: all ease-out .3s;
           cursor: pointer;
-          text-align: center;         
+          text-align: center;
+          text-decoration: none;     
         }
 
   .Footer{
@@ -164,36 +149,10 @@
 
   }
 
+.FormGroupdiv2{
+  display:flex;
+}
 
-
-
-
-
-
-
-// .MainHeader__title{
-//   font-size: 22px;
-//   padding: 32px;
-//   font-weight: bold;
-//   line-height: 1.5;
-//   text-align: center;
-// }
-
-// .MainField{
-//   width: 700px;
-//   height: 1701px;
-//   background-color: papayawhip;
-// }
-
-// .MainField__user{
-//   width: 343px;
-//   height: 1596px;
-//   background-color:peru;
-// }
-
-
-// .Footer{
-//   width: 1440px;
-//   height: 220px;
-//   background-color: blue;
-// }
+.year{
+  line-height: 60px;
+}

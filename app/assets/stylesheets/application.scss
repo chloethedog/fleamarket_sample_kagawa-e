@@ -1,9 +1,11 @@
 @import "reset";
-@import "registration-new.scss";
+
 @import "modules/mixin";
+@import "registration-new.scss";
 @import "items";
 @import "modules/footer";
 @import "modules/header";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "_sessions.scss";
