@@ -18,13 +18,13 @@
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 }
 
-  .MainWrapper{
+  .Main__Wrapper{
     width: 700px;
     margin: 0 auto;
     background-color: #fff;
   }
 
-    .MainHeaderTitle{
+    .Main__Header__Title{
       font-size: 22px;
       padding: 32px;
       font-weight: bold;
@@ -32,17 +32,17 @@
       text-align: center;  
     }
 
-    .NewUser{
+    .New__User{
       padding: 40px 40px 64px;
       border-top: 1px solid #f5f5f5;
     }
 
-      .FormContainer{
+      .Form__Container{
         margin: 0 auto;
         max-width: 343px;
      }
 
-        .FormGroup{
+        .Form__Group{
           margin: 24px 0 0;
         }
 
@@ -73,7 +73,7 @@
           line-height: 1.4em;
         }
 
-        .InputDefault{
+        .Input__Default{
           box-sizing: border-box;
           height: 48px;
           width: 100%;
@@ -87,12 +87,12 @@
           margin-right: 7.5px;
         }
 
-        .InputDefaultA{
+        .Input__Default__A{
          @include Inputplace;
           margin-right: 7.5px;
         }
 
-        .InputDefaultB{
+        .Input__Default__B{
           @include Inputplace;
           margin: 8px 0 0;
         }
@@ -102,13 +102,13 @@
           font-weight: bold;
         }
 
-        .ExpositionSentence{
+        .Exposition__Sentence{
           font-size: 14px;
           margin: 8px 0 0;
           padding: 0;
         }
 
-         .FormGroupA{
+         .Form__GroupA{
           margin: 24px 0 0;
          } 
 
@@ -149,10 +149,11 @@
 
   }
 
-.FormGroupdiv2{
+.Form__Group__div2{
   display:flex;
 }
 
 .year{
   line-height: 60px;
 }
+
