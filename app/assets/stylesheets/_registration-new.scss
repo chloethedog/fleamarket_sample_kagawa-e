@@ -1,4 +1,4 @@
-@import "modules/sessions-detail";
+
 
 .Main{
   background-repeat: no-repeat;
@@ -124,8 +124,8 @@
 }
 
 .Category__T{
+  @include BGcolor;
   margin-top: 40px;
-  background: #3CCACE;
   border: 1px solid #3CCACE;
   color: #fff;
   display: block;
