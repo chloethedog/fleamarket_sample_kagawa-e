@@ -106,6 +106,11 @@
           color: #fff;
         }
       }
+
+      .reason-img {
+        width: 300px;
+        height: 300px;
+      }
     
       &--text {
         font-weight: bold;
@@ -277,7 +282,7 @@
 }
 
 .product__sample--img {
-  width: 100%;
+  width: 184px;
   height: 150px;
   position: relative;
   overflow: hidden;
@@ -322,28 +327,3 @@
   align-items: center;
   justify-content: space-between;
 }
-
-//出品するボタン//
-.purchase-btn {
-  width: 90px;
-  @include BGcolor;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px;
-
-  &--text {
-    color: #fff;
-    display: block;
-    font-size: 18px;
-    text-decoration: none;
-    margin-bottom: 5px;
-  }
-  
-  &--icon {
-    width: 60%;
-  }
-}
-

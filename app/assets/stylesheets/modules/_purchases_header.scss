@@ -1,0 +1,25 @@
+.purchases-header {
+  height: 128px;
+  //変数でまとめる予定,購入確認ページ全体のcss
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  font-size: 14px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+
+    &--furima {
+      width: 185px;
+      height: 49px;
+      display: inline-block;
+    }
+}

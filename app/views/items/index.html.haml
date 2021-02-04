@@ -18,7 +18,7 @@
             .reason__list--contents
               %span.number
                 %p 1
-              = image_tag"pict-reason-01.jpg",width:300,height:'300'
+              = image_tag"pict-reason-01.jpg",class: "reason-img"
             .reason__list--text
               %span 3分
               %text ですぐに出品
@@ -28,7 +28,7 @@
             .reason__list--contents
               %span.number
                 %p 2
-              = image_tag "pict-reason-02.jpg",width:300,height:'300'
+              = image_tag "pict-reason-02.jpg",class: "reason-img"
             .reason__list--text
               %span シンプル
               %text で使いやすい
@@ -38,7 +38,7 @@
             .reason__list--contents
               %span.number
                 %p 3
-              = image_tag "pict-reason-03.jpg",width:300,height:'300'
+              = image_tag "pict-reason-03.jpg",class: "reason-img"
             .reason__list--text
               %text 手数料
               %span 業界最安
@@ -89,7 +89,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "339674_s.jpg",width:'184',height:'150'
+                = image_tag "339674_s.jpg",class:"img"
               .product__sample--text
                 %h3.Introduction  ロンパース
                 .details
@@ -102,7 +102,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -115,7 +115,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -128,7 +128,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -141,7 +141,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -154,7 +154,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -167,7 +167,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -180,7 +180,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -193,7 +193,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -206,7 +206,7 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",width:'184',height:'150',class:"img"
+                = image_tag "pict-reason-01.jpg",class:"img"
               .product__sample--text
                 .Introduction  テレワーク
                 .details
@@ -226,12 +226,12 @@
           .container__sample
             = link_to "#" do
               %figure.product__sample--img
-                = image_tag "udon01.png",width:'184',height:'150',class:"img"
+                = image_tag "339674_s.jpg",class:"img"
               .product__sample--text
-                .Introduction  うどん
+                .Introduction  ロンパース
                 .details
                   %ul
-                    %li  500円
+                    %li  1,000円
                     %li
                       .fa.fa-star
                       0
@@ -239,4 +239,5 @@
   = render "shared/footer"
   .purchase-btn
     .purchase-btn--text 出品する
-    = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
+    = link_to (image_tag 'icon_camera.png' ,class: "purchase-btn--icon")
+
