@@ -141,6 +141,7 @@
     }
   }
 }
+//お支払機能のページについてのscss
 .payment-method {
   flex: 1 1 0%;
   width: 700px;
@@ -170,8 +171,8 @@
     text-align: right;
   }
   &__card-link {
-    background-color: #3CCACE;
-    border: 1px solid #3CCACE;
+    background-color: $usual-color;
+    border: 1px solid $usual-color;
     color: #fff;
     display: block;
     width: 100%;
