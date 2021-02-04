@@ -141,7 +141,6 @@
     }
   }
 }
-
 .payment-method {
   flex: 1 1 0%;
   width: 700px;
@@ -184,4 +183,29 @@
     text-align: center;
   }
 }
+
+.credit-card {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  &__card-detail {
+    flex: 1 1 0%;
+    margin: 0px 16px;
+  }
+  &__company-image {
+    margin-top: 8px;
+    max-height: 32px;
+    max-width: 48px;
+  }
+  &__delete-btn {
+    background-color: initial;
+    border: 1px solid #ea352d;
+    border-radius: 4px;
+    color: #ea352d;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 12px;
+  }
+}
+
 
