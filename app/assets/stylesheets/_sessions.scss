@@ -40,35 +40,31 @@
   background-color: white;
   border-top: 1px solid #3CCACE;
   text-align: center;
-}
-.body__btn__gg{
-  width: 328px;
-  height: 52px;
-  font-size: 15px;
-  margin: 0px 65px 20px;
-  border: #979797 solid 1px;
-  background-color: white;
-  padding: 15px;
-}
-.body__btn__fb{
-  width: 328px;
-  height: 52px;
-  font-size: 15px;
-  margin: 20px 65px 20px;
-  border: #979797 solid 1px;
-  background-color: #385185;
-  padding: 15px;
-  color: wheat;
-}
-.body__btn__ap{
-  width: 328px;
-  height: 52px;
-  font-size: 15px;
-  margin: 20px 65px 20px;
-  border: #979797 solid 1px;
-  background-color: black;
-  padding: 15px;
-  color: wheat;
+
+  .body__btn__gg{
+    @include BtnSize; 
+    margin: 0px 65px 20px;
+    border: #979797 solid 1px;
+    background-color: white;
+    padding: 15px;
+  
+  }
+  .body__btn__fb{
+    @include BtnSize;
+    margin: 20px 65px 20px;
+    border: #979797 solid 1px;
+    background-color: #385185;
+    padding: 15px;
+    color: wheat;
+  }
+  .body__btn__ap{
+    @include BtnSize;
+    margin: 20px 65px 20px;
+    border: #979797 solid 1px;
+    background-color: black;
+    padding: 15px;
+    color: wheat;
+  }
 }
 .form{
   width: 456px;
@@ -102,4 +98,8 @@
     font-size: 15px;
     color: blue;
   }
+}
+
+.fa-apple-alt {
+  color: white;
 }

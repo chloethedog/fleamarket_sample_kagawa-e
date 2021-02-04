@@ -5,13 +5,13 @@
       = link_to '新規会員登録', "#", class: "new__log"
     .Signin__body__btn
       %button.body__btn__gg
-        %i.fa.fa-star
+        %i.fab.fa-google
         Googleでログイン
       %button.body__btn__fb
-        %i.fa.fa-star
+        %i.fab.fa-facebook-square
         Facebookでログイン
       %button.body__btn__ap
-        %i.fa.fa-star
+        %i.fa.fa-apple-alt
         Appleでログイン
     =form_with html: {class: "form"}do |f|
       = f.text_field :text, class: 'form__email', placeholder: "  メールアドレス"

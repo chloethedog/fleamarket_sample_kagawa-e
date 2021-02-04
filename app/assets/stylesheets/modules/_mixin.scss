@@ -26,3 +26,9 @@
   font-size: 16px;
   margin: 8px 0 0;
 }
+
+@mixin BtnSize {
+  width: 328px;
+  height: 52px;
+  font-size: 15px;
+}

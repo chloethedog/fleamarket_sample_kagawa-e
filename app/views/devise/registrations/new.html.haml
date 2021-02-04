@@ -27,26 +27,28 @@
             %h3.Exposition 本人確認
             %p.Exposition__Sentence 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ご協力ください。他のお客さまに公開されることはありません。
           .Form__Group
-            .Form__GroupA
+            .Form__Group
               .Form__Group__div
                 %label.Category お名前(全角)
                 %span.Sticker 必須
-              %input.Input__Default__A{name: "email", placeholder: "例)香川"}
-              %input.Input__Default__B{name: "email", placeholder: "例)太郎"}
+              .Form__Group__div__parallel
+                %input.Input__Default__left{name: "email", placeholder: "例)香川"}
+                %input.Input__Default__right{name: "email", placeholder: "例)太郎"}
           .Form__Group
             .Form__Group
               .Form__Group__div
                 %label.Category お名前カナ(全角)
                 %span.Sticker 必須
-              %input.Input__Default__A{name: "email", placeholder: "例)カガワ"}
-              %input.Input__Default__B{name: "email", placeholder: "例)タロウ"}
+              .Form__Group____parallel
+                %input.Input__Default__left{name: "email", placeholder: "例)カガワ"}
+                %input.Input__Default__right{name: "email", placeholder: "例)タロウ"}
           .Form__Group
             .Form__Group
               .Form__Group__div
                 %label.Category 生年月日
                 %span.Sticker 必須
-              .Form__Group__div2
-                %select.Input__Default__B{name: "select"}
+              .Form__Group__div__parallel
+                %select.Input__Default__right{name: "select"}
                   %option{value: ""} --
                   %option{value: "1900"} 1900f
                   %option{value: "1901"} 1901
@@ -170,7 +172,7 @@
                   %option{value: "2019"} 2019
                   %option{value: "2020"} 2020
                 %div.year 年
-                %select.Input__Default__B{name: "month"}
+                %select.Input__Default__right{name: "month"}
                   %option{value: ""} --
                   %option{value: "1"} 1
                   %option{value: "2"} 2
@@ -185,7 +187,7 @@
                   %option{value: "11"} 11
                   %option{value: "12"} 12
                 %div.year 月
-                %select.Input__Default__B{name: "day"}
+                %select.Input__Default__right{name: "day"}
                   %option{value: ""} --
                   %option{value: "1"} 1
                   %option{value: "2"} 2
@@ -297,7 +299,7 @@
             %input.Input__Default{name: "email", placeholder: "例）サンポート2-1"}  
           .Form__Group
             %label.Category 建物名
-            %span.StickerA 任意
+            %span.Sticker__Any 任意
             %input.Input__Default{name: "email", placeholder: "例）高松シンボルタワータワー棟4・5階"}  
           .Form__Group
             %label.Category 電話番号
@@ -305,5 +307,5 @@
             %input.Input__Default{name: "email", placeholder: "例）0878220111"}  
           .Form__Group
             %label
-              = link_to '登録する','#',class: "CategoryT"
+              = link_to '登録する','#',class: "Category__T"
 -# %form{:action => "#", :method => "post", name: "yyyymmdd"}

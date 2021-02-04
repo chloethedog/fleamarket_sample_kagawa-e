@@ -1,14 +1,5 @@
 @import "modules/sessions-detail";
 
-%body{
-}
-
-.Header{
-  width: 1440px;
-  height: 128px;
-  background-color: blue;
-}
-
 .Main{
   background-repeat: no-repeat;
   margin: 0;
@@ -16,140 +7,87 @@
   background: whitesmoke;
   font-size: 14px;
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+ }
+
+.Main__Wrapper{
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+ }
+
+.Main__Header__Title{
+  font-size: 22px;
+  padding: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;  
+ }
+
+.New__User{
+  padding: 40px 40px 64px;
+  border-top: 1px solid #f5f5f5;
 }
 
-  .Main__Wrapper{
-    width: 700px;
-    margin: 0 auto;
-    background-color: #fff;
-  }
+.Form__Container{
+  margin: 0 auto;
+  max-width: 343px;
+}
 
-    .Main__Header__Title{
-      font-size: 22px;
-      padding: 32px;
-      font-weight: bold;
-      line-height: 1.5;
-      text-align: center;  
+.Form__Group{
+  margin: 24px 0 0;
+}
+
+.Category {
+  font-weight: 600;
+}
+
+.Sticker {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: center;
+  background-color: #EA352D;
+
+  &__Any {
+    background-color: #bfbfbf;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 4px;
+    margin-left: 8px;
+    border-radius: 2px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4em;
+ }
+}
+
+.Input__Default{
+  box-sizing: border-box;
+  height: 48px;
+  width: 100%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 8px 0 0;
+  margin-right: 7.5px;
+  &__left{
+    @include Inputplace;
+      margin-right: 7.5px;
+    } 
+  &__right{
+      @include Inputplace;
+      margin: 8px 0 0;
     }
+}
 
-    .New__User{
-      padding: 40px 40px 64px;
-      border-top: 1px solid #f5f5f5;
-    }
 
-      .Form__Container{
-        margin: 0 auto;
-        max-width: 343px;
-     }
-
-        .Form__Group{
-          margin: 24px 0 0;
-        }
-
-        .Category {
-          font-weight: 600;
-        }
-
-        .Sticker {
-          margin: 0 0 0 8px;
-          padding: 2px 4px;
-          border-radius: 2px;
-          color: #fff;
-          font-size: 12px;
-          vertical-align: center;
-          background-color: #EA352D;
-        }
-
-        .StickerA {
-          background-color: #bfbfbf;
-          color: #fff;
-          font-size: 12px;
-          padding: 0 4px;
-          margin-left: 8px;
-          border-radius: 2px;
-          display: inline-block;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 1.4em;
-        }
-
-        .Input__Default{
-          box-sizing: border-box;
-          height: 48px;
-          width: 100%;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          margin: 8px 0 0;
-          margin-right: 7.5px;
-        }
-
-        .Input__Default__A{
-         @include Inputplace;
-          margin-right: 7.5px;
-        }
-
-        .Input__Default__B{
-          @include Inputplace;
-          margin: 8px 0 0;
-        }
-
-        .Exposition{
-          font-size: 16px;
-          font-weight: bold;
-        }
-
-        .Exposition__Sentence{
-          font-size: 14px;
-          margin: 8px 0 0;
-          padding: 0;
-        }
-
-         .Form__GroupA{
-          margin: 24px 0 0;
-         } 
-
-        .p2{
-          margin: 8px 0 0;
-          color: #888;
-          line-height: 1.5;
-          font-size: 14px;
-        } 
-
-        .h3title{
-          font-size: 16px;
-          font-weight: bold;
-        }
-
-        .CategoryT{
-          margin-top: 40px;
-          background: #3CCACE;
-          border: 1px solid #3CCACE;
-          color: #fff;
-          display: block;
-          width: 100%;
-          line-height: 48px;
-          font-size: 14px;
-          border-radius: 4px;
-          transition: all ease-out .3s;
-          cursor: pointer;
-          text-align: center;
-          text-decoration: none;     
-        }
-
-  .Footer{
-    width: 456px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 40px 0;
-    background-color: whitesmoke;
-
-  }
-
-.Form__Group__div2{
+.Form__Group__div__parallel{
   display:flex;
 }
 
@@ -157,3 +95,46 @@
   line-height: 60px;
 }
 
+
+.Exposition{
+  font-size: 16px;
+  font-weight: bold;
+
+  &__Sentence{
+    font-size: 14px;
+    margin: 8px 0 0;
+    padding: 0;
+}
+}
+
+.Form__Group{
+  margin: 24px 0 0;
+} 
+
+.p2{
+  margin: 8px 0 0;
+  color: #888;
+  line-height: 1.5;
+  font-size: 14px;
+} 
+
+.h3title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Category__T{
+  margin-top: 40px;
+  background: #3CCACE;
+  border: 1px solid #3CCACE;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;     
+}
