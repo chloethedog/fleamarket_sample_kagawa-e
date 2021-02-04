@@ -8,6 +8,7 @@
         .payment-method
           %section.payment-method__title
             %h2 支払い方法
+          -# 機能実装の際にカードの登録状況によってどちらのビューを呼び出すかの機能を追加する
           .payment-method__card-list
             %section.payment-method__section
               = link_to new_card_path, class: "payment-method__card-link" do
