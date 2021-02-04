@@ -1,0 +1,28 @@
+.pankuzu {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16);
+    &__list {
+        overflow: visible;
+        width: 1020px;
+        margin: 0 auto;
+        padding: 16px 0;
+        font-size: 14px;
+        white-space: normal;
+        color: #333;
+    }
+}
+
+.breadcrumbs--list {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    line-height: 36px;
+    white-space: normal;
+    font-weight: 600;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

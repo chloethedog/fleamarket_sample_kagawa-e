@@ -1,8 +1,24 @@
+# フリマ > マイページ
 crumb :root do
-  link "Home", root_path
+  link "フリマ", root_path
 end
 
-# crumb :projects do
+crumb :user do
+  link "マイページ", user_path
+  parent :root
+end
+
+
+# crumb :purchases_index do |item|
+#   link "商品購入ページ",  item_purchases_path(item)
+#   parent :items,item
+# end
+
+# crumb :items_new do
+#   link "商品出品ページ", new_item_path
+#   parent :root
+# end
+
 #   link "Projects", projects_path
 # end
 

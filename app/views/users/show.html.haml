@@ -1,5 +1,7 @@
 .user
   = render "shared/header"
+  - breadcrumb :user,@user
+  = render "shared/breadcrumbs"
   .user__body
     .userbody__main
       .userbody__main__left
