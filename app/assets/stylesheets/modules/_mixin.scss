@@ -27,6 +27,14 @@
   margin: 8px 0 0;
 }
 
+@mixin Sticker {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  vertical-align: center;
+}
+
 @mixin BtnSize {
   width: 328px;
   height: 52px;

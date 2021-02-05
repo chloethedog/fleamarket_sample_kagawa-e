@@ -42,25 +42,27 @@
 }
 
 .Sticker {
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  vertical-align: center;
   background-color: #EA352D;
+  color: #fff;
+  @include Sticker;
+  // margin: 0 0 0 8px;
+  // padding: 2px 4px;
+  // border-radius: 2px;
+  // font-size: 12px;
+  // vertical-align: center;
 
   &__Any {
     background-color: #bfbfbf;
     color: #fff;
-    font-size: 12px;
-    padding: 0 4px;
-    margin-left: 8px;
-    border-radius: 2px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.4em;
+    @include Sticker;
+    // font-size: 12px;
+    // padding: 0 4px;
+    // margin-left: 8px;
+    // border-radius: 2px;
+    // display: inline-block;
+    // font-style: normal;
+    // font-weight: 600;
+    // line-height: 1.4em;
  }
 }
 
@@ -86,15 +88,16 @@
     }
 }
 
-
 .Form__Group__div__parallel{
   display:flex;
+  
 }
-
+// .year,.month,.day{
+//   height: 60px;
+//  }
 .year{
   line-height: 60px;
 }
-
 
 .Exposition{
   font-size: 16px;
