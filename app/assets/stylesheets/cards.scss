@@ -52,38 +52,23 @@
     align-items: center;
   }
   &__card-number {
-    @include form-style();
-    font-family: inherit;
-    margin: 0;
-    padding: 0 16px;
-    width: inherit;
+    @include card-form-style();
   }
   &__select-month {
-    @include form-style();
-    background-color: #fff;
-    color: #222;
-    line-height: 1;
+    @include card-form-style();
     margin-right: 5px;
     padding: 0 56px 0 16px;
     width: 100%;
   }
   &__select-year {
-    @include form-style();
+    @include card-form-style();
     margin-left: 5px;
-    background-color: #fff;
-    color: #222;
-    line-height: 1;
     margin-right: 5px;
     padding: 0 56px 0 16px;
     width: 100%;
-
   }
   &__security-code {
-    @include form-style();
-    font-family: inherit;
-    margin: 0;
-    padding: 0 16px;
-    width: inherit;
+    @include card-form-style();
   }
   &__question {
     margin-top: 8px;
