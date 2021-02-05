@@ -1,0 +1,42 @@
+%body
+  = render "purchases/header"
+  %main.card-registration
+    %section.card-registration__title
+      %h2 支払い方法
+    = form_with url: "#", id: "card_form", local: true do |f|
+      .card-form
+        .input-form
+          .input-form__form-title
+            = f.label :カード番号
+            %span.reauired 必須
+          .input-form__input-box
+            = text_field  "card", "card_number", required: "required", class: "input-form__card-number", placeholder: "1234 5678 1234 5678" ,size: "19", maxlength: "19", type: "text", id: "card_number_form"
+          = image_tag 'visa-c.svg', class: 'card-company'
+          = image_tag 'mastercard.svg', class: 'card-company'
+          = image_tag 'saison.svg', class: 'card-company'
+          = image_tag 'jcb.svg', class: 'card-company'
+          = image_tag 'american_express.svg', class: 'card-company'
+          = image_tag 'dinersclub.svg', class: 'card-company'
+          = image_tag 'discover.svg', class: 'card-company'
+        .input-form
+          .input-form__form-title
+            = f.label :有効期限 
+            %span.required 必須 
+          .input-form__input-box
+            = f.select "card[exp_month]", @month, {include_blank: true}, {class: "input-form__select-month"}
+            %span 月
+            = f.select "card[exp_year]", @years, {include_blank: true}, {class: "input-form__select-year"}
+            %span 年
+        .input-form
+          .input-form__form-title
+            = f.label :セキュリティコード
+            %span.required 必須
+          .input-form__input-box
+            = f.text_field "card[security]", required: "required", type: 'text', class: "input-form__security-code", placeholder: "カード背面４桁もしくは3桁の番号"
+          .input-form__question
+            %span
+              %icon.fas.fa-question-circle
+            カード裏面の番号とは
+        = f.submit "commit", value: "登録する", class: "input-form__submit-btn"
+        = link_to "もどる", "user_path", class: "input-form__back-btn"
+  = render "purchases/footer"

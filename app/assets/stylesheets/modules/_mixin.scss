@@ -73,3 +73,20 @@
   margin-right: 5px;
   vertical-align: middle;
 }
+
+//クレジットカード登録ページで使用
+@mixin card-form-style {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 48px;
+  outline: none;
+  background-color: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0 16px;
+  line-height: 1;
+  font-family: inherit;
+  width: inherit;
+} 
