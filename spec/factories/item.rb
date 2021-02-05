@@ -9,9 +9,13 @@ FactoryBot.define do
     category_id            {"1"}
     stste_id               {"1"}
     delivery_fee_id        {"1"}
-    delivery_are_id        {"1"}
+    delivery_area_id        {"1"}
     delivery_method_id     {"1"}
     shipment_date_id       {"1"}
-  end
 
+    item_photo
+    after(:build) do |item|
+      item.images << build(:item_photo)
+    end
+  end
 end
