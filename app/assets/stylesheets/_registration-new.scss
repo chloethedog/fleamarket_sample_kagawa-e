@@ -45,29 +45,15 @@
   background-color: #EA352D;
   color: #fff;
   @include Sticker;
-  // margin: 0 0 0 8px;
-  // padding: 2px 4px;
-  // border-radius: 2px;
-  // font-size: 12px;
-  // vertical-align: center;
 
   &__Any {
     background-color: #bfbfbf;
     color: #fff;
     @include Sticker;
-    // font-size: 12px;
-    // padding: 0 4px;
-    // margin-left: 8px;
-    // border-radius: 2px;
-    // display: inline-block;
-    // font-style: normal;
-    // font-weight: 600;
-    // line-height: 1.4em;
  }
 }
 
 .Input__Default{
-  // box-sizing: border-box;
   height: 48px;
   width: 100%;
   padding: 10px 16px 8px;
@@ -100,9 +86,6 @@
     border-radius: 4px;
   }
 }
-
-
-
 
 .Exposition{
   font-size: 16px;
