@@ -1,23 +1,20 @@
 @import "reset";
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "modules/variable-scss.scss";
-
 @import "modules/mixin";
 @import "registration-new.scss";
 @import "items";
 @import "modules/footer";
 @import "modules/header";
-@import "users-show";
 @import "items/purchases";
 @import "modules/purchases_footer";
 @import "modules/purchases_header";
 @import "modules/purchase-btn";
-
-@import "_sessions.scss";
+@import "modules/items";
+@import "modules/items.new";
 @import "modules/breadcrumbs";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
+@import "_sessions.scss";
 @import "modules/sessions-detail";
 @import "_show.scss";
 @import "modules/_header_at_login";
