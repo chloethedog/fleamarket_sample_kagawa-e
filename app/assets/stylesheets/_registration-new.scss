@@ -1,0 +1,130 @@
+
+
+.Main{
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background: whitesmoke;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+ }
+
+.Main__Wrapper{
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+ }
+
+.Main__Header__Title{
+  font-size: 22px;
+  padding: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;  
+ }
+
+.New__User{
+  padding: 40px 40px 64px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.Form__Container{
+  margin: 0 auto;
+  max-width: 343px;
+}
+
+.Form__Group{
+  margin: 24px 0 0;
+}
+
+.Category {
+  font-weight: 600;
+}
+
+.Sticker {
+  background-color: #EA352D;
+  color: #fff;
+  @include Sticker;
+
+  &__Any {
+    background-color: #bfbfbf;
+    color: #fff;
+    @include Sticker;
+ }
+}
+
+.Input__Default{
+  height: 48px;
+  width: 100%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 8px 0 0;
+  margin-right: 7.5px;
+  &__left{
+    @include Inputplace;
+    margin-right: 7.5px;
+    } 
+  &__right{
+    @include Inputplace;
+    margin: 8px 0 0;
+    }
+}
+
+.Form__Group__parallel{
+  display: flex;
+  line-height: 48px;
+  margin: 8px 0 0;
+
+  select{
+    width: calc((100% - 48px) / 3);
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
+
+.Exposition{
+  font-size: 16px;
+  font-weight: bold;
+  &__Sentence{
+    font-size: 14px;
+    margin: 8px 0 0;
+    padding: 0;
+}
+}
+
+.Form__Group{
+  margin: 24px 0 0;
+} 
+
+.p2{
+  margin: 8px 0 0;
+  color: #888;
+  line-height: 1.5;
+  font-size: 14px;
+} 
+
+.h3title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Category__T{
+  @include BGcolor;
+  margin-top: 40px;
+  border: 1px solid #3CCACE;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;     
+}
