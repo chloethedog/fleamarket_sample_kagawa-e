@@ -67,7 +67,7 @@
 }
 
 .Input__Default{
-  box-sizing: border-box;
+  // box-sizing: border-box;
   height: 48px;
   width: 100%;
   padding: 10px 16px 8px;
@@ -80,29 +80,33 @@
   margin-right: 7.5px;
   &__left{
     @include Inputplace;
-      margin-right: 7.5px;
+    margin-right: 7.5px;
     } 
   &__right{
-      @include Inputplace;
-      margin: 8px 0 0;
+    @include Inputplace;
+    margin: 8px 0 0;
     }
 }
 
-.Form__Group__div__parallel{
-  display:flex;
-  
+.Form__Group__parallel{
+  display: flex;
+  line-height: 48px;
+  margin: 8px 0 0;
+
+  select{
+    width: calc((100% - 48px) / 3);
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 }
-// .year,.month,.day{
-//   height: 60px;
-//  }
-.year{
-  line-height: 60px;
-}
+
+
+
 
 .Exposition{
   font-size: 16px;
   font-weight: bold;
-
   &__Sentence{
     font-size: 14px;
     margin: 8px 0 0;

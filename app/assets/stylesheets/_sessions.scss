@@ -21,10 +21,10 @@
     font-size: 14px;
   }
   .new__log{
+  @include BGblue;
   margin: 8px 0 0;
   border-radius: 13px;
-  border: 1px solid #0099E8;
-  background: #0099E8;
+  border: 1px solid #0095ee;
   color: #fff;
   line-height: 40px;
   text-decoration: none;
