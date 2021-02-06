@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe "delivery" do
+describe Delivery do
   describe "#create" do
     it "register new?" do
       delivery = build(:delivery)
@@ -40,10 +40,10 @@ describe "delivery" do
       expect(delivery).to be_valid
     end
 
-    it "valid without user_id" do
+    it "is invalid without user_id" do
       delivery = build(:delivery, user_id: "")
-      expect(delivery).to be_valid
+      delivery.valid?
+      expect(delivery.errors[:user_id]).to include("は空で入力しないでください。")
     end
-
   end
 end

@@ -8,6 +8,7 @@ class Delivery < ApplicationRecord
     validates :prefectures_id
     validates :municipality
     validates :address 
+    validates :user_id
   end
 
 end

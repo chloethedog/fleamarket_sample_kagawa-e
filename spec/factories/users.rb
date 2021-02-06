@@ -1,6 +1,7 @@
 FactoryBot.define do
 
   factory :user do
+    id                              {"1"}
     nickname                        {"yama"}
     email                           {"test@gmail.com"}
     password                        {"test0000"}
