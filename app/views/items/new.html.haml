@@ -6,7 +6,7 @@
       .ListingPics
         %label 出品画像
         %span.Required 必須
-        %p.Pics-max5 最大5枚までアップロードできます 
+        %p.Pics-best1 最高の1枚をアップロード!
         .ListingPics__upload
           .PicsFrame
             %label.ClickLabel{for: ""}
@@ -17,7 +17,7 @@
           .HiddenField
             .Preview
               .Preview__upper
-                %img{src: "", alt: ""}
+                = image_tag "/"
               .Preview__lower
                 .Preview__lower__update
                   %span.PicUpdate 編集
@@ -42,9 +42,9 @@
         .Categories
           %label{for: ""} カテゴリー
           %span.Required 必須
-          %select.Categories__parent{required: "required", name: ""}
-          %select.Categories__child{required: "required", name: ""}
-          %select.Categories__grandChild{required: "required", name: ""}
+          %select.Categories__ancestory{required: "required", name: ""}
+          %select.Categories__ancestory{required: "required", name: ""}
+          %select.Categories__ancestory{required: "required", name: ""}
         .Size
           %label{for: ""} サイズ
           %span.Required 必須
@@ -61,8 +61,8 @@
       .Shipping
         %p.Shipping__title 
           配送について
-          %a{href: ""}  
-            %i.far.fa-question-circle
+          = link_to "#", class: "ShippingInfo" do
+            = icon('far', 'question-circle')
         .Shipping__whoPays
           %label{for: ""} 配送料の負担
           %span.Required 必須
@@ -83,8 +83,8 @@
       .Prices
         %p.Prices__title 
           価格（¥300〜9,999,999）
-          %a{href: ""}  
-            %i.far.fa-question-circle
+          = link_to "#", class: "PriceInfo" do
+            = icon('far', 'question-circle')
         .Prices__pricing
           .Prices__pricing__left
             %label{for: ""} 販売価格
@@ -101,22 +101,22 @@
       .PutUp
         .PutUp__contents
           %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
-          %a.NbtnDraft{href: "#"} 下書きに保存
-          %a.NbtnRtn{href: "/"} もどる
+          = link_to '下書きに保存', "#", class: "NbtnDraft" 
+          = link_to 'もどる', "#", class: "NbtnRtn" 
       .Agreement
         .Agreement__contents
           %p 
             禁止されている
-            %a{href: ""} 行為 
+            = link_to '行為', "#", class: "ListingAgreement" 
             および 
-            %a{href: ""} 出品物
+            = link_to '出品物', "#", class: "ListingAgreement" 
             を必ずご確認ください。 
-            %a{href: ""} 偽ブランド品
+            = link_to '偽ブランド品', "#", class: "ListingAgreement" 
             や
-            %a{href: ""} 盗品物
+            = link_to '盗品物', "#", class: "ListingAgreement" 
             などの販売は犯罪であり、法律により処罰される可能性があります。 
             また、出品をもちまして
-            %a{href: ""} 加盟店規約 
+            = link_to '加盟店規約', "#", class: "ListingAgreement" 
             に同意したことになります。
   .ListingItems__footer
     = render "purchases/footer"
