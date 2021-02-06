@@ -3,7 +3,11 @@ class Item < ApplicationRecord
 
   belongs_to :user
   belongs_to :category
-  belongs_to_active_hash :state, :delivery_fee, :delivery_area, :delivery_method, :shipment_date
+  belongs_to_active_hash :state
+  belongs_to_active_hash :delivery_fee
+  belongs_to_active_hash :delivery_area
+  belongs_to_active_hash :delivery_method
+  belongs_to_active_hash :shipment_date
   has_one :item_photo, dependent: :destroy
 
   with_options presence: true do

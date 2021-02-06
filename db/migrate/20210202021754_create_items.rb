@@ -10,10 +10,10 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.references :category,        null: false
       t.integer :state_id,           null: false
       t.string :brand
-      t.integer :delivery_fee,       null: false
-      t.integer :delivery_area,      null: false
-      t.integer :delivery_method,    null: false
-      t.integer :shipment_date,      null: false
+      t.integer :delivery_fee_id,       null: false
+      t.integer :delivery_area_id,      null: false
+      t.integer :delivery_method_id,    null: false
+      t.integer :shipment_date_id,      null: false
       t.timestamps
     end
       add_index :items, :name
