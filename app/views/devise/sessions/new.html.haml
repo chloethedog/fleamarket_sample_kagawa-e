@@ -1,0 +1,20 @@
+.Signin
+  .Signin__body
+    .Signin__body__new
+      %p アカウントをお持ちでない方はこちら
+      = link_to '新規会員登録', "#", class: "new__log"
+    .Signin__body__btn
+      %button.body__btn__gg
+        %i.fab.fa-google
+        Googleでログイン
+      %button.body__btn__fb
+        %i.fab.fa-facebook-square
+        Facebookでログイン
+      %button.body__btn__ap
+        %i.fa.fa-apple-alt
+        Appleでログイン
+    =form_with html: {class: "form"}do |f|
+      = f.text_field :text, class: 'form__email', placeholder: "  メールアドレス"
+      = f.text_field :text, class: 'form__password', placeholder: "  パスワード"
+      = f.submit 'ログイン', class: 'form__submit'
+      = link_to 'パスワードを忘れた方はこちら' , "#", class:"form__no"
