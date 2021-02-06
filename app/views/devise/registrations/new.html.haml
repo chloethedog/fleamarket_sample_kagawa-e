@@ -1,4 +1,5 @@
 %body
+  = render "purchases/header"
   %main.Main
     %section.Main__Wrapper
       %h2.Main__Header__Title 会員情報入力
@@ -122,4 +123,5 @@
           .Form__Group
             %label
               = link_to '登録する','#',class: "Category__T"
+    = render "purchases/footer"
 

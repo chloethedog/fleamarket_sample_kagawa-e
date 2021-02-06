@@ -1,3 +1,5 @@
+%body.sessons__body
+  = render "purchases/header"
 .Signin
   .Signin__body
     .Signin__body__new
@@ -18,3 +20,6 @@
       = f.text_field :text, class: 'form__password', placeholder: "  パスワード"
       = f.submit 'ログイン', class: 'form__submit'
       = link_to 'パスワードを忘れた方はこちら' , "#", class:"form__no"
+
+.footer
+  = render "purchases/footer"

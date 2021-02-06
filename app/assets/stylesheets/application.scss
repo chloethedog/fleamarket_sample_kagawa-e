@@ -4,7 +4,7 @@
 @import "modules/variable-scss.scss";
 @import "modules/mixin";
 @import "registration-new.scss";
-@import "items";
+@import "items/purchases";
 @import "modules/footer";
 @import "modules/header";
 @import "items/purchases";
@@ -14,9 +14,9 @@
 @import "modules/items";
 @import "modules/items.new";
 @import "modules/breadcrumbs";
-@import "_sessions.scss";
+@import "sessions";
 @import "modules/sessions-detail";
 @import "_show.scss";
 @import "modules/_header_at_login";
 @import "cards";
-
+@import "users-show";
