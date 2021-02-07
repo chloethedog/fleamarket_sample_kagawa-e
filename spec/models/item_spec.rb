@@ -3,8 +3,12 @@ require 'rails_helper'
 describe Item do
   describe '#create' do
     context '正常に保存' do
+      # before do
+        # @user = FactoryBot.create(:user)  先にuserを作っておいて、インスタンス変数にいれる
+      # end
       it "is invalid without a name" do
-        item = build(:item, name: nil)
+        user = FactoryBot.create(:user)
+        item = build(:item, seller_id: user.id, purchase_id: user.id)
         item.valid?
         expect(item.errors[:name]).to include("can't be blank")
       end
