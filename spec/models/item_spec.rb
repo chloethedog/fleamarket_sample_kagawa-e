@@ -9,7 +9,7 @@ describe Item do
       end
       it "is invalid without a name" do
         # user = FactoryBot.create(:user)
-        item = build(:item)
+        item = FactoryBot.build(:item)
         item.valid?
         expect(item.errors[:name]).to include("can't be blank")
       end

@@ -15,8 +15,11 @@ FactoryBot.define do
     delivery_method_id     {1}
     shipment_date_id       {1}
 
+
+    association sller_id, factory: :user
+    association purchase_id, factory: :user
     # association :item_photo
-    # association :user
+
     # association :category
     
     # after(:build) do |item|
