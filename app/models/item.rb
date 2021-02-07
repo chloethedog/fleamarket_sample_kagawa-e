@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
-  belongs_to :seller, class_name:'User', foreign_key: :seller_id
-  belongs_to :purchase, class_name:'User', foreign_key: :purchase_id
+  belongs_to :seller, class_name:'User'
+  belongs_to :buyer, class_name:'User'
   belongs_to :category
   belongs_to_active_hash :state
   belongs_to_active_hash :delivery_fee
@@ -13,12 +13,10 @@ class Item < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :seller
     validates :price
     validates :purchase
     validates :explanation
-    validates :category_id
-    validates :stste_id
+    validates :state_id
     validates :delivery_fee_id
     validates :delivery_area_id
     validates :delivery_method_id

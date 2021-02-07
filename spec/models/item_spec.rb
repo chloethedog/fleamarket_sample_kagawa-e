@@ -11,7 +11,7 @@ describe Item do
         # user = FactoryBot.create(:user)
         item = FactoryBot.build(:item)
         item.valid?
-        expect(item.errors[:name]).to include("can't be blank")
+        expect(item).to be_valid
       end
     end
   end

@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_one :delivery
   has_one :card
-  has_many :items, foreign_key: :seller_id
-  has_many :items, foreign_key: :purchase_id 
+  has_many :items, class_name: 'Item', foreign_key: "seller_id"
+  has_many :items, class_name: 'Item', foreign_key: "buyer_id"
 end

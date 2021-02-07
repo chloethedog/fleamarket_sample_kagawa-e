@@ -31,7 +31,7 @@ Things you may want to cover:
 |seller_id|integer|null: false, foreign_key: { to_table: users}|
 |price|integer|null: false|
 |purchase|integer|null: false|
-|purchase_id|integer|foreign_key: {to_table: users}|
+|buyer_id|integer|foreign_key: {to_table: users}|
 |explanation|text|null: false|
 |category_id|integer|null: false, foreign_key: true|
 |state_id|integer|null: false|

@@ -2,12 +2,10 @@ FactoryBot.define do
 
   factory :item do
     name                   {"item"}
-    seller_id              { FactoryBot.create(:user)}
     price                  {1000}
     purchase               {"1"}
-    purchase_id            { FactoryBot.create(:user)}
     explanation            {"説明文"}
-    category_id            {1}
+    
     state_id               {1}
     brand                  {"クロユニ"}
     delivery_fee_id        {1}
@@ -16,14 +14,8 @@ FactoryBot.define do
     shipment_date_id       {1}
 
 
-    association sller_id, factory: :user
-    association purchase_id, factory: :user
-    # association :item_photo
-
-    # association :category
-    
-    # after(:build) do |item|
-    #   item << build(:item_photo)
-    # end
+    association :seller, factory: :user
+    association :buyer, factory: :user
+    association :category
   end
 end
