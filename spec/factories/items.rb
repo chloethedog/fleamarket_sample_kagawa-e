@@ -16,7 +16,7 @@ FactoryBot.define do
     shipment_date_id       {1}
 
     # association :item_photo
-    association :user
+    # association :user
     # association :category
     
     # after(:build) do |item|
