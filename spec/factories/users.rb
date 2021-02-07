@@ -3,7 +3,7 @@ FactoryBot.define do
   factory :user do
     id                              {"1"}
     nickname                        {"yama"}
-    email                           {"test@gmail.com"}
+    email                           {"zell8130@outlook.jp"}
     password                        {"test0000"}
     password_confirmation           {"test0000"}
     birthday                        {"1998-03-18"}
