@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
     t.bigint "seller_id", null: false
     t.integer "price", null: false
     t.integer "purchase", null: false
-    t.bigint "purchase_id"
+    t.bigint "buyer_id"
     t.text "explanation", null: false
     t.bigint "category_id", null: false
     t.integer "state_id", null: false
@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["brand"], name: "index_items_on_brand"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["name"], name: "index_items_on_name"
-    t.index ["purchase_id"], name: "index_items_on_purchase_id"
     t.index ["seller_id"], name: "index_items_on_seller_id"
   end
 
@@ -65,6 +65,6 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
   end
 
   add_foreign_key "item_photos", "items"
-  add_foreign_key "items", "users", column: "purchase_id"
+  add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "seller_id"
 end

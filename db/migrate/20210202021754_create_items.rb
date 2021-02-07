@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.references :seller,          null: false, foreign_key: { to_table: :users}
       t.integer :price,              null: false
       t.integer :purchase,           null: false
-      t.references :purchase,        foreign_key: { to_table: :users}
+      t.references :buyer,        foreign_key: { to_table: :users}
       t.text :explanation,           null: false
       t.references :category,        null: false
       t.integer :state_id,           null: false
