@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
   
+  before_save { email.downcase! }
+  
   has_one :delivery
   has_one :card 
   has_many :items
