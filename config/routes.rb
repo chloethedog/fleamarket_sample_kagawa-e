@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
   }
   devise_scope :user do
-    get 'deliveries', to: 'users/registrations#new_address'
+    get 'deliveries', to: 'users/registrations#new_delivery'
+    post 'deliveries', to: 'users/registrations#create_delivery'
   end
   root 'items#index'
 
