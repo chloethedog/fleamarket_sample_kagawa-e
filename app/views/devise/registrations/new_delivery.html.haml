@@ -1,11 +1,13 @@
 %body
   = render "purchases/header"
   %main.Main
+    %section.Main__Wrapper
+      %h2.Main__Header__Title 会員情報入力
     = form_with model:@delivery, html:{class:"New__User"} do |f|
       = render "devise/shared/error_messages", resource: @delivery
       .Form__Container
         .Form__Group
-            %h3.h3title 配送先住所
+          %h3.h3title 配送先住所
           .Form__Group
             = f.label :郵便番号, class: "Category"
             %span.Sticker 必須
@@ -32,5 +34,5 @@
             = f.text_field :phone_number, placeholder: "例）0878220111", class: "Input__Default"
           .Form__Group
             %label
-              = f.submit "住所情報入力へ", class: "Category__T"
+              = f.submit "登録", class: "Category__T"
   = render "purchases/footer"
