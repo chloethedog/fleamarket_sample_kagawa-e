@@ -12,13 +12,32 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     @user = User.new(sign_up_params)
-    @user.save
-    if @user.save
-      sign_in(:user, @user)
-      redirect_to user_path(@user)
-    else
+    unless @user.valid?
       flash.now[:alert] = @user.errors.full_messages
       render :new and return
+    end
+    session["devise.regist_date"] = {user: @user.attributes}
+    session["devise.regist_date"][:user]["password"] = params[:user][:password]
+    @delivery = @user.build_delivery
+    render :new_delivery
+  end
+
+  def create_delivery
+    @user = User.new(session["devise.regist_date"]["user"])
+    @delivery = Delivery.new(delivery_params)
+    unless @delivery.valid?
+      flash.now[:alert] = @delivery.errors.full_messages
+      render :new_delivery and return
+    end
+    @user.build_delivery(@delivery.attributes)
+    @user.save!
+    if @user.save
+      session["devise.regist_date"]["user"].clear
+      sign_in(:user, @user)
+      redirect_to user_path(current_user.id)
+    else
+      flash.now[:alert] = @user.errors.full_messages
+      render :new_delivery and return
     end
   end
 
@@ -46,7 +65,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def delivery_params
+    params.require(:delivery).permit(:postal_code, :prefectures_id, :municipality, :address, :address_detail, :phone_number)
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
