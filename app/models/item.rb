@@ -9,7 +9,8 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_area
   belongs_to_active_hash :delivery_method
   belongs_to_active_hash :shipment_date
-  has_one :item_photo, dependent: :destroy
+  has_one :item_photo
+  accepts_nested_attributes_for :item_photo
 
   # with_options presence: true do
   #   validates :name
