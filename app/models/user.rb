@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable
   
   before_save { email.downcase! }
-  
+
   has_one :delivery
   has_one :card 
   has_many :items
@@ -13,14 +13,13 @@ class User < ApplicationRecord
   validates :email, uniqueness: { case_sensitive: false, message: 'は既に登録されています。' }, format: { with: /\A\S+@\S+\.\S+\z/, message: 'は＠とドメインを含む必要があります'}
                     
   validates :password, confirmation: { message: 'パスワードが間違っています。'  }
-  validates :password, :password_confirmation ,length: { minimum: 7,message: "は7文字以上で入力してください"}
+  validates :password, length: { minimum: 7,message: "は7文字以上で入力してください"}
 
   with_options presence: {message: 'は空で入力しないでください。'} do
     validates :nickname
     validates :birthday
     validates :email
     validates :password
-    validates :password_confirmation
     validates :last_name
     validates :first_name
     validates :first_name_ruby

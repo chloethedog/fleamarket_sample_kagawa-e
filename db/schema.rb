@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 2021_01_30_035254) do
     t.integer "prefectures_id", null: false
     t.string "municipality", null: false
     t.string "address", null: false
-    t.string "address_detail", null: false
+    t.string "address_detail"
     t.string "phone_number"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_deliveries_on_user_id"
