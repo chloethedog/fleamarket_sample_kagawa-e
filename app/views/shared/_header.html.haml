@@ -6,14 +6,41 @@
         %input.input-box{placeholder:  "キーワードから探す"}
         %button.search-button
           = link_to image_tag("icon-search 1.png", class:"search-icon"), "/"
-    .TopNav
-      %ul.__lists--left
-        = icon('fas', 'list')
-        %li= link_to 'カテゴリーから探す', "/", class: "category-list"
-        = icon('fas', 'tags')
-        %li= link_to 'ブランドから探す', "/", class: "brand-list"
-      %ul.__lists--right
-        %li= link_to 'ログイン',new_user_session_path, class: "login"
-        %li= link_to '新規会員登録',new_user_registration_path, class: "sign-up"
-
-
+    - if user_signed_in?
+      .header-main__bottom
+        %ul.search-list
+          %li.search-list__category
+            = link_to '#', class: "search-list__category-link" do
+              %i.fas.fa-list
+              %span カテゴリーから探す
+          %li.search-list__brand
+            = link_to '#', class: "search-list__brand-link" do
+              %i.fas.fa-tags
+              %span ブランドから探す
+        %ul.contents-list
+          %li.contents-list__favorites
+            = link_to '#', class: "contents-list__favorites-link" do
+              %i.fas.fa-star
+              お気に入り一覧
+          %li.contents-list__news
+            = link_to '#', class: "contents-list__news-link" do
+              %i.fas.fa-bell
+              %span お知らせ
+          %li.contents-list__doing-list  
+            = link_to '#', class: "contents-list__doing-list-link" do
+              %i.fas.fa-check
+              %span やること一覧
+          %li.contents-list__mypage
+            = link_to user_path(current_user), class: "contents-list__mypage-link" do
+              = image_tag 'member_photo_noimage_thumb.png',class: "mypage-icon", alt: "icon"
+              %span.mypage マイページ
+    - else
+      .TopNav
+        %ul.__lists--left
+          = icon('fas', 'list')
+          %li= link_to 'カテゴリーから探す', "/", class: "category-list"
+          = icon('fas', 'tags')
+          %li= link_to 'ブランドから探す', "/", class: "brand-list"
+        %ul.__lists--right
+          %li= link_to 'ログイン',new_user_session_path, class: "login"
+          %li= link_to '新規会員登録',new_user_registration_path, class: "sign-up"
