@@ -27,4 +27,4 @@
     %li= link_to 'メール/パスワード', "#", class: "list"
     %li= link_to '本人情報', "#", class: "list"
     %li= link_to '電話番号確認', "#", class: "list"
-    %li= link_to 'ログアウト', "#", class: "list"
+    %li= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "list"
