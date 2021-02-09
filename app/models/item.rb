@@ -11,15 +11,15 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipment_date
   has_one :item_photo, dependent: :destroy
 
-  with_options presence: true do
-    validates :name
-    validates :price
-    validates :purchase
-    validates :explanation
-    validates :state_id
-    validates :delivery_fee_id
-    validates :delivery_area_id
-    validates :delivery_method_id
-    validates :shipment_date_id
-  end
+  # with_options presence: true do
+  #   validates :name
+  #   validates :price
+  #   validates :purchase
+  #   validates :explanation
+  #   validates :state_id
+  #   validates :delivery_fee_id
+  #   validates :delivery_area_id
+  #   validates :delivery_method_id
+  #   validates :shipment_date_id
+  # end
 end

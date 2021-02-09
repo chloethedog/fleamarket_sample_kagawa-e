@@ -26,13 +26,16 @@
       %hr.HorizontalRule          
       .Description
         .Description__name
-          %label{for: "item_name"} 商品名
-          %span.Required 必須
-          %input{required: "required", placeholder: "40文字まで", type: "text", name: ""}
+          = form_with(model: @item, local: true) do |f|
+            %label{for: "item_name"} 商品名
+            %span.Required 必須
+            = f.text_field :name, placeholder: "40文字まで"
         .Description__text
-          %label{for: ""} 商品の説明
-          %span.Required 必須
-          %textarea.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
+          = form_with(model: @item, local: true) do |f|
+            %label{for: ""} 商品の説明
+            %span.Required 必須
+            = f.text_area :explanation, size: "30x10", maxlength: 1000, placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            -# %textarea.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
         .Description__wordCount
           %span 0
           \/1000
@@ -40,11 +43,14 @@
       .Details
         %p.Details__title 商品の詳細
         .Categories
-          %label{for: ""} カテゴリー
-          %span.Required 必須
-          %select.Categories__ancestory{required: "required", name: ""}
-          %select.Categories__ancestory{required: "required", name: ""}
-          %select.Categories__ancestory{required: "required", name: ""}
+          = form_with(model: @item, class: "jsform", local: true) do |f|
+            %label{for: ""} カテゴリー
+            %span.Required 必須
+            = f.collection_select :category_id,@category, :id, :name,{include_blank: "---"},{class:"form-pull-down select-category"}
+
+          -# %select.Categories__ancestory{required: "required", name: ""}
+          -# %select.Categories__ancestory{required: "required", name: ""}
+          -# %select.Categories__ancestory{required: "required", name: ""}
         .Size
           %label{for: ""} サイズ
           %span.Required 必須
@@ -100,7 +106,9 @@
           %span.Prices__profit__right ー
       .PutUp
         .PutUp__contents
-          %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
+          = form_with(model: @item, local: true) do |f|
+            = f.submit '出品する', class: 'NbtnPutup'
+          -# %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
           = link_to '下書きに保存', "#", class: "NbtnDraft" 
           = link_to 'もどる', "#", class: "NbtnRtn" 
       .Agreement

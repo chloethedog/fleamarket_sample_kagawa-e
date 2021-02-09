@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
-
+  get 'api/items/category',to: 'items#get_category'
   resources :users, only:[:show] do
     member do
       get :card
@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   
   resources :items, only: [:index, :show, :new] do
     resources :purchases, only:[:index]
+
   end
 
   resources :cards, only:[:new]
+
 end
