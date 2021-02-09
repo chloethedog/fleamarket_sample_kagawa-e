@@ -3,7 +3,7 @@
   %main.Main
     %section.Main__Wrapper
       %h2.Main__Header__Title 会員情報入力
-    = form_with model:@delivery, html:{class:"New__User"} do |f|
+    = form_with model:@delivery, html:{class:"New__User"}, local: true do |f|
       = render "devise/shared/error_messages", resource: @delivery
       .Form__Container
         .Form__Group
@@ -15,7 +15,7 @@
           .Form__Group
             = f.label :都道府県, class: "Category"
             %span.Sticker 必須
-            = f.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: true}, {class: "Input__Default"}
+            = f.collection_select :prefectures_id, Prefecture.all, :id, :name, {include_blank: true}, {class: "Input__Default"}
           .Form__Group
             = f.label :市区町村, class: "Category"
             %span.Sticker 必須
