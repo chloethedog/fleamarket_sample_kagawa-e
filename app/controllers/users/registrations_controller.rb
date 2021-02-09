@@ -12,10 +12,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     @user = User.new(sign_up_params)
+    @user.save
     if @user.save
-      redirect_to root_path, notice: "新規登録しました"
+      sign_in(:user, @user)
+      redirect_to user_path(@user)
     else
-      redirect_to root_path
+      flash.now[:alert] = @user.errors.full_messages
+      render :new and return
     end
   end
 
