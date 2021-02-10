@@ -3,11 +3,10 @@
   %main.Main
     %section.Main__Wrapper
       %h2.Main__Header__Title 会員情報入力
-    = form_with model:@delivery, html:{class:"New__User"}, local: true do |f|
-      = render "devise/shared/error_messages", resource: @delivery
-      .Form__Container
-        .Form__Group
-          %h3.h3title 配送先住所
+      = form_with model:@delivery, html:{class:"New__User"}, local: true do |f|
+        .Form__Container
+          .Form__Group
+            %h3.h3title 配送先住所
           .Form__Group
             = f.label :郵便番号, class: "Category"
             %span.Sticker 必須

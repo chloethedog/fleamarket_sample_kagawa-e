@@ -4,7 +4,6 @@
     %section.Main__Wrapper
       %h2.Main__Header__Title 会員情報入力
       = form_with model:@user, url: user_registration_path, html:{class:"New__User"}, local: true do |f|
-        = render "devise/shared/error_messages", resource: @user
         .Form__Container
           .Form__Group
             = f.label :ニックネーム, class: "Category"
@@ -19,7 +18,7 @@
             %span.Sticker 必須
             = f.password_field :password, placeholder: "6文字以上の半角英数字", class: "Input__Default"
           .Form__Group
-            = f.label :パスワード, class: "Category"
+            = f.label :"パスワード(再入力)", class: "Category"
             %span.Sticker 必須
             = f.password_field :password_confirmation, placeholder: "上記と同じものを入力してください", class: "Input__Default"
           .Form__Group
@@ -35,7 +34,7 @@
               = f.text_field :first_name, placeholder: "例)太郎", class: "Input__Default__right"
           .Form__Group
             .Form__Group__div
-              = f.label :"お名前カナ(全角)", class: "Category"
+              = f.label :"お名前かな(全角)", class: "Category"
               %span.Sticker 必須
             .Form__Group__parallel
               = f.text_field :last_name_ruby, placeholder: "例)かがわ", class: "Input__Default__left"
@@ -45,7 +44,7 @@
               = f.label :生年月日, class: "Category"
               %span.Sticker 必須
             .Form__Group__parallel
-              != sprintf(f.date_select(:birthday, prefix:'birthday', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),'年','月')+'日'               
+              = f.date_select :birthday, use_month_numbers: true,start_year: 1930, end_year: (Time.now.year - 10), include_blank: true
             %p.p2 ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .Form__Group
             %label
