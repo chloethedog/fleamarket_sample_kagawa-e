@@ -21,6 +21,6 @@ class Item < ApplicationRecord
     validates :delivery_area_id
     validates :delivery_method_id
     validates :shipment_date_id
-    # validates :purchase
+    validates :purchase
   end
 end

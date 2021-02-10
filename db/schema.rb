@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
     t.string "name", null: false
     t.bigint "seller_id"
     t.integer "price", null: false
-    t.integer "purchase"
+    t.integer "purchase", default: 0
     t.bigint "buyer_id"
     t.text "explanation", null: false
     t.bigint "category_id", null: false
