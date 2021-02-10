@@ -71,6 +71,12 @@ describe Item do
         expect(@item.errors[:shipment_date_id]).to include("can't be blank")
       end
 
+      it "item_photo が空のとき" do
+        @item.item_photo = nil
+        @item.valid?
+        expect(@item.errors[:item_photo]).to include("can't be blank")
+      end
+
     end
   end
 end
