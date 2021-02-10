@@ -36,7 +36,6 @@
             %label{for: ""} 商品の説明
             %span.Required 必須
             = f.text_area :explanation, size: "30x10", maxlength: 1000, placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-            -# %textarea.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
           .Description__wordCount
             %span 0
             \/1000
@@ -48,24 +47,20 @@
             %span.Required 必須
             = f.collection_select :category_id,@category, :id, :name,{include_blank: "選んで下さい "},{class:"form-pull-down select-category"}
 
-            -# %select.Categories__ancestory{required: "required", name: ""}
-            -# %select.Categories__ancestory{required: "required", name: ""}
-            -# %select.Categories__ancestory{required: "required", name: ""}
           -# .Size
           -#     %label{for: ""} サイズ
           -#     %span.Required 必須
           -#     -# %select{required: "required", name: ""}     
           -# 現在、Sizeカラムがないのでコメントアウトしています。
+
           .Brands
             %label{for: ""} ブランド
             %span.Optional 任意
             = f.text_field :brand, placeholder: "例）シャネル"
-            -# %input{placeholder: "例）シャネル", type: "text", name: ""}
           .Condition
             %label{for: ""} 商品の状態
             %span.Required 必須
             = f.collection_select :state_id, State.all, :id, :name, {include_blank: "選んでください"},{class:""}
-            -# %select{required: "required", name: ""}
         %hr.HorizontalRule
         .Shipping
           %p.Shipping__title 
@@ -76,22 +71,18 @@
             %label{for: ""} 配送料の負担
             %span.Required 必須
             = f.collection_select :delivery_fee_id, DeliveryFee.all, :id, :name, {include_blank: "選んでください"},{class:""}
-            -# %select{required: "required", name: ""}
           .Shipping__methods 
             %label{for: ""} 配送の方法
             %span.Required 必須
             = f.collection_select :delivery_method_id, DeliveryMethod.all, :id, :name, {include_blank: "選んでください"},{class:""}
-            -# %select{required: "required", name: ""}
           .Shipping__from
             %label{for: ""} 発送元の地域
             %span.Required 必須
             = f.collection_select :delivery_area_id, DeliveryArea.all, :id, :name, {include_blank: "選んでください"},{class:""}
-            -# %select{required: "required", name: ""} 
           .Shipping__days
             %label{for: ""} 発送までの日数
             %span.Required 必須
             = f.collection_select :shipment_date_id, ShipmentDate.all, :id, :name, {include_blank: "選んでください"},{class:""}
-            -# %select{required: "required", name: ""}    
         %hr.HorizontalRule
         .Prices
           %p.Prices__title 
@@ -104,7 +95,6 @@
               %span.Required 必須
             %span.YenMark ¥
             = f.number_field :price, class:"Prices__pricing__right", min: 300, max: 999999, placeholder: "--"
-            -# %input.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
           .Prices__salesCommission
             .Prices__salesCommission__left 販売手数料（10%）
             %span.Prices__salesCommission__right ー
@@ -115,7 +105,6 @@
         .PutUp
           .PutUp__contents
             = f.submit '出品する', class: 'NbtnPutup'
-            -# %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
             = link_to '下書きに保存', "#", class: "NbtnDraft" 
             = link_to 'もどる', "#", class: "NbtnRtn" 
         .Agreement
