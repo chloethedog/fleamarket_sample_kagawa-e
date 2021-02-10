@@ -9,12 +9,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # binding.pry
+    binding.pry
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path, notice: '商品を出品しました'
     else
       @category = Category.roots
+      @item.build_item_photo
       render "new"
     end
   end

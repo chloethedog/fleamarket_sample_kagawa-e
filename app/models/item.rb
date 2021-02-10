@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_method
   belongs_to_active_hash :shipment_date
   has_one :item_photo
-  accepts_nested_attributes_for :item_photo
+  accepts_nested_attributes_for :item_photo, allow_destroy: true
 
   with_options presence: true do
     validates :name
@@ -22,5 +22,6 @@ class Item < ApplicationRecord
     validates :delivery_method_id
     validates :shipment_date_id
     validates :purchase
+    validates :item_photo
   end
 end
