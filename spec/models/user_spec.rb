@@ -52,7 +52,7 @@ describe "user" do
     it "is invalid without a password_confirmation" do
       user = build(:user, password_confirmation: "")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("は空で入力しないでください。")
+      expect(user.errors[:password_confirmation]).to include("パスワードが間違っています。")
     end
 
     it "is invalid without entry the same password" do
@@ -69,7 +69,13 @@ describe "user" do
     it "passwords of 6 characters or less is invalid" do
       user = build(:user, password: "test00", password_confirmation: "test00")
       user.valid?
-      expect(user.errors[:password]).to include("は7文字以上で入力してください")
+      expect(user.errors[:password]).to include("は7文字以上126文字以下で入力してください")
+    end
+
+    it "passwords of 126 characters or less is invalid" do
+      user = build(:user, password: "test000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", password_confirmation: "test00")
+      user.valid?
+      expect(user.errors[:password]).to include("は7文字以上126文字以下で入力してください")
     end
 
     it "is invalid without last name" do

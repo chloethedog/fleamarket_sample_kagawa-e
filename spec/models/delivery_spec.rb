@@ -42,8 +42,7 @@ describe Delivery do
 
     it "is invalid without user_id" do
       delivery = build(:delivery, user_id: "")
-      delivery.valid?
-      expect(delivery.errors[:user_id]).to include("は空で入力しないでください。")
+      expect(delivery).to be_valid
     end
   end
 end
