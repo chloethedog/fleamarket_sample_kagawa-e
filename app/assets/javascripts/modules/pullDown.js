@@ -10,7 +10,7 @@ $(function(){
 
     
     const html=`
-      <select class="form-pull-down select-category"  name="category_id">
+      <select class="form-pull-down select-category"  name="item[category_id]">
         <option value="">---</option>
         ${options}
       </select>
@@ -20,7 +20,7 @@ $(function(){
 
 
 //changeイベント設定箇所
-  $('.jsform').on('change','.form-pull-down',function(){
+  $('.Categories').on('change','.form-pull-down',function(){
     // alert('change!')
     $(this).nextAll().remove()  //選択された要素より下のformを一度リセット
     const category_id=$(this).val() //選択されたidを取得
@@ -40,7 +40,7 @@ $(function(){
       }
       
       const select_form=buildForm(categories) //挿入するフィームを作成
-      const target=$('.jsform') //append先である既存の要素を定義
+      const target=$('.Categories') //append先である既存の要素を定義
       target.append(select_form)
     
     })
