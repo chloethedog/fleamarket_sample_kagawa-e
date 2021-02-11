@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   has_one :delivery
   has_one :card 
-  has_many :items
+  has_many :items, class_name: 'Item', foreign_key: "seller_id"
+  has_many :items, class_name: 'Item', foreign_key: "buyer_id"
 
   validates :email, uniqueness: { case_sensitive: false, message: 'は既に登録されています。' }, format: { with: /\A[^@\s]+@[^@\s]+\.[^@\s]+\z/, message: 'は＠とドメインを含む必要があります'}
                     
@@ -36,4 +37,6 @@ class User < ApplicationRecord
     validates :first_name_ruby
   end
 
+  has_many :items, class_name: 'Item', foreign_key: "seller_id"
+  has_many :items, class_name: 'Item', foreign_key: "buyer_id"
 end

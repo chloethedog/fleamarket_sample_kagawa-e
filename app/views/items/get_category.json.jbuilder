@@ -1,0 +1,1 @@
+json.array! @category, :id, :name
