@@ -22,25 +22,25 @@ describe "user" do
       user = create(:user)
       user = build(:user)
       user.valid?
-      expect(user.errors[:email]).to include("は既に登録されています。")
+      expect(user.errors[:email]).to include("はすでに存在します")
     end
 
     it "is invalid with Email addresses without @ and domain" do
       user = build(:user, email: "test")
       user.valid?
-      expect(user.errors[:email]).to include("は＠とドメインを含む必要があります")
+      expect(user.errors[:email]).to include("は不正な値です")
     end
 
     it "is invalid with Email addresses without @ " do
       user = build(:user, email: "test.tet")
       user.valid?
-      expect(user.errors[:email]).to include("は＠とドメインを含む必要があります")
+      expect(user.errors[:email]).to include("は不正な値です")
     end
     
     it "is invalid with Email addresses without domain " do
-      user = build(:user, email: "test@test")
+      user = build(:user, email: "test@test@")
       user.valid?
-      expect(user.errors[:email]).to include("は＠とドメインを含む必要があります")
+      expect(user.errors[:email]).to include("は不正な値です")
     end
 
     it "is invalid without a password" do
@@ -52,13 +52,13 @@ describe "user" do
     it "is invalid without a password_confirmation" do
       user = build(:user, password_confirmation: "")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("パスワードが間違っています。")
+      expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません")
     end
 
     it "is invalid without entry the same password" do
       user = build(:user, password: "test0000", password_confirmation: "test0001")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("パスワードが間違っています。")
+      expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません")
     end
 
     it "password of 7 characters or more is valid" do
@@ -67,15 +67,15 @@ describe "user" do
     end
     
     it "passwords of 6 characters or less is invalid" do
-      user = build(:user, password: "test00", password_confirmation: "test00")
+      user = build(:user, password: "tes00", password_confirmation: "test00")
       user.valid?
-      expect(user.errors[:password]).to include("は7文字以上126文字以下で入力してください")
+      expect(user.errors[:password]).to include("は6文字以上で入力してください")
     end
 
-    it "passwords of 126 characters or less is invalid" do
-      user = build(:user, password: "test000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", password_confirmation: "test00")
+    it "passwords of 128 characters or less is invalid" do
+      user = build(:user, password: "test000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", password_confirmation: "test00")
       user.valid?
-      expect(user.errors[:password]).to include("は7文字以上126文字以下で入力してください")
+      expect(user.errors[:password]).to include("は128文字以内で入力してください")
     end
 
     it "is invalid without last name" do
