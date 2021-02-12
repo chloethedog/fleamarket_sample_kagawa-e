@@ -24,12 +24,19 @@
                 %span 送料込み
             .item__buy-button
               - if user_signed_in?
-                #もし自分が出品したアイテムであるならば        
+                ifログイン状態かつ出品者であるならば（current_user.id == @item.seller_id）        
                 = link_to "商品を編集する", '#', class: "item__buy-button_link" 
                 = link_to "商品を削除する", '#', class: "item__buy-button_link"
+                elseログイン状態かつ出品者以外なら
+                = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+              - else
+              ログアウトならば編集・削除・購入ボタンなし
+
+
+
             .item__text-box
               .item__text
-                testテスト試作
+                = @item.explanation
             .item__detail
               %table
                 %tbody
