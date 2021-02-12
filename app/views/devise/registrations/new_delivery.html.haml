@@ -8,30 +8,30 @@
           .Form__Group
             %h3.h3title 配送先住所
           .Form__Group
-            = f.label :郵便番号, class: "Category"
+            = f.label :郵便番号, class: "Form__inner-label"
             %span.Sticker 必須
             = f.text_field :postal_code, placeholder: "例)760-8639", class: "Input__Default"
           .Form__Group
-            = f.label :都道府県, class: "Category"
+            = f.label :都道府県, class: "Form__inner-label"
             %span.Sticker 必須
             = f.collection_select :prefectures_id, Prefecture.all, :id, :name, {include_blank: true}, {class: "Input__Default"}
           .Form__Group
-            = f.label :市区町村, class: "Category"
+            = f.label :市区町村, class: "Form__inner-label"
             %span.Sticker 必須
             = f.text_field :municipality, placeholder: "例）高松市", class: "Input__Default"
           .Form__Group
-            = f.label :番地, class: "Category"
+            = f.label :番地, class: "Form__inner-label"
             %span.Sticker 必須
             = f.text_field :address, placeholder: "例）サンポート2-1", class: "Input__Default"
           .Form__Group
-            = f.label :建物名, class: "Category"
+            = f.label :建物名, class: "Form__inner-label"
             %span.Sticker__Any 任意
             = f.text_field :address_detail, placeholder: "例）高松シンボルタワータワー棟4・5階", class: "Input__Default"
           .Form__Group
-            = f.label :電話番号, class: "Category"
+            = f.label :電話番号, class: "Form__inner-label"
             %span.Sticker__Any 任意
             = f.text_field :phone_number, placeholder: "例）0878220111", class: "Input__Default"
           .Form__Group
             %label
-              = f.submit "登録", class: "Category__T"
+              = f.submit "登録", class: "Form__submit-btn"
   = render "purchases/footer"

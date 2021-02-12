@@ -30,7 +30,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       render :new_delivery and return
     end
     @user.build_delivery(@delivery.attributes)
-    @user.save!
     if @user.save
       session["devise.regist_date"]["user"].clear
       sign_in(:user, @user)
