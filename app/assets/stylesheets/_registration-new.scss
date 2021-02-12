@@ -37,7 +37,7 @@
   margin: 24px 0 0;
 }
 
-.Category {
+.Form__inner-label {
   font-weight: 600;
 }
 
@@ -113,7 +113,7 @@
   font-weight: bold;
 }
 
-.Category__T{
+.Form__submit-btn{
   @include BGcolor;
   margin-top: 40px;
   border: 1px solid #3CCACE;

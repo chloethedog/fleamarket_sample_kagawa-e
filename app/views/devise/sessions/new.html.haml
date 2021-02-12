@@ -15,11 +15,10 @@
       %button.body__btn__ap
         %i.fa.fa-apple-alt
         Appleでログイン
-    =form_with html: {class: "form"}do |f|
-      = f.text_field :text, class: 'form__email', placeholder: "  メールアドレス"
-      = f.text_field :text, class: 'form__password', placeholder: "  パスワード"
+    =form_with model: @user, url: user_session_path, html: {class: "form"}, local: true do |f|
+      = f.email_field :email, class: 'form__email', placeholder: "  メールアドレス"
+      = f.text_field :password, class: 'form__password', placeholder: "  パスワード"
       = f.submit 'ログイン', class: 'form__submit'
       = link_to 'パスワードを忘れた方はこちら' , "#", class:"form__no"
-
 .footer
   = render "purchases/footer"
