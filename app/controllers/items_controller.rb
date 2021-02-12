@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
   def index
-    @item = Item.find(params[:item_id])
+    # @item = Item.find(params[:item_id])
   end
 
   def show
     @item = Item.find(params[:id])
+    @user = User.find(params[:id])
+    # @user.seller_id = params[:seller][:nickname]
   end
 
   def new

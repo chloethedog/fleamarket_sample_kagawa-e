@@ -23,7 +23,10 @@
                 %span (税込)
                 %span 送料込み
             .item__buy-button
-              = link_to "購入画面へ進む", '#', class: "item__buy-button_link" 
+              - if user_signed_in?
+                #もし自分が出品したアイテムであるならば        
+                = link_to "商品を編集する", '#', class: "item__buy-button_link" 
+                = link_to "商品を削除する", '#', class: "item__buy-button_link"
             .item__text-box
               .item__text
                 testテスト試作
@@ -34,7 +37,7 @@
                     %th 
                       出品者
                     %td 
-                      = link_to @item.price, class: "#"
+                      = link_to @user.nickname, class: "#"
                   %tr
                     %th
                       カテゴリー
@@ -53,7 +56,7 @@
                     %th 
                       商品の状態
                     %td 
-                      商品の状態を記載
+                      = @item.explanation
                   %tr 
                     %th 
                       配送料の負担
