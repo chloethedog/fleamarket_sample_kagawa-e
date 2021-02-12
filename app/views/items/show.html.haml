@@ -25,8 +25,8 @@
             .item__buy-button
               - if user_signed_in?
                 ifログイン状態かつ出品者であるならば（current_user.id == @item.seller_id）        
-                = link_to "商品を編集する", '#', class: "item__buy-button_link" 
-                = link_to "商品を削除する", '#', class: "item__buy-button_link"
+                = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
+                = link_to "商品を削除する", '#', class: "item__buy-button_delete"
                 elseログイン状態かつ出品者以外なら
                 = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
               - else
