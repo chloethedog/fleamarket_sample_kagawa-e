@@ -7,7 +7,8 @@
       .main-item__show
         .main-item-list
           .item
-            %h2.item__name 商品名
+            %h2.item__name
+              = @item.name
             .item-images
               .item-images__main
                 .item-images__main-image
@@ -16,7 +17,8 @@
                 .item-images__sub-image
                   = image_tag 'testtest.jpeg', class: "small-image"
             .item__price
-              %span.item__price-fee ¥1000
+              %span.item__price-fee
+                = "¥#{@item.price}"
               .item__price-detail
                 %span (税込)
                 %span 送料込み
@@ -32,7 +34,7 @@
                     %th 
                       出品者
                     %td 
-                      = link_to "出品者", "#", class: "#"
+                      = link_to @item.price, class: "#"
                   %tr
                     %th
                       カテゴリー
@@ -45,8 +47,8 @@
                   %tr
                     %th 
                       ブランド
-                    %td 
-                      ブランドを記載
+                    %td
+                      = @item.brand
                   %tr 
                     %th 
                       商品の状態
