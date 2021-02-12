@@ -1,0 +1,108 @@
+.SearchItems
+  .SearchItems__header
+    = render "shared/header_at_login"
+  .SearchItems__main
+    .SearchMethods
+      .SearchMethods__form
+        .ResultsOrder
+        .AdvancedSearch
+          %h3.AdvancedSearch__title
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-plus
+              %span.AddKeyword キーワードを追加する
+            %input.Keywords{type: "search", placeholder: "例）値下げ", name: ""}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-list-ul
+              %span.ChooseCategory カテゴリーを選択する
+            %select.CategorySelections{name: ""}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-coins
+              %span.Budget 価格
+            %select.BudgetSelections{name: ""}
+            .PriceRange
+              %input.PriceRange__box{type: "number", placeholder: "￥Min"}
+              %span 〜
+              %input.PriceRange__box{type: "number", placeholder: "￥Max"}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-star
+              %span.AcceptableConditions 商品の状態
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 新品、未使用
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 未使用に近い
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 目立った傷や汚れなし
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} やや傷や汚れあり
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 傷や汚れあり
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 全体に状態が悪い
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-truck
+              %span.ChooseShipping 配送料の負担
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 送料込み（出品者負担）
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 着払い（購入者負担）
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-shopping-cart
+              %span.ChooseShipping 販売状況
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 販売中
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 売り切れ
+          .AdvancedSearch__decision
+            .AdvancedSearch__Decisiton__clear クリア
+            %input.AdvancedSearch__decision__done{type: "submit", name: "", value: "完了"}
+    .SearchResults
+      %section.DisplayResults
+        %h2.DisplyResuluts__title 検索結果
+        .Display__Results__count 1 - 2件表示
+        .DisplayItems
+          %section.SelectedItem
+            = link_to "#"
+              %figure.SelectedItem__photo
+                = image_tag "/"
+              .SelectedItem__explanation
+                %h3.SelectedItem__name アイスクリームスプーン
+                .SelectedItem__numbers
+                  .SelectedItem__price
+                  .SelectedItem__fav
+                    %i.far.fa-star 
+                    %span 1
+          %section.SelectedItem
+            = link_to "#"
+              %figure.SelectedItem__photo
+                = image_tag "/"
+                %figcaption
+                  .TriangleTag
+                    .TriangleTag__sold SOLD
+              .SelectedItem__explanation
+                %h3.SelectedItem__name アイスクリームスプーン
+                .SelectedItem__numbers
+                  .SelectedItem__price
+                  .SelectedItem__fav
+                    %i.far.fa-star 
+                    %span 2
+  .SearchItems__footer
+    = render "shared/footer"
+    = render "shared/purchase_btn"

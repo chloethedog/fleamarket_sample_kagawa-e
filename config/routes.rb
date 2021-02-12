@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   
   resources :items, only: [:index, :show, :new] do
     resources :purchases, only:[:index]
+    collection do
+      get :search
+    end  
   end
 
   resources :cards, only:[:new]
