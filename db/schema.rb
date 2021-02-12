@@ -19,6 +19,19 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "deliveries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "postal_code", null: false
+    t.integer "prefectures_id", null: false
+    t.string "municipality", null: false
+    t.string "address", null: false
+    t.string "address_detail"
+    t.string "phone_number"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_deliveries_on_user_id"
+  end
+
   create_table "item_photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "thumbnail", null: false
     t.bigint "item_id"
@@ -53,6 +66,11 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.text "profile"
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name_ruby", null: false
+    t.string "first_name_ruby", null: false
+    t.date "birthday", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -64,6 +82,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_053430) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "deliveries", "users"
   add_foreign_key "item_photos", "items"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "seller_id"
