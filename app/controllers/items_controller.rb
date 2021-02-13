@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    # @user.seller_id = params[:seller][:nickname]
   end
 
   def new
