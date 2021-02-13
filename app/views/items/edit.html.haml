@@ -9,13 +9,26 @@
           %span.Required 必須
           %p.Pics-best1 最高の1枚をアップロード!
           .ListingPics__upload
+            .image-list
+              .thumbnail
+                .thumbnail__image
+                  = image_tag @photo.thumbnail.url, width: 120, alt: "preview"
+                .thumbnail__btn
+                  .thumbnail__btn--update
+                    %span#update-btn 編集
+                  .thumbnail__btn--delete
+                    %span#delete-btn 削除
             .PicsFrame
-              = f.fields_for :item_photo do |ip|
-                .ClickLabel{for: ""}
-                  = ip.file_field :thumbnail, class:"ClickLabel"
-                  .FrameCentre
-                    %i.fas.fa-camera
-                    %p.FrameCentre__instructions クリックしてファイルをアップロード
+              = f.fields_for :item_photo, local: true do |ip|
+                .clearfix
+                  %ul#previews
+                    %li.label
+                      .ClickLabel{for: ""}
+                        = ip.file_field :thumbnail, class:"ClickLabel"
+                        = ip.hidden_field :thumbnail_cache
+                        .FrameCentre
+                          %i.fas.fa-camera
+                          %p.FrameCentre__instructions クリックしてファイルをアップロード
         .ListingPics__hidden
           .HiddenField
             .Preview
