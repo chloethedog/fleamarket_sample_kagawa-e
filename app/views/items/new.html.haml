@@ -3,16 +3,19 @@
     = render "purchases/header"
   .ListingItems__main
     .ListingForm
-      .ListingPics
-        %label 出品画像
-        %span.Required 必須
-        %p.Pics-best1 最高の1枚をアップロード!
-        .ListingPics__upload
-          .PicsFrame
-            %label.ClickLabel{for: ""}
-              .FrameCentre
-                %i.fas.fa-camera
-                %p.FrameCentre__instructions クリックしてファイルをアップロード
+      = form_with(model: @item, local: true) do |f|
+        .ListingPics
+          %label 出品画像
+          %span.Required 必須
+          %p.Pics-best1 最高の1枚をアップロード!
+          .ListingPics__upload
+            .PicsFrame
+              = f.fields_for :item_photo do |ip|
+                .ClickLabel{for: ""}
+                  = ip.file_field :thumbnail, class:"ClickLabel"
+                  .FrameCentre
+                    %i.fas.fa-camera
+                    %p.FrameCentre__instructions クリックしてファイルをアップロード
         .ListingPics__hidden
           .HiddenField
             .Preview
@@ -23,100 +26,101 @@
                   %span.PicUpdate 編集
                 .Preview__lower__delete
                   %span.PicDelete 削除
-      %hr.HorizontalRule          
-      .Description
-        .Description__name
-          %label{for: "item_name"} 商品名
-          %span.Required 必須
-          %input{required: "required", placeholder: "40文字まで", type: "text", name: ""}
-        .Description__text
-          %label{for: ""} 商品の説明
-          %span.Required 必須
-          %textarea.Description__text-fill{required: "required", rows: "7", placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", name: ""}
-        .Description__wordCount
-          %span 0
-          \/1000
-      %hr.HorizontalRule  
-      .Details
-        %p.Details__title 商品の詳細
-        .Categories
-          %label{for: ""} カテゴリー
-          %span.Required 必須
-          %select.Categories__ancestory{required: "required", name: ""}
-          %select.Categories__ancestory{required: "required", name: ""}
-          %select.Categories__ancestory{required: "required", name: ""}
-        .Size
-          %label{for: ""} サイズ
-          %span.Required 必須
-          %select{required: "required", name: ""}
-        .Brands
-          %label{for: ""} ブランド
-          %span.Optional 任意
-          %input{placeholder: "例）シャネル", type: "text", name: ""}
-        .Condition
-          %label{for: ""} 商品の状態
-          %span.Required 必須
-          %select{required: "required", name: ""}
-      %hr.HorizontalRule
-      .Shipping
-        %p.Shipping__title 
-          配送について
-          = link_to "#", class: "ShippingInfo" do
-            = icon('far', 'question-circle')
-        .Shipping__whoPays
-          %label{for: ""} 配送料の負担
-          %span.Required 必須
-          %select{required: "required", name: ""}
-        .Shipping__methods 
-          %label{for: ""} 配送の方法
-          %span.Required 必須
-          %select{required: "required", name: ""}
-        .Shipping__from
-          %label{for: ""} 発送元の地域
-          %span.Required 必須
-          %select{required: "required", name: ""} 
-        .Shipping__days
-          %label{for: ""} 発送までの日数
-          %span.Required 必須
-          %select{required: "required", name: ""}    
-      %hr.HorizontalRule
-      .Prices
-        %p.Prices__title 
-          価格（¥300〜9,999,999）
-          = link_to "#", class: "PriceInfo" do
-            = icon('far', 'question-circle')
-        .Prices__pricing
-          .Prices__pricing__left
-            %label{for: ""} 販売価格
+        %hr.HorizontalRule          
+        .Description
+          .Description__name
+            %label{for: "item_name"} 商品名
             %span.Required 必須
-          %span.YenMark ¥
-          %input.Prices__pricing__right{type: "number", placeholder: "0", name: ""}  
-        .Prices__salesCommission
-          .Prices__salesCommission__left 販売手数料（10%）
-          %span.Prices__salesCommission__right ー
+            = f.text_field :name, placeholder: "40文字まで"
+          .Description__text
+            %label{for: ""} 商品の説明
+            %span.Required 必須
+            = f.text_area :explanation, size: "30x10", maxlength: 1000, placeholder: "商品の説明（必須1,000文字以内）\n（色、素材、重さ、定価、注意点など）\n\n例）2010年頃に１万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          .Description__wordCount
+            %span 0
+            \/1000
+        %hr.HorizontalRule  
+        .Details
+          %p.Details__title 商品の詳細
+          .Categories
+            %label{for: ""} カテゴリー
+            %span.Required 必須
+            = f.collection_select :category_id,@category, :id, :name,{include_blank: "選んで下さい "},{class:"form-pull-down select-category"}
+
+          -# .Size
+          -#     %label{for: ""} サイズ
+          -#     %span.Required 必須
+          -#     -# %select{required: "required", name: ""}     
+          -# 現在、Sizeカラムがないのでコメントアウトしています。
+
+          .Brands
+            %label{for: ""} ブランド
+            %span.Optional 任意
+            = f.text_field :brand, placeholder: "例）シャネル"
+          .Condition
+            %label{for: ""} 商品の状態
+            %span.Required 必須
+            = f.collection_select :state_id, State.all, :id, :name, {include_blank: "選んでください"},{class:""}
         %hr.HorizontalRule
-        .Prices__profit
-          .Prices__profit__left 販売利益
-          %span.Prices__profit__right ー
-      .PutUp
-        .PutUp__contents
-          %input.NbtnPutup{type: "submit", name: "commit", value: "出品する"}
-          = link_to '下書きに保存', "#", class: "NbtnDraft" 
-          = link_to 'もどる', "#", class: "NbtnRtn" 
-      .Agreement
-        .Agreement__contents
-          %p 
-            禁止されている
-            = link_to '行為', "#", class: "ListingAgreement" 
-            および 
-            = link_to '出品物', "#", class: "ListingAgreement" 
-            を必ずご確認ください。 
-            = link_to '偽ブランド品', "#", class: "ListingAgreement" 
-            や
-            = link_to '盗品物', "#", class: "ListingAgreement" 
-            などの販売は犯罪であり、法律により処罰される可能性があります。 
-            また、出品をもちまして
-            = link_to '加盟店規約', "#", class: "ListingAgreement" 
-            に同意したことになります。
-  .ListingItems__footer
-    = render "purchases/footer"
+        .Shipping
+          %p.Shipping__title 
+            配送について
+            = link_to "#", class: "ShippingInfo" do
+              = icon('far', 'question-circle')
+          .Shipping__whoPays
+            %label{for: ""} 配送料の負担
+            %span.Required 必須
+            = f.collection_select :delivery_fee_id, DeliveryFee.all, :id, :name, {include_blank: "選んでください"},{class:""}
+          .Shipping__methods 
+            %label{for: ""} 配送の方法
+            %span.Required 必須
+            = f.collection_select :delivery_method_id, DeliveryMethod.all, :id, :name, {include_blank: "選んでください"},{class:""}
+          .Shipping__from
+            %label{for: ""} 発送元の地域
+            %span.Required 必須
+            = f.collection_select :delivery_area_id, DeliveryArea.all, :id, :name, {include_blank: "選んでください"},{class:""}
+          .Shipping__days
+            %label{for: ""} 発送までの日数
+            %span.Required 必須
+            = f.collection_select :shipment_date_id, ShipmentDate.all, :id, :name, {include_blank: "選んでください"},{class:""}
+        %hr.HorizontalRule
+        .Prices
+          %p.Prices__title 
+            価格（¥300〜9,999,999）
+            = link_to "#", class: "PriceInfo" do
+              = icon('far', 'question-circle')
+          .Prices__pricing
+            .Prices__pricing__left
+              %label{for: ""} 販売価格
+              %span.Required 必須
+            %span.YenMark ¥
+            = f.number_field :price, class:"Prices__pricing__right", min: 300, max: 999999, placeholder: "--"
+          .Prices__salesCommission
+            .Prices__salesCommission__left 販売手数料（10%）
+            %span.Prices__salesCommission__right ー
+          %hr.HorizontalRule
+          .Prices__profit
+            .Prices__profit__left 販売利益
+            %span.Prices__profit__right ー
+        .PutUp
+          .PutUp__contents
+            = f.submit '出品する', class: 'NbtnPutup'
+            = link_to '下書きに保存', "#", class: "NbtnDraft" 
+            = link_to 'もどる', "#", class: "NbtnRtn" 
+        .Agreement
+          .Agreement__contents
+            %p 
+              禁止されている
+              = link_to '行為', "#", class: "ListingAgreement" 
+              および 
+              = link_to '出品物', "#", class: "ListingAgreement" 
+              を必ずご確認ください。 
+              = link_to '偽ブランド品', "#", class: "ListingAgreement" 
+              や
+              = link_to '盗品物', "#", class: "ListingAgreement" 
+              などの販売は犯罪であり、法律により処罰される可能性があります。 
+              また、出品をもちまして
+              = link_to '加盟店規約', "#", class: "ListingAgreement" 
+              に同意したことになります。
+    .ListingItems__footer
+      = render "purchases/footer"
