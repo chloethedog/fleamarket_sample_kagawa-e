@@ -12,10 +12,10 @@
             .item-images
               .item-images__main
                 .item-images__main-image
-                  = image_tag 'testtest.jpeg',class: "big-image"
+                  = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag 'testtest.jpeg', class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
             .item__price
               %span.item__price-fee
                 = "¥#{@item.price}"
@@ -24,13 +24,14 @@
                 %span 送料込み
             .item__buy-button
               - if user_signed_in?
-                ifログイン状態かつ出品者であるならば（current_user.id == @item.seller_id）        
-                = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
-                = link_to "商品を削除する", '#', class: "item__buy-button_delete"
-                elseログイン状態かつ出品者以外なら
+                - if current_user.id == @item.seller_id       
+                  = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
+                  = link_to "商品を削除する", '#', class: "item__buy-button_delete"
+                - else
                 = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
               - else
-              ログアウトならば編集・削除・購入ボタンなし
+                .no_by-button
+
 
 
 
@@ -44,46 +45,46 @@
                     %th 
                       出品者
                     %td 
-                      = link_to @user.nickname, class: "#"
+                      = link_to @item.seller.nickname, class: "#"
                   %tr
                     %th
                       カテゴリー
                     %td 
-                      = link_to "親カテゴリー", "#", class: "#"
+                      = link_to @item.category.parent.parent.name, "#", class: "#"
                       %br
-                      = link_to ">小カテゴリー", "#", class: "#"
+                      =link_to @item.category.parent.name, "#", class: "#"
                       %br
-                      = link_to ">孫カテゴリー", "#", class: "#"
+                      = link_to  @item.category.name, "#", class: "#"
                   %tr
                     %th 
                       ブランド
                     %td
                       = @item.brand
                   %tr 
-                    %th 
-                      商品の状態
+                    %th
+                      = @item.state.name 
                     %td 
                       = @item.explanation
                   %tr 
                     %th 
                       配送料の負担
                     %td 
-                      配送料の負担方法を記載
+                      = @item.delivery_fee.name
                   %tr 
                     %th
                       配送の方法
                     %td 
-                      配送の方法を記載
+                      = @item.delivery_method.name
                   %tr 
                     %th 
                       発送元の地域
                     %td 
-                      香川県
+                      = @item.delivery_area.name
                   %tr 
                     %th 
                       発送日の目安
                     %td
-                      発送日の目安を記載
+                      = @item.shipment_date.name
             .item__option
               %ul
                 = link_to "#", method: :post, class: "favorite-link" do
@@ -144,5 +145,9 @@
                             %i.fa.fa-star
                             4
                         %p （税込）
+
+                
+                          
+                          
   = render "shared/footer"
   = render "shared/purchase_btn"

@@ -288,3 +288,7 @@
     border: 1px solid #ccc;
     color: #fff;
 }
+
+a {
+    @include text_blue;
+}
