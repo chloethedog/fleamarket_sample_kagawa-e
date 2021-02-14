@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
     else
       @category = Category.roots
       @item.build_item_photo
+      flash.now[:alert] = @item.errors.full_messages
       render "new"
     end
   end
