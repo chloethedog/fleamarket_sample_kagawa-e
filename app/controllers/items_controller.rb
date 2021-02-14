@@ -31,7 +31,6 @@ class ItemsController < ApplicationController
     if @item.update(update_params)
       redirect_to root_path, notice: '商品を編集しました'
     else
-      @item.build_item_photo
       flash.now[:alert] = @item.errors.full_messages
       render :edit
     end
@@ -61,6 +60,5 @@ class ItemsController < ApplicationController
     @item_category_root_children = @item_category_root.children
     @category = Category.roots
     @photo = @item.item_photo
-    @photo.thumbnail.cache! unless @photo.thumbnail.blank?
   end
 end
