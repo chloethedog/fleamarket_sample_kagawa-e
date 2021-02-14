@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
   resources :items, only: [:index, :show, :new, :create, :edit, :update] do
     resources :purchases, only:[:index]
+    # get "items/new", to: ""
 
   end
 
