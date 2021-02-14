@@ -224,17 +224,35 @@
 
 //クレジットカード登録ページで使用
 @mixin card-form-style {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    height: 48px;
-    outline: none;
-    background-color: #fff;
-    color: #222;
-    margin: 0;
-    padding: 0 16px;
-    line-height: 1;
-    font-family: inherit;
-    width: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 48px;
+  outline: none;
+  background-color: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0 16px;
+  line-height: 1;
+  font-family: inherit;
+  width: inherit;
+} 
+
+// 商品編集画面で使用
+@mixin edit-page-style {
+  color: #00b0ff;
+  line-height: 30px;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #eee;
+  background: $usual-color-white;
+  cursor: pointer;
+}
+@mixin edit-page-btn-style {
+  color: #00b0ff;
+  background: $usual-color-white;
+  line-height: 30px;
+  cursor: pointer;
+  font-size: 14px;
 }
