@@ -21,14 +21,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
-    @category = Category.roots
   end
 
   def update
-    item = Item.find(params[:id])
-    item.update(item_params)
-    
+    if @item.update(item_params)
+      redirect_to root_path, notice: '商品を編集しました'
+    else
+      flash.now[:alert] = @item.errors.full_messages
+      render :edit
+    end
   end
 
   def get_category
