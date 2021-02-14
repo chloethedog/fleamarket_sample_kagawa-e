@@ -233,3 +233,21 @@
   font-family: inherit;
   width: inherit;
 } 
+
+// 商品編集画面で使用
+@mixin edit-page-style {
+  color: #00b0ff;
+  line-height: 30px;
+  width: 50%;
+  height: 30px;
+  border: 1px solid #eee;
+  background: $usual-color-white;
+  cursor: pointer;
+}
+@mixin edit-page-btn-style {
+  color: #00b0ff;
+  background: $usual-color-white;
+  line-height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}

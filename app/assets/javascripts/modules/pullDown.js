@@ -32,7 +32,9 @@ $(function(){
       target.append(select_form)
     })
     .fail(function() {
-      alert('失敗')
+      if(category_id != "") {
+        alert('失敗')
+      }
     });
   })
 });
