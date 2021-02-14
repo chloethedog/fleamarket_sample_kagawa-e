@@ -7,24 +7,37 @@
       .main-item__show
         .main-item-list
           .item
-            %h2.item__name 商品名
+            %h2.item__name
+              = @item.name
             .item-images
               .item-images__main
                 .item-images__main-image
-                  = image_tag 'testtest.jpeg',class: "big-image"
+                  = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag 'testtest.jpeg', class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
             .item__price
-              %span.item__price-fee ¥1000
+              %span.item__price-fee
+                = "¥#{@item.price}"
               .item__price-detail
                 %span (税込)
                 %span 送料込み
             .item__buy-button
-              = link_to "購入画面へ進む", '#', class: "item__buy-button_link" 
+              - if user_signed_in?
+                - if current_user.id == @item.seller_id       
+                  = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
+                  = link_to "商品を削除する", '#', class: "item__buy-button_delete"
+                - else
+                  = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+              - else
+                .no_by-button
+
+
+
+
             .item__text-box
               .item__text
-                testテスト試作
+                = @item.explanation
             .item__detail
               %table
                 %tbody
@@ -32,46 +45,51 @@
                     %th 
                       出品者
                     %td 
-                      = link_to "出品者", "#", class: "#"
+                      = link_to @item.seller.nickname, user_path, class: "#"
                   %tr
                     %th
                       カテゴリー
-                    %td 
-                      = link_to "親カテゴリー", "#", class: "#"
-                      %br
-                      = link_to ">小カテゴリー", "#", class: "#"
-                      %br
-                      = link_to ">孫カテゴリー", "#", class: "#"
+                    %td
+                      - if @item.category.parent.parent.present?
+                        = link_to @item.category.parent.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.name, "#", class: "#"
+                      - else
+                        = link_to @item.category.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.name, "#", class: "#"
                   %tr
                     %th 
                       ブランド
-                    %td 
-                      ブランドを記載
+                    %td
+                      = @item.brand
                   %tr 
-                    %th 
-                      商品の状態
+                    %th
+                      = @item.state.name 
                     %td 
-                      商品の状態を記載
+                      = @item.explanation
                   %tr 
                     %th 
                       配送料の負担
                     %td 
-                      配送料の負担方法を記載
+                      = @item.delivery_fee.name
                   %tr 
                     %th
                       配送の方法
                     %td 
-                      配送の方法を記載
+                      = @item.delivery_method.name
                   %tr 
                     %th 
                       発送元の地域
                     %td 
-                      香川県
+                      = @item.delivery_area.name
                   %tr 
                     %th 
                       発送日の目安
                     %td
-                      発送日の目安を記載
+                      = @item.shipment_date.name
             .item__option
               %ul
                 = link_to "#", method: :post, class: "favorite-link" do
@@ -131,6 +149,6 @@
                           %li
                             %i.fa.fa-star
                             4
-                        %p （税込）
+                        %p （税込）                       
   = render "shared/footer"
   = render "shared/purchase_btn"
