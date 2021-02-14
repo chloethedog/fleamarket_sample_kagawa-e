@@ -216,30 +216,28 @@ label {
   }
 }
 figcaption {
-  .TriangleTag {
-    ::after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-color: #3CCACE transparent transparent transparent;
-      border-width: 100px 100px 0 0;
-    } 
-    &__sold {
-      top: 20px;
-      font-size: 24px;
-      position: absolute;
-      left: 0;
-      z-index: 2;
-      color: #fff;
-      transform: rotate(-45deg);
-      letter-spacing: 2px;
-      font-weight: 600;    
-    }
+  .TriangleTag::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #3CCACE transparent transparent transparent;
+    border-width: 100px 100px 0 0;
   }  
+  .SoldTag {
+    top: 20px;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    transform: rotate(-45deg);
+    letter-spacing: 2px;
+    font-weight: 600;    
+  }
 }
