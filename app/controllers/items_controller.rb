@@ -28,9 +28,10 @@ class ItemsController < ApplicationController
   end
 
   def update
-    if @item.update(item_params)
+    if @item.update(update_params)
       redirect_to root_path, notice: '商品を編集しました'
     else
+      @item.build_item_photo
       flash.now[:alert] = @item.errors.full_messages
       render :edit
     end
@@ -44,7 +45,11 @@ class ItemsController < ApplicationController
 
  private
   def item_params
-    params.require(:item).permit(:name, :price, :purchase, :buyer_id, :explanation, :category_id, :state_id, :thumbnail_cache, :brand, :delivery_fee_id, :delivery_area_id, :delivery_method_id, :shipment_date_id, item_photo_attributes: [:thumbnail], item_photo_attributes: [:thumbnail_cache]).merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :price, :purchase, :buyer_id, :explanation, :category_id, :state_id, :brand, :delivery_fee_id, :delivery_area_id, :delivery_method_id, :shipment_date_id, item_photo_attributes: [:thumbnail]).merge(seller_id: current_user.id)
+  end
+
+  def update_params
+    params.require(:item).permit(:name, :price, :purchase, :buyer_id, :explanation, :category_id, :state_id, :brand, :delivery_fee_id, :delivery_area_id, :delivery_method_id, :shipment_date_id, item_photo_attributes: [:thumbnail, :thumbnail_cache, :id, :_delete]).merge(seller_id: current_user.id)
   end
   
   def item_edit
