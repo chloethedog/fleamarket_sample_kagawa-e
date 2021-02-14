@@ -1,220 +1,225 @@
 @mixin label {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4em;
-}
-
-@mixin input { 
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin: 0;
-  outline: none;
-  padding: 0 16px;
-  display: inline-flex;
-  width: 100%;
-  margin-top: 16px;
-}
-
-@mixin label-span($color: #ff0211) {
-  label {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.4em;
-  }
-  span {
-    background-color: $color;
-    color: #fff;
-    font-size: 12px;
-    padding: 0 4px;
-    border-radius: 2px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.4em;
-    margin-left: 8px;
-  }
+}
+
+@mixin input {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0 16px;
+    display: inline-flex;
+    width: 100%;
+    margin-top: 16px;
+}
+
+@mixin label-span($color: #ff0211) {
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4em;
+    }
+    span {
+        background-color: $color;
+        color: #fff;
+        font-size: 12px;
+        padding: 0 4px;
+        border-radius: 2px;
+        display: inline-block;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.4em;
+        margin-left: 8px;
+    }
 }
 
 @mixin frame {
-  padding: 40px;
-  background-color: #fff;
-} 
+    padding: 40px;
+    background-color: #fff;
+}
 
 @mixin HR {
-  border-top-color: #efefef;
-  border-left: 0 solid #efefef;
-  border-bottom: 0 solid #efefef;
-  border-right: 0 solid #efefef;
-  border-top-style: solid;
-  border-top-width: 1px;
-  margin: 0;
-} 
+    border-top-color: #efefef;
+    border-left: 0 solid #efefef;
+    border-bottom: 0 solid #efefef;
+    border-right: 0 solid #efefef;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin: 0;
+}
 
 @mixin title {
-  color: #888888;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4em;
-  margin-bottom: 24px;
+    color: #888888;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-bottom: 24px;
 }
 
 @mixin prices {
-  -webkit-box-align: center;
-  align-items: center;
-  box-sizing: content-box;
-  display: flex;
-  height: 46px;
-  padding: 12px 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: content-box;
+    display: flex;
+    height: 46px;
+    padding: 12px 0px;
 }
 
 @mixin btn($backgroundColor, $borderColor, $fontColor) {
-  font-size: 17px;
-  min-height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
-  font-weight: 600;
-  width: 100%; 
-  border-radius: 4px;
-  box-sizing: border-box;
-  background: $backgroundColor;
-  border: 1px solid $borderColor;
-  color: $fontColor;
+    font-size: 17px;
+    min-height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: $backgroundColor;
+    border: 1px solid $borderColor;
+    color: $fontColor;
 }
 
 @mixin btnSetting {
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 @mixin info {
-  color: #0099e8;
-  text-decoration: none;
-}  
+    color: #0099e8;
+    text-decoration: none;
+}
 
 @mixin PicLower {
-  width: 50%;
-  height: 30px;
-  border: 1px solid #eee;
-  background: #f5f5f5;
-  text-align: center;
-  cursor: pointer;
+    width: 50%;
+    height: 30px;
+    border: 1px solid #eee;
+    background: #f5f5f5;
+    text-align: center;
+    cursor: pointer;
 }
 
 @mixin PicLower-btn {
-  background: #f5f5f5;
-  color: #00b0ff;
-  line-height: 30px;
-  font-weight: 400;
-  font-size: 14px;
-  margin: 0;
+    background: #f5f5f5;
+    color: #00b0ff;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
 }
+
 //トップページで使用
 @mixin Fcolor {
-  color: #3ccace;
+    color: #3ccace;
 }
 
 @mixin BGcolor {
-  background-color: #3ccace;
+    background-color: #3ccace;
 }
 
 @mixin Blue {
-  color: #0095ee;
+    color: #0095ee;
 }
 
 @mixin BGblue {
-  background-color: #0095ee;
+    background-color: #0095ee;
 }
 
+@mixin text_blue {
+    color: #0095ee;
+}
 
 @mixin Inputplace {
-  box-sizing: border-box;
-  height: 48px;
-  width: calc(50% - 6px);
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  line-height: 1.5;
-  font-size: 16px;
-  margin: 8px 0 0;
+    box-sizing: border-box;
+    height: 48px;
+    width: calc(50% - 6px);
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 8px 0 0;
 }
 
 @mixin Sticker {
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  font-size: 12px;
-  vertical-align: center;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 12px;
+    vertical-align: center;
 }
 
 @mixin BtnSize {
-  width: 328px;
-  height: 52px;
-  font-size: 15px;
+    width: 328px;
+    height: 52px;
+    font-size: 15px;
 }
 
-@mixin Show($size){
-  font-size: $size;
-  text-decoration: none;
-  color: black;
-  border-left: solid 8px #3ccace;
-  background: whitesmoke;
-  margin-bottom: 5px;
-  line-height: 2.5;
-  border-radius: 0 15px 15px 0;
-  padding: 0.5em;
-  list-style-type: none!important;
-  display: block;
+@mixin Show($size) {
+    font-size: $size;
+    text-decoration: none;
+    color: black;
+    border-left: solid 8px #3ccace;
+    background: whitesmoke;
+    margin-bottom: 5px;
+    line-height: 2.5;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    list-style-type: none!important;
+    display: block;
 }
+
 //商品購入ページで使用
 @mixin Purchases {
-  margin: 0px auto;
-  padding: 32px 16px;
-  max-width: 375px;
-  border-top: 1px solid  whitesmoke;
+    margin: 0px auto;
+    padding: 32px 16px;
+    max-width: 375px;
+    border-top: 1px solid whitesmoke;
 }
 
 @mixin BGpurchases {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 // 商品詳細ページで使用
 @mixin search-style1 () {
-  line-height: 38px;
-  padding: 0 0 0 16px;
-  position: relative;
+    line-height: 38px;
+    padding: 0 0 0 16px;
+    position: relative;
 }
 
 @mixin search-style2() {
-  color: $black-color;
-  line-height: 32px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  padding-right: 30px;
+    color: $black-color;
+    line-height: 32px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding-right: 30px;
 }
 
 @mixin contents-style1() {
-  color: $black-color;
-  padding-left: 16px;
+    color: $black-color;
+    padding-left: 16px;
 }
 
 @mixin contents-style2() {
-  align-items: center;
-  color: $black-color;
-  line-height: 32px;
+    align-items: center;
+    color: $black-color;
+    line-height: 32px;
 }
 
 @mixin contents-style3() {
-  color: #cccccc;
-  font-size: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
+    color: #cccccc;
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 //クレジットカード登録ページで使用

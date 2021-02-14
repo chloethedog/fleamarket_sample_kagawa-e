@@ -4,6 +4,10 @@ class ItemsController < ApplicationController
     @item = Item.all
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
   def new
     @item = Item.new
     @item.build_item_photo
