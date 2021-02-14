@@ -151,3 +151,18 @@
 .search-list__brand-link:hover {
     @include Blue;
 }
+
+.contents-list {
+    &__favorites-link:hover {
+        @include Blue;
+    }
+    &__news-link:hover {
+        @include Blue;
+    }
+    &__doing-list-link:hover {
+        @include Blue;
+    }
+    &__mypage-link:hover {
+        @include Blue;
+    }
+}
