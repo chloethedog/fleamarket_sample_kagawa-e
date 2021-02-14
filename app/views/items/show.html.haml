@@ -15,7 +15,7 @@
                   = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag 'testtest.jpeg', class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
             .item__price
               %span.item__price-fee
                 = "¥#{@item.price}"
@@ -45,16 +45,21 @@
                     %th 
                       出品者
                     %td 
-                      = link_to @item.seller.nickname, class: "#"
+                      = link_to @item.seller.nickname, user_path, class: "#"
                   %tr
                     %th
                       カテゴリー
-                    %td 
-                      = link_to @item.category.parent.parent.name, "#", class: "#"
-                      %br
-                      =link_to @item.category.parent.name, "#", class: "#"
-                      %br
-                      = link_to  @item.category.name, "#", class: "#"
+                    %td
+                      - if @item.category.parent.parent.present?
+                        = link_to @item.category.parent.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.name, "#", class: "#"
+                      - else
+                        = link_to @item.category.parent.name, "#", class: "#"
+                        %br
+                        = link_to @item.category.name, "#", class: "#"
                   %tr
                     %th 
                       ブランド
