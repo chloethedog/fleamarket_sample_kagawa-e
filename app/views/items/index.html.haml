@@ -239,6 +239,9 @@
                   %p (税込)
   = render "shared/footer"
   .purchase-btn
-    .purchase-btn--text 出品する
-    = link_to (image_tag 'icon_camera.png' ,class: "purchase-btn--icon")
-
+    - if user_signed_in?
+      .purchase-btn--text 出品する
+      = link_to (image_tag 'icon_camera.png' ,class: "purchase-btn--icon")
+    -else
+      .purchase-btn--text 出品する
+      = link_to image_tag('icon_camera.png' ,class: "purchase-btn--icon"),new_user_registration_path
