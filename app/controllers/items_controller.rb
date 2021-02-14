@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :item_edit, only: [:edit, :update]
   def index
     @item = Item.all
   end
@@ -21,6 +22,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    unless current_user.id == @item.seller_id 
+      redirect_to root_path, notice: '商品の出品者ではありません'
+    end
   end
 
   def update
@@ -40,7 +44,18 @@ class ItemsController < ApplicationController
 
  private
   def item_params
-    params.require(:item).permit(:name, :price, :purchase, :buyer_id, :explanation, :category_id, :state_id, :brand, :delivery_fee_id, :delivery_area_id, :delivery_method_id, :shipment_date_id, item_photo_attributes: [:thumbnail]).merge(seller_id: current_user.id)
+    params.require(:item).permit(:name, :price, :purchase, :buyer_id, :explanation, :category_id, :state_id, :thumbnail_cache, :brand, :delivery_fee_id, :delivery_area_id, :delivery_method_id, :shipment_date_id, item_photo_attributes: [:thumbnail], item_photo_attributes: [:thumbnail_cache]).merge(seller_id: current_user.id)
   end
-
+  
+  def item_edit
+    @item = Item.find(params[:id])
+    @item_category = Category.find_by(id: @item.category_id)
+    @item_category_parent = @item.category.parent
+    @item_category_parent_children = @item_category_parent.children
+    @item_category_root = @item_category.root
+    @item_category_root_children = @item_category_root.children
+    @category = Category.roots
+    @photo = @item.item_photo
+    @photo.thumbnail.cache! unless @photo.thumbnail.blank?
+  end
 end
