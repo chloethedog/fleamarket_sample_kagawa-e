@@ -3,14 +3,14 @@
   %main.card-registration
     %section.card-registration__title
       %h2 支払い方法
-    = form_with url: "#", id: "card_form", local: true do |f|
+    = form_with model: @card, id: "card_form", local: true do |f|
       .card-form
         .input-form
           .input-form__form-title
             = f.label :カード番号
             %span.reauired 必須
           .input-form__input-box
-            = text_field  "card", "card_number", required: "required", class: "input-form__card-number", placeholder: "1234 5678 1234 5678" ,size: "19", maxlength: "19", type: "text", id: "card_number_form"
+            = text_field  "card", "card_number", required: "required", class: "input-form__card-number", placeholder: "1234 5678 1234 5678" ,size: "19", maxlength: "16", type: "text", id: "card_number"
           = image_tag 'visa-c.svg', class: 'card-company'
           = image_tag 'mastercard.svg', class: 'card-company'
           = image_tag 'saison.svg', class: 'card-company'
