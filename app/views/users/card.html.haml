@@ -15,8 +15,9 @@
                 %icon.far.fa-credit-card
                 クレジットカードを追加する
               = form_with url: new_card_path do
-                :plain
-                  <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
+                <script type="text/javascript" src="https://js.pay.jp/"></script>
+                -# :plain
+                -#   <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
             -# %section.payment-method__section
             -#   .credit-card
             -#     %icon.fas.fa-check-circle
