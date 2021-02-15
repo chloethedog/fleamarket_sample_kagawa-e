@@ -2,7 +2,7 @@ $(function() {
   $('#card_form').on('submit', function(e) {
     e.preventDefault()
 
-    Payjp.setPublicKey("pk_test_0653e560244cd04acd14b3ef");
+    Payjp.setPublicKey("Rails.application.credentials[:payjp][:pk_test_key]");
     var card = {
       number: document.getElementById("card_number").value,
       exp_month: document.getElementById("card[exp_month]").value,
