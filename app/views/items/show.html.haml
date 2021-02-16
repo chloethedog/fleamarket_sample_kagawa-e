@@ -25,7 +25,7 @@
             .item__buy-button
               - if user_signed_in?
                 - if current_user.id == @item.seller_id       
-                  = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
+                  = link_to "商品を編集する", edit_item_path(@item.id), class: "item__buy-button_link--edit" 
                   = link_to "商品を削除する", '#', class: "item__buy-button_delete"
                 - else
                   = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
