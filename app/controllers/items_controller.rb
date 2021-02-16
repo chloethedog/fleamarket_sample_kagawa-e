@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    
     @item.build_item_photo
     @category = Category.roots
   end
