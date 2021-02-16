@@ -12,10 +12,10 @@
             .item-images
               .item-images__main
                 .item-images__main-image
-                  = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
+                  = image_tag @item.item_photo.thumbnail.url,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.url, class: "small-image"
             .item__price
               %span.item__price-fee
                 = "¥#{@item.price}"
