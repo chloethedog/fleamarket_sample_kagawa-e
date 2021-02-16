@@ -12,10 +12,10 @@
             .item-images
               .item-images__main
                 .item-images__main-image
-                  = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
+                  = image_tag @item.item_photo.thumbnail.url,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.url, class: "small-image"
             .item__price
               %span.item__price-fee
                 = "¥#{@item.price}"
@@ -31,10 +31,6 @@
                   = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
               - else
                 .no_by-button
-
-
-
-
             .item__text-box
               .item__text
                 = @item.explanation
@@ -104,14 +100,27 @@
                     %i.fa.fa-flag
                     不適切な商品の通報
           .item__comments
-            %ul.comments-list
-            = form_with html: {class: "#"} do |f|
+            %ul.item__comments-list
+              - @item.comments.each do |comment|
+                .comment-box
+                  .comment-box__name-box
+                    - if comment.user_id == @item.seller_id
+                      .comment-box__seller
+                        出品者
+                      .comment-box__nickname
+                        = comment.user.nickname
+                    - else
+                      .comment-box__nickname
+                      = comment.user.nickname
+                  .comment-box__text
+                    = comment.text
+            = form_with model: [@item, @comment], html: {class: "#"}, local: true do |f|
               = f.text_area :text, class: "form-message"
               %p.warning-message
                 相手のことを考えて丁寧なコメントを心がけましょう。
                 %br 
                 不快な言葉遣いなどは利用制限や退会処分となる事があります。
-              = button_tag type: 'submit', class: "submit-btn" do
+              = f.submit class: "submit-btn" do
                 %icon.fa.fa-comment 
                 コメントする
           .item__seller

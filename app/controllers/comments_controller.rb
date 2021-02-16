@@ -12,11 +12,7 @@ class CommentsController < ApplicationController
       render item_path(@item)
     end
   end
-
-  def new
-    return @comment
-  end
-
+  
   private
   def comment_params
     params.require(:comment).permit(:text, :item_id).merge(user_id: current_user.id)
