@@ -3,13 +3,10 @@ class CommentsController < ApplicationController
   
 
   def create
-    @comment = @item.comments.new(comment_params)
-    if @comment.save
-      redirect_to item_path(@item), notice: 'コメントが送信されました'
-    else
-      @comments =  @item.comments.includes(:item)
-      flash.now[:alert] = 'メッセージを入力してください。'
-      render item_path(@item)
+    @comment = @item.comments.create(comment_params)
+    respond_to do |format|
+      format.html {redirect_to item_path(@item)}
+      format.json
     end
   end
   
