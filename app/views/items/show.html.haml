@@ -100,29 +100,32 @@
                     %i.fa.fa-flag
                     不適切な商品の通報
           .item__comments
-            %ul.item__comments-list
+            %ul.item__comments--list
               - @item.comments.each do |comment|
                 .comment-box
-                  .comment-box__name-box
-                    - if comment.user_id == @item.seller_id
-                      .comment-box__seller
-                        出品者
-                      .comment-box__nickname
-                        = comment.user.nickname
-                    - else
-                      .comment-box__nickname
-                      = comment.user.nickname
+                  .comment-box__title
+                    .comment-box__created_at 
+                      = comment.created_at
+                    .comment-box__name-box
+                      - if comment.user_id == @item.seller_id
+                        .comment-box__name-box--seller
+                          出品者
+                        .comment-box__name-box--nickname
+                          = comment.user.nickname
+                      - else
+                        .comment-box__name-box--nickname
+                          = comment.user.nickname
                   .comment-box__text
                     = comment.text
-            = form_with model: [@item, @comment], html: {class: "#"}, local: true do |f|
-              = f.text_area :text, class: "form-message"
-              %p.warning-message
-                相手のことを考えて丁寧なコメントを心がけましょう。
-                %br 
-                不快な言葉遣いなどは利用制限や退会処分となる事があります。
-              = f.submit class: "submit-btn" do
-                %icon.fa.fa-comment 
-                コメントする
+            - if user_signed_in?
+              = form_with model: [@item, @comment], html: {class: "#"}, local: true do |f|
+                = f.text_area :text, class: "form-message"
+                %p.warning-message
+                  相手のことを考えて丁寧なコメントを心がけましょう。
+                  %br 
+                  不快な言葉遣いなどは利用制限や退会処分となる事があります。
+                = f.submit "コメントする", class: "submit-btn" do
+                  %icon.fa.fa-comment 
           .item__seller
             = link_to "出品者さんのその他の商品", "#", class: "other-item-title"
             .other-item-list
