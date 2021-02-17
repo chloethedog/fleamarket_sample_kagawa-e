@@ -1,4 +1,5 @@
-%body
+= javascript_include_tag 'commentReload'
+.Wrapper
   = render "shared/header"
   - breadcrumb :item
   = render "shared/breadcrumbs"
@@ -102,7 +103,7 @@
           .item__comments
             %ul.item__comments--list
               - @item.comments.each do |comment|
-                .comment-box{"data-comment": comment.id}
+                .comment-box{"data-comment-id": comment.id}
                   .comment-box__title
                     .comment-box__created_at 
                       = comment.created_at
