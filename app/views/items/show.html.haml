@@ -102,7 +102,7 @@
           .item__comments
             %ul.item__comments--list
               - @item.comments.each do |comment|
-                .comment-box
+                .comment-box{"data-comment": comment.id}
                   .comment-box__title
                     .comment-box__created_at 
                       = comment.created_at
