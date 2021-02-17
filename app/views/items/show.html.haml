@@ -34,7 +34,7 @@
                   - if @item.purchase == 0
                     = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
                   - else
-                    = image_tag "売り切れです", class: "item__buy-button_link"
+                    .item__buy-button--soldout 売り切れました
               - else
                 .no_by-button
 

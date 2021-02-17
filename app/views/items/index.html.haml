@@ -87,23 +87,22 @@
           = link_to "#" do
             .prodeucts__text 新規投稿商品
         .products__container
-          - @item.each do |item|
-            - if  item.purchase == 0
-              .container__sample
-                = link_to item_path(item.id) do
-                  %figure.product__sample--img
-                    = image_tag item.item_photo.thumbnail.url,class:"img"
-                  .product__sample--text
-                    %h3.Introduction
-                      = item.name
-                    .details
-                      %ul
-                        %li
-                          = "¥#{item.price}"
-                        %li
-                          %i.fa.fa-star
-                          0
-                      %p (税込)
+          - @items.each do |item|
+            .container__sample
+              = link_to item_path(item.id) do
+                %figure.product__sample--img
+                  = image_tag item.item_photo.thumbnail.url,class:"img"
+                .product__sample--text
+                  %h3.Introduction
+                    = item.name
+                  .details
+                    %ul
+                      %li
+                        = "¥#{item.price}"
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
     %Section.NewPickup
       .NewPickup__tittle ピックアップブランド
       .NewPickup__products
@@ -111,8 +110,8 @@
           = link_to "#" do
             .prodeucts__text 無印良品
         .products__container
-          - @item.each do |item|
-            - if  item.brand == "無印良品" && item.purchase == 0
+          - @items.each do |item|
+            - if  item.brand == "無印良品"
               .container__sample
                 = link_to item_path(item.id) do
                   %figure.product__sample--img
