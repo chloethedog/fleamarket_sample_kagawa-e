@@ -118,13 +118,13 @@
                   .comment-box__text
                     = comment.text
             - if user_signed_in?
-              = form_with model: [@item, @comment], html: {class: "#"}, local: true do |f|
-                = f.text_area :text, class: "form-message"
+              = form_with model: [@item, @comment], id: "comment_new", local: true do |f|
+                = f.text_area :text, class: "comment__text-box"
                 %p.warning-message
                   相手のことを考えて丁寧なコメントを心がけましょう。
                   %br 
                   不快な言葉遣いなどは利用制限や退会処分となる事があります。
-                = f.submit "コメントする", class: "submit-btn" do
+                = f.submit "コメントする", class: "comment__submit" do
                   %icon.fa.fa-comment 
           .item__seller
             = link_to "出品者さんのその他の商品", "#", class: "other-item-title"

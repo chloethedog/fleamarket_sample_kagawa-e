@@ -151,7 +151,7 @@
         background-color: #fff;
         margin: 10px 0;
         text-align: center;
-        .form-message {
+        .comment__text-box {
             width: 100%;
             min-height: 104px;
             padding: 10px;
@@ -163,7 +163,7 @@
             margin: 10px 0;
             text-align: left;
         }
-        .submit-btn {
+        .comment__submit {
             line-height: 48px;
             background-color: $usual-color;
             border: 1px solid $usual-color;
