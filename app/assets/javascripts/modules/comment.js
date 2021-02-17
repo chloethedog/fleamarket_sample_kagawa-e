@@ -1,7 +1,8 @@
 $(function(){
+
   function buildHTML(comment){
     let seller_tag = comment.seller_id == comment.user_id ? `<div class="comment-box__name-box--seller">出品者</div>` : '' ;
-    let html = `<div class="comment-box">
+    let html = `<div class="comment-box" data-comment-id=${comment.id}>
                   <div class="comment-box__title">
                     <div class="comment-box__created_at">
                       ${comment.created_at}
@@ -18,7 +19,7 @@ $(function(){
                   </div>
                 </div>`
     return html;
-  }
+  };
 
   $('#comment_new').on('submit', function(e){
     e.preventDefault();
@@ -35,11 +36,12 @@ $(function(){
     .done(function(data){
       let html = buildHTML(data);
       $('.item__comments--list').append(html);
-      $('comment__text-box').val('');
-      $('comment__submit').prop('disabled', false);
+      $('.item__comments--list').animate({ scrollTop: $('.item__comments--list')[0].scrollHeight});
+      $('#comment_new')[0].reset();
+      $('.comment__submit').prop('disabled', false);
     })
     .fail(function(){
       alert('error');
-    })
-  })
-})
+    });
+  });
+});
