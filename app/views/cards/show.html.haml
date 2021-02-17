@@ -1,0 +1,114 @@
+.user
+  = render "shared/header"
+  .user__body
+    .userbody__main
+      .userbody__main__left
+        = render "users/left_navi"
+      .bodymain__right
+        .payment-method
+          %section.payment-method__title
+            %h2 登録されているカードの情報
+          -# 機能実装の際にカードの登録状況によってどちらのビューを呼び出すかの機能を追加する
+          .payment-method__card-list
+            %section.payment-method__section
+              -# = link_to new_card_path, class: "payment-method__card-link" do
+              -#   %icon.far.fa-credit-card
+              -#   クレジットカードを追加する
+              -# = link_to card_path, class: "payment-method__card-link" do
+              -#   %icon.far.fa-credit-card
+              -#   クレジットカード確認する
+
+              -# = form_with url: new_card_path do
+              -#   <script type="text/javascript" src="https://js.pay.jp/"></script>
+              -#   :plain
+              -#     <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
+            %section.payment-method__section
+              .credit-card
+                %icon.fas.fa-check-circle
+                .credit-card__card-detail
+                  = "**** **** **** " + @card_information.last4
+                  %p 
+                    有効期限
+                    - exp_month = @card_information.exp_month.to_s
+                    - exp_year = @card_information.exp_year.to_s.slice(2,3)
+                    = exp_month + " / " + exp_year
+                  -# = image_tag "credit-cards/#{@card_src}", width: '26', height: '20', alt: @card_brand, id: "card_image"
+                  -# = image_tag 'visa-c.svg', class: "credit-card__company-image"
+                = link_to "削除", card_path, method: :delete, class: "credit-card__delete-btn"
+            %section.payment-method__section.TAR
+              = link_to "#" do
+                %span 支払い方法について
+                %icon.fas.fa-angle-right
+  = render "shared/footer"
+  .purchase-btn
+    .purchase-btn--text 出品する
+    = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-# %body
+-#   = render "purchases/header"
+-#   %main.card-registration
+-#     %section.card-registration__title
+-#       %h2 カード情報
+-#       .card-form
+-#       = form_with model: @card, method: :delete, id: "card_form", local: true do |f|
+-#         .input-form
+-#           .input-form__form-title
+-#             %section.payment-method__section
+-#               .credit-card
+-#                 %icon.fas.fa-check-circle
+-#                 .credit-card__card-detail
+-#                   -# = "**** **** **** " + @card_information.last4
+-#                   %p 
+-#                     有効期限
+-#                     06 / 23
+-#                   = image_tag 'visa-c.svg', class: "credit-card__company-image"
+
+-#         = f.submit "commit", value: "削除する", class: "input-form__submit-btn"
+-#         = link_to "もどる", "user_path", class: "input-form__back-btn"
+-#   = render "purchases/footer"
+
+  -# - if @card.present?
+  -#   %ul.content__credit-cards__list
+  -#     %li
+  -#       = form_with url: card_path(@card.id), method: :delete, local: true, id: 'charge-form' do |f|
+  -#         -# カードブランドのアイコンを表示する場合-----
+  -#         %figure
+  -#           = image_tag "credit-cards/#{@card_src}", width: '26', height: '20', alt: @card_brand, id: "card_image"
+  -#         -#----------------------------------
+  -#         .content__credit-cards__list--pay-num
+  -#           = "**** **** **** " + @card_information.last4
+  -#         .content__credit-cards__list--pay-num
+  -#           - exp_month = @card_information.exp_month.to_s
+  -#           - exp_year = @card_information.exp_year.to_s.slice(2,3)
+  -#           = exp_month + " / " + exp_year
+  -#         %input{type: "hidden", name: "card_id", value: ""}
+  -#         = f.submit "削除する", {class: "content__credit-cards__list__remove"}
+
+  
