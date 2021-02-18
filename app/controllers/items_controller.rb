@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :item_edit, only: [:edit, :update]
-  before_action :authenticate_user!, only: [:create, :edit, :update, :new, :destroy]
+  before_action :authenticate_user!, expect: [:index, :show]
   def index
     @item = Item.all
   end
