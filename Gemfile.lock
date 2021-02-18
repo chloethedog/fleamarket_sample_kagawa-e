@@ -363,8 +363,8 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
-  fog-aws
   factory_bot_rails
+  fog-aws
   font-awesome-sass
   gretel
   haml-rails (>= 1.0, <= 2.0.1)
