@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
   before_action :item_edit, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :new]
+  
   def index
-    @item = Item.all
+    @items = Item.where(purchase: 0)
   end
 
   def show
     @item = Item.find(params[:id])
+
   end
 
   def new

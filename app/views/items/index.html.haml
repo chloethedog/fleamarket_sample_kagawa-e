@@ -87,156 +87,46 @@
           = link_to "#" do
             .prodeucts__text 新規投稿商品
         .products__container
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "339674_s.jpg",class:"img"
-              .product__sample--text
-                %h3.Introduction  ロンパース
-                .details
-                  %ul
-                    %li  1,000円
-                    %li
-                      %i.fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)  
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "pict-reason-01.jpg",class:"img"
-              .product__sample--text
-                .Introduction  テレワーク
-                .details
-                  %ul
-                    %li  1,000,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
+          - @items.each do |item|
+            .container__sample
+              = link_to item_path(item.id) do
+                %figure.product__sample--img
+                  = image_tag item.item_photo.thumbnail.url,class:"img"
+                .product__sample--text
+                  %h3.Introduction
+                    = item.name
+                  .details
+                    %ul
+                      %li
+                        = "¥#{item.price}"
+                      %li
+                        %i.fa.fa-star
+                        0
+                    %p (税込)
     %Section.NewPickup
       .NewPickup__tittle ピックアップブランド
       .NewPickup__products
         .products__textarea
           = link_to "#" do
-            .prodeucts__text アーカイバ
+            .prodeucts__text 無印良品
         .products__container
-          .container__sample
-            = link_to "#" do
-              %figure.product__sample--img
-                = image_tag "339674_s.jpg",class:"img"
-              .product__sample--text
-                .Introduction  ロンパース
-                .details
-                  %ul
-                    %li  1,000円
-                    %li
-                      .fa.fa-star
-                      0
-                  %p (税込)
+          - @items.each do |item|
+            - if  item.brand == "無印良品"
+              .container__sample
+                = link_to item_path(item.id) do
+                  %figure.product__sample--img
+                    = image_tag item.item_photo.thumbnail.url,class:"img"
+                  .product__sample--text
+                    %h3.Introduction
+                      = item.name
+                    .details
+                      %ul
+                        %li
+                          = "¥#{item.price}"
+                        %li
+                          %i.fa.fa-star
+                          0
+                      %p (税込)    
   = render "shared/footer"
   = render "shared/purchase_btn"
 
