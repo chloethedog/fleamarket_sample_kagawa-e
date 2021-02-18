@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :item_edit, only: [:edit, :update]
-  before_action :authenticate_user!, expect: [:index, :show]
+  before_action :authenticate_user!, except: [:show, :index]
 
   def index
     @items = Item.where(purchase: 0)
@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
     else
       @category = Category.roots
       @item.build_item_photo
+      flash.now[:alert] = @item.errors.full_messages
       render "new"
     end
   end
