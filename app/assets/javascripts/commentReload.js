@@ -2,7 +2,7 @@ $(function(){
   
   let reloadComments = function() {
     let last_comment_id = $('.comment-box:last').data("comment-id") || 0;
-    var path = location.pathname
+    let path = location.pathname
     $.ajax({
       url: path + '/api/comments',
       type: 'get',
