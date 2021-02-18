@@ -8,20 +8,30 @@
       .infomation
         .infomation__top
           %figure.infomation__figurea
-            = image_tag "339674_s.jpg",class: "figure-img"
+            = image_tag @item.item_photo.thumbnail.url,class: "figure-img"
         .infomation__middle
-          .infomation--product  ロンパース3枚セット  70サイズ
+          .infomation--product  
+            = @item.name
           %p.infomation__FeePrice
-            %span.information__FeePrice--fee  送料込み（税込み）
-            %span.information__FeePrice--price  ¥2,000
+            %span.information__FeePrice--fee  
+              = @item.delivery_fee.name
+            -# %span.information__FeePrice--price  ¥2,000
     %section.Main__three
       .PaymentAmount
         .--text  支払い金額
-        #PaymentPrice  ¥2,000
+        #PaymentPrice 
+          = @item.price
     %section.Main__four
       .MethodOfPayment
         .MethodOfPayment__top
           .--way  支払い方法
+          .Creditcard
+            = "**** **** **** " + @card_information.last4
+            %p 
+              有効期限
+              - exp_month = @card_information.exp_month.to_s
+              - exp_year = @card_information.exp_year.to_s.slice(2,3)
+              = exp_month + " / " + exp_year
         .MethodOfPayment__bottom
           = link_to root_path do 
             .fas.fa-plus-circle
@@ -33,12 +43,24 @@
           .AddressArea__left  配送先
           = link_to '変更する >', root_path, class: "AddressArea__right"
         .Address__Information
-          %p  〒760-0019
-          香川県
-          高松市
-          サンポート
+          %ul  
+            %li 
+            = '〒 ' + @delivery.postal_code
+            %li 
+            %P ーーご住所ーー
+            = @prefecture.name
+            %li
+            = @delivery.municipality
+            %li
+            = @delivery.address
+            
+            %li
+            %P ーーお名前ーー
+            = @user.last_name
+            = @user.first_name
 
-          %p 山田 タロウ  
-    %section.Main__six  カード情報を登録してください。
-  
+            
+
+    -# %section.Main__six  カード情報を登録してください
+    = link_to '購入する', pay_item_purchases_path, class: 'paybtn' 
   = render "purchases/footer"

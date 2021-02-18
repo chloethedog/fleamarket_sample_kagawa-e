@@ -16,10 +16,14 @@ Rails.application.routes.draw do
   end
   
   resources :items, only: [:index, :show, :new, :create, :edit, :update,  :destroy] do
-    resources :purchases, only:[:index]
-
+    resources :purchases, only:[:index,] do
+      collection do
+        get :pay
+      end
+    end
   end
 
   resources :cards
+  
 
 end
