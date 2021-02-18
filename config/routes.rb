@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :items, only: [:index, :show, :new, :create, :edit, :update] do
+  resources :items do
     resources :purchases, only:[:index]
 
   end

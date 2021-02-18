@@ -12,10 +12,10 @@
             .item-images
               .item-images__main
                 .item-images__main-image
-                  = image_tag @item.item_photo.thumbnail.identifier,class: "big-image"
+                  = image_tag @item.item_photo.thumbnail.url,class: "big-image"
               .item-images__sub
                 .item-images__sub-image
-                  = image_tag @item.item_photo.thumbnail.identifier, class: "small-image"
+                  = image_tag @item.item_photo.thumbnail.url, class: "small-image"
             .item__price
               %span.item__price-fee
                 = "¥#{@item.price}"
@@ -26,7 +26,7 @@
               - if user_signed_in?
                 - if current_user.id == @item.seller_id       
                   = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
-                  = link_to "商品を削除する", '#', class: "item__buy-button_delete"
+                  = link_to "商品を削除する", item_path(@item), method: :delete, class: "item__buy-button_delete"
                 - else
                   = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
               - else

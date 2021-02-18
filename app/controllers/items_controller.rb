@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :item_edit, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:create, :edit, :update, :new, :destroy]
   def index
     @item = Item.all
   end
@@ -37,6 +38,17 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = @item.errors.full_messages
       render :edit
+    end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    if current_user == @item.seller
+      @item.destroy
+      redirect_to root_path
+    else
+      flash.now[:alert] = '商品の出品者ではありません'
+      render :show
     end
   end
 
