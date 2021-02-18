@@ -10,6 +10,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_method
   belongs_to_active_hash :shipment_date
   has_one :item_photo, dependent: :destroy
+  has_many :comments
   accepts_nested_attributes_for :item_photo, allow_destroy: true
 
   with_options presence: true do

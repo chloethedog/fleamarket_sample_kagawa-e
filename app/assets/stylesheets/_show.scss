@@ -151,7 +151,7 @@
         background-color: #fff;
         margin: 10px 0;
         text-align: center;
-        .form-message {
+        .comment__text-box {
             width: 100%;
             min-height: 104px;
             padding: 10px;
@@ -163,7 +163,7 @@
             margin: 10px 0;
             text-align: left;
         }
-        .submit-btn {
+        .comment__submit {
             line-height: 48px;
             background-color: $usual-color;
             border: 1px solid $usual-color;
@@ -172,6 +172,42 @@
             font-size: 18px;
             border-radius: 100px;
         }
+        
+    }
+}
+// コメント機能のscss
+.comment-box {
+    border: 1px solid $usual-color;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 80px;
+    background-color: $usual-color;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__created_at {
+        color: $usual-color-white;
+        margin-left: 5px;
+    }
+    &__name-box {
+        display: flex;
+        &--seller {
+            margin-right: 10px;
+            color: #ffb340;
+        }
+        &--nickname {
+            margin-right: 5px;
+            color: $usual-color-white;
+        }
+    }
+    &__text {
+        border: 1px solid $usual-color-white;
+        padding: 10px;
+        text-align: start;
+        margin: 5px;
+        background-color: $usual-color-white;
+        word-wrap: break-word;
     }
 }
 

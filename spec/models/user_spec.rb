@@ -84,9 +84,9 @@ describe "@user" do
         expect(@user.errors[:password]).to include("は7文字以上で入力してください")
       end
   
-      it "passwords of 128 characters or less is invalid" do
-        @user.password = "test000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-        @user.password_confirmation = "test000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      it "passwords of 128 characters or more is invalid" do
+        @user.password = "t" * 129
+        @user.password_confirmation = "t" * 129
         @user.valid?
         expect(@user.errors[:password]).to include("は128文字以内で入力してください")
       end
