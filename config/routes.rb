@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     namespace :api do
       resources :comments, only: :index, default: {format: 'json' } 
     end
+    
   end
 
   resources :cards, only:[:new]

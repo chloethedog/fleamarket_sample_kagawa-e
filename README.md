@@ -47,6 +47,7 @@ Things you may want to cover:
 - belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
 - has_many :comments
 - has_one :item_photo
+- has_many :favorite
 
 ## item_photosテーブル
 
@@ -87,6 +88,7 @@ Things you may want to cover:
 - has_one :card
 - has_many :items
 - has_many :comments
+- has_many :favorite
 
 ## deliveriesテーブル
 
@@ -120,6 +122,17 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|item_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :item
+
+## favoritesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 
