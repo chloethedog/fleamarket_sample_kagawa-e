@@ -14,13 +14,16 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :items, only: [:index, :show, :new, :create] do
+  resources :items do
     resources :purchases, only:[:index]
     collection do
       get :search
     end  
+    resources :comments, only: :create
+    namespace :api do
+      resources :comments, only: :index, default: {format: 'json' } 
+    end
   end
 
   resources :cards, only:[:new]
-
 end

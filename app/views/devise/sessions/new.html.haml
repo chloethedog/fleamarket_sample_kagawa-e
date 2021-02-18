@@ -4,7 +4,7 @@
   .Signin__body
     .Signin__body__new
       %p アカウントをお持ちでない方はこちら
-      = link_to '新規会員登録', "#", class: "new__log"
+      = link_to '新規会員登録',new_user_registration_path, class: "new__log"
     .Signin__body__btn
       %button.body__btn__gg
         %i.fab.fa-google
@@ -17,7 +17,7 @@
         Appleでログイン
     =form_with model: @user, url: user_session_path, html: {class: "form"}, local: true do |f|
       = f.email_field :email, class: 'form__email', placeholder: "  メールアドレス"
-      = f.text_field :password, class: 'form__password', placeholder: "  パスワード"
+      = f.password_field :password, class: 'form__password', placeholder: "  パスワード"
       = f.submit 'ログイン', class: 'form__submit'
       = link_to 'パスワードを忘れた方はこちら' , "#", class:"form__no"
 .footer

@@ -211,4 +211,15 @@ ja:
     address: 番地
     address_detail: 建物名
     phone_number: 電話番号
-
+    name: 商品名
+    price: 販売価格
+    explanation: 商品の説明
+    category: カテゴリー
+    state_id: 商品の状態
+    brand: ブランド
+    delivery_fee_id: 配送料の負担
+    delivery_area_id: 発送元の地域
+    delivery_method_id: 配送の方法
+    shipment_date_id: 発送までの日数
+    thumbnail_id: 出品画像
+    item_photo: 出品画像

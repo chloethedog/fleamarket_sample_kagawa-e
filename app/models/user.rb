@@ -11,6 +11,7 @@ class User < ApplicationRecord
 
   has_many :items, class_name: 'Item', foreign_key: "seller_id"
   has_many :items, class_name: 'Item', foreign_key: "buyer_id"
+  has_many :comments
 
   validates :password, length: { minimum: 7 ,message: 'は7文字以上で入力してください'}
 

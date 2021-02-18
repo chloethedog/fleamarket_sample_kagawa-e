@@ -9,23 +9,26 @@
           %span.Required 必須
           %p.Pics-best1 最高の1枚をアップロード!
           .ListingPics__upload
+            .image-list
+              .thumbnail
+                .thumbnail__image
+                  = image_tag @photo.thumbnail.url, alt: "preview"
+                .thumbnail__btn
+                  .thumbnail__btn--update
+                    %span#update-btn 編集
+                  .thumbnail__btn--delete
+                    %span#delete-btn 削除
             .PicsFrame
-              = f.fields_for :item_photo do |ip|
-                .ClickLabel{for: ""}
-                  = ip.file_field :thumbnail, class:"ClickLabel"
-                  .FrameCentre
-                    %i.fas.fa-camera
-                    %p.FrameCentre__instructions クリックしてファイルをアップロード
-        .ListingPics__hidden
-          .HiddenField
-            .Preview
-              .Preview__upper
-                = image_tag "/"
-              .Preview__lower
-                .Preview__lower__update
-                  %span.PicUpdate 編集
-                .Preview__lower__delete
-                  %span.PicDelete 削除
+              = f.fields_for :item_photo, local: true do |ip|
+                .clearfix
+                  %ul#previews
+                    %li.label
+                      .ClickLabel{for: ""}
+                        = ip.file_field :thumbnail, class:"ClickLabel"
+                        = ip.hidden_field :thumbnail_cache
+                        .FrameCentre
+                          %i.fas.fa-camera
+                          %p.FrameCentre__instructions クリックしてファイルをアップロード
         %hr.HorizontalRule          
         .Description
           .Description__name
@@ -43,10 +46,18 @@
         .Details
           %p.Details__title 商品の詳細
           .Categories
+            .es
+              = @item_category.id
+              = @item_category_parent.id
+              = @item_category_root.id
             %label{for: ""} カテゴリー
             %span.Required 必須
-            = f.collection_select :category_id,@category, :id, :name,{include_blank: "選んで下さい "},{class:"form-pull-down select-category"}
-
+            = f.collection_select :category_id,@category, :id, :name,{include_blank: "選んで下さい ", selected: @item_category_root.id},{class:"form-pull-down select-category"}
+            -if @item_category_root.id == @item_category_parent.id
+              = f.collection_select :category_id,@item_category_parent_children, :id, :name,{include_blank: "選んで下さい ", selected: @item_category.id},{class:"form-pull-down select-category"}
+            -else 
+              = f.collection_select :category_id,@item_category_root_children, :id, :name,{include_blank: "選んで下さい ", selected: @item_category_parent.id},{class:"form-pull-down select-category"} 
+              = f.collection_select :category_id,@item_category_parent_children, :id, :name,{include_blank: "選んで下さい ", selected: @item_category.id},{class:"form-pull-down select-category"}
           -# .Size
           -#     %label{for: ""} サイズ
           -#     %span.Required 必須
@@ -104,9 +115,9 @@
             %span.Prices__profit__right ー
         .PutUp
           .PutUp__contents
-            = f.submit '出品する', class: 'NbtnPutup'
+            = f.submit '編集する', class: 'NbtnPutup'
             = link_to '下書きに保存', "#", class: "NbtnDraft" 
-            = link_to 'もどる', root_path, class: "NbtnRtn" 
+            = link_to 'もどる', "#", class: "NbtnRtn" 
         .Agreement
           .Agreement__contents
             %p 
