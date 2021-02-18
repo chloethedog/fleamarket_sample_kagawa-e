@@ -1,6 +1,7 @@
 FactoryBot.define do
 
   factory :item do
+    id                     {"1"}
     name                   {"item"}
     price                  {1000}
     purchase               {1}

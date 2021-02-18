@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
   before_action :item_edit, only: [:edit, :update]
+  before_action :authenticate_user!, except: [:show, :index]
+
   def index
-    @item = Item.all
+    @items = Item.where(purchase: 0)
   end
 
   def show
     @item = Item.find(params[:id])
+    @comment = Comment.new
   end
 
   def new
@@ -23,6 +26,7 @@ class ItemsController < ApplicationController
       flash.now[:alert] = @item.errors.full_messages
       @category = Category.roots
       @item.build_item_photo
+      flash.now[:alert] = @item.errors.full_messages
       render "new"
     end
   end
@@ -39,6 +43,17 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = @item.errors.full_messages
       render :edit
+    end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    if current_user == @item.seller
+      @item.destroy
+      redirect_to root_path
+    else
+      flash.now[:alert] = '商品の出品者ではありません'
+      render :show
     end
   end
 

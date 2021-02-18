@@ -1,149 +1,122 @@
 //トップページ・ヘッダー//
 .TopHead {
-  padding: 0 60px;
-  background-color: #fff;
-  flex-direction: column;
-  text-decoration: none;
-
-//サーチバー//
-  .search__contents {
-    max-width: 1040px;
-    width: 100%;
-    min-height: 70px;
-    margin: 0 auto;
-    padding: 15px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .furima-icon {
-      width: 10vw;
-      margin-right: 20px;
-    }
-    
-    .search-form {
-      width: 100%;
-      display: flex;
-      margin-bottom: 5px;
-
-      .input-box {
-        width: 100%;
-        padding-left: 10px;
-        min-height: 35px;
-        min-width: 35px;
-      }
-      
-      .search-button {
-        width: 40px;
-        border: 0;
-        cursor: pointer;
-        @include BGcolor;
-        padding: 8px;
-
-        .search-icon {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-//ナビゲーション//
-  .TopNav {
-    max-width: 1040px;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 42px;
-    margin: 0 auto;
+    padding: 0 60px;
+    background-color: #fff;
+    flex-direction: column;
     text-decoration: none;
-
-//カテゴリーから探す・ブランドから探す//
-    .__lists--left {
-      display: flex;
-      align-items: center;
-      font-weight: bolder;
-
-      .category-list {
-        text-decoration: none;
-        margin-right: 3vw;
-        color: #333333;
-      }
-
-      .brand-list {
-        text-decoration: none;
-        color: #333333;
-      }
-
-      .fas.fa-list{
-        @include Fcolor;
-        margin-right: 5px;
-      }
-
-      .fas.fa-tags {
-        @include Fcolor;
-        margin-right: 5px;
-      }
-//カーソルを上に乗せた時
-      .category-list:hover,.brand-list:hover {
-        @include Blue;
-      }
+    //サーチバー//
+    .search__contents {
+        max-width: 1040px;
+        width: 100%;
+        min-height: 70px;
+        margin: 0 auto;
+        padding: 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .furima-icon {
+            width: 10vw;
+            margin-right: 20px;
+        }
+        .search-form {
+            width: 100%;
+            display: flex;
+            margin-bottom: 5px;
+            .input-box {
+                width: 100%;
+                padding-left: 10px;
+                min-height: 35px;
+                min-width: 35px;
+            }
+            .search-button {
+                width: 40px;
+                border: 0;
+                cursor: pointer;
+                @include BGcolor;
+                padding: 8px;
+                .search-icon {
+                    width: 100%;
+                }
+            }
+        }
     }
-
-//ログイン機能//
-    .__lists--right {
-      display: flex;
-      list-style: none;
-
-//ログインボタン//
-      .login {
-        text-decoration: none;
-        line-height: 32px;
-        margin-right: 16px;
-        color: #333333;
-        background-color: white;
-        border: 1px solid #0095ee;
-        border-radius: 4px;
-        @include Blue;
-        display: block;
+    //ナビゲーション//
+    .TopNav {
+        max-width: 1040px;
         font-size: 14px;
-        padding: 0 10px;
-        transition: all 0.3s ease-out 0s;
-      }
-//カーソルを上に乗せた時//
-      .login:hover{
-        color: white;
-        @include BGblue;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 42px;
+        margin: 0 auto;
         text-decoration: none;
-      }
-
-//新規会員登録ボタン//
-      .sign-up {
-        line-height: 32px;
-        @include BGcolor;
-        @include Fcolor;
-        border: 1px solid;
-        border-radius: 4px;
-        color: white;
-        display: block;
-        font-size: 14px;
-        padding: 0 10px;
-        padding-left: 16px;
-        text-decoration: none;
-      }
+        //カテゴリーから探す・ブランドから探す//
+        .__lists--left {
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            .category-list {
+                text-decoration: none;
+                margin-right: 3vw;
+                color: #333333;
+            }
+            .brand-list {
+                text-decoration: none;
+                color: #333333;
+            }
+            .fas.fa-list {
+                @include Fcolor;
+                margin-right: 5px;
+            }
+            .fas.fa-tags {
+                @include Fcolor;
+                margin-right: 5px;
+            }
+            //カーソルを上に乗せた時
+            .category-list:hover,
+            .brand-list:hover {
+                @include Blue;
+            }
+        }
+        //ログイン機能//
+        .__lists--right {
+            display: flex;
+            list-style: none;
+            //ログインボタン//
+            .login {
+                text-decoration: none;
+                line-height: 32px;
+                margin-right: 16px;
+                color: #333333;
+                background-color: white;
+                border: 1px solid #0095ee;
+                border-radius: 4px;
+                @include Blue;
+                display: block;
+                font-size: 14px;
+                padding: 0 10px;
+                transition: all 0.3s ease-out 0s;
+            }
+            //カーソルを上に乗せた時//
+            .login:hover {
+                color: white;
+                @include BGblue;
+                text-decoration: none;
+            }
+            //新規会員登録ボタン//
+            .sign-up {
+                line-height: 32px;
+                @include BGcolor;
+                @include Fcolor;
+                border: 1px solid;
+                border-radius: 4px;
+                color: white;
+                display: block;
+                font-size: 14px;
+                padding: 0 10px;
+                padding-left: 16px;
+                text-decoration: none;
+            }
+        }
     }
-  }
 }
-
-//未実装のためコメントアウト//
-
-// .user-nickname {
-//   text-decoration: none;
-//   margin-right: 3vw;
-//   color: #333333;
-//   font-weight: bold;
-// }
-// .logout {
-//   text-decoration: none;
-//   color: #333333;
-// }

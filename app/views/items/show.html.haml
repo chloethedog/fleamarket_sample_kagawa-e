@@ -1,4 +1,5 @@
-%body
+= javascript_include_tag 'commentReload'
+.Wrapper
   = render "shared/header"
   - breadcrumb :item
   = render "shared/breadcrumbs"
@@ -25,15 +26,15 @@
             .item__buy-button
               - if user_signed_in?
                 - if current_user.id == @item.seller_id       
-                  = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
-                  = link_to "商品を削除する", '#', class: "item__buy-button_delete"
+                  = link_to "商品を編集する", edit_item_path(@item), class: "item__buy-button_link--edit" 
+                  = link_to "商品を削除する", item_path(@item), method: :delete, class: "item__buy-button_delete"
                 - else
-                  = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+                  - if @item.purchase == 0
+                    = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+                  - else
+                    .item__buy-button--soldout 売り切れました
               - else
                 .no_by-button
-
-
-
 
             .item__text-box
               .item__text
@@ -45,7 +46,7 @@
                     %th 
                       出品者
                     %td 
-                      = link_to @item.seller.nickname, user_path, class: "#"
+                      = link_to @item.seller.nickname, "#", class: "#"
                   %tr
                     %th
                       カテゴリー
@@ -104,16 +105,29 @@
                     %i.fa.fa-flag
                     不適切な商品の通報
           .item__comments
-            %ul.comments-list
-            = form_with html: {class: "#"} do |f|
-              = f.text_area :text, class: "form-message"
-              %p.warning-message
-                相手のことを考えて丁寧なコメントを心がけましょう。
-                %br 
-                不快な言葉遣いなどは利用制限や退会処分となる事があります。
-              = button_tag type: 'submit', class: "submit-btn" do
-                %icon.fa.fa-comment 
-                コメントする
+            %ul.item__comments--list
+              - @item.comments.each do |comment|
+                .comment-box{"data-comment-id": comment.id}
+                  .comment-box__title
+                    .comment-box__created_at
+                      = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+                    .comment-box__name-box
+                      - if comment.user_id == @item.seller_id
+                        .comment-box__name-box--seller
+                          出品者
+                      .comment-box__name-box--nickname
+                        = comment.user.nickname
+                  .comment-box__text
+                    = comment.text
+            - if user_signed_in?
+              = form_with model: [@item, @comment], id: "comment_new", local: true do |f|
+                = f.text_area :text, class: "comment__text-box"
+                %p.warning-message
+                  相手のことを考えて丁寧なコメントを心がけましょう。
+                  %br 
+                  不快な言葉遣いなどは利用制限や退会処分となる事があります。
+                = f.submit "コメントする", class: "comment__submit" do
+                  %icon.fa.fa-comment 
           .item__seller
             = link_to "出品者さんのその他の商品", "#", class: "other-item-title"
             .other-item-list

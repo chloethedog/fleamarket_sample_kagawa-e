@@ -26,4 +26,13 @@ Rails.application.routes.draw do
   resources :cards
   
 
+  resources :items do
+    resources :purchases, only:[:index]
+    resources :comments, only: :create
+    namespace :api do
+      resources :comments, only: :index, default: {format: 'json' } 
+    end
+  end
+
+  resources :cards, only:[:new]
 end
