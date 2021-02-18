@@ -1,6 +1,6 @@
 .SearchItems
   .SearchItems__header
-    = render "shared/header_at_login"
+    = render "shared/header"
   .SearchItems__main
     .SearchMethods
       .SearchMethods__form
@@ -79,31 +79,24 @@
         %h2.DisplayResults__title 検索結果
         .DisplayResults__count 1 - 2件表示
         .DisplayItems
-          %section.SelectionBox
-            = link_to "#" do
-              %figure.SelectedPhoto 
-                = image_tag "/"
-              .SelectedItem
-                %h3.SelectedItem__name アイスクリームスプーン
-                .SelectedItem__numbers
-                  .NumbersPrice ￥500
-                  .NumbersFav
-                    %i.far.fa-star 
-                    %span 1
-          %section.SelectionBox
-            = link_to "#" do
-              %figure.SelectedPhoto
-                = image_tag "/"
-                %figcaption
-                  .TriangleTag
-                  .SoldTag SOLD
-              .SelectedItem
-                %h3.SelectedItem__name アイスクリームスプーン
-                .SelectedItem__numbers
-                  .SelectedItem__price ￥500
-                  .SelectedItem__fav
-                    %i.far.fa-star 
-                    %span 2
+          - @items.each do |item| 
+            %section.SelectionBox
+              = link_to "#" do
+                %figure.SelectedPhoto 
+                  = image_tag item.item_photo.thumbnail.url, claas: "search-item-image"
+                  - if item.purchase == 1
+                    %figcaption
+                      .TriangleTag
+                      .SoldTag SOLD
+                .SelectedItem
+                  %h3.SelectedItem__name
+                    = item.name
+                  .SelectedItem__numbers
+                    .NumbersPrice
+                      = item.price
+                    .NumbersFav
+                      %i.far.fa-star 
+                      %span 1
   .SearchItems__footer
     = render "shared/footer"
     = render "shared/purchase_btn"
