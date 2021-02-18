@@ -4,7 +4,7 @@
       %h1.search__contents__icon
         = link_to image_tag("logo.png", class:"furima-icon"),root_path
       .search__contents__form  
-        = form_with(class: "search-form", model: @items, method: :get, local: true) do |f|
+        = form_with(class: "search-form",url: search_items_path , method: :get, local: true) do |f|
           = f.text_field :keyword, placeholder: "キーワードから探す", class: "input-box"
           %label.search-button{for: "search-btn"}
             = image_tag("icon-search 1.png", class:"search-icon")
