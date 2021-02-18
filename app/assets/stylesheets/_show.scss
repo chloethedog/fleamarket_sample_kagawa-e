@@ -292,3 +292,18 @@
 a {
     @include text_blue;
 }
+
+.item__buy-button--soldout {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    color: gray;
+}

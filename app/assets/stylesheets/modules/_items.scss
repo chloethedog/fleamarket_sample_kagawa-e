@@ -1,181 +1,54 @@
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+
 .TopMain {
-  * {
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  ul {
-    list-style:none;
-  }
-
-
-  .AppDL {
-    width: 100vw;
-    height: 560px;
-    background-image: image-url('bg-mainVisual-pict_pc.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    position: relative;
-    padding: 0 60px;
-    display: flex;
-    align-items: center;
-
-    &__title {
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 35px 0 0 0;
-
-      &--top {
-        text-shadow: 0 0 5px rgba(0,0,0,0.4);
-        font-size: 60px;
-        line-height: 1.2;
-        color: #fff;
-      }
-
-      .text--a,.text--b {
-        text-shadow: 0 0 5px rgba(0,0,0,0.4);
-        color: #fff;
-        line-height: 1.77778;
-        margin: 16px 0 16px 0;
-      }
+    * {
+        box-sizing: border-box;
     }
-  }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+    }
+    .AppDL {
+        width: 100vw;
+        height: 560px;
+        background-image: image-url('bg-mainVisual-pict_pc.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+        padding: 0 60px;
+        display: flex;
+        align-items: center;
+        &__title {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 35px 0 0 0;
+            &--top {
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+                font-size: 60px;
+                line-height: 1.2;
+                color: #fff;
+            }
+            .text--a,
+            .text--b {
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+                color: #fff;
+                line-height: 1.77778;
+                margin: 16px 0 16px 0;
+            }
+        }
+    }
 }
+
 
 /* FURIMAが選ばれる3つの理由部分 */
+
 .Reason {
-  padding: 60px 20px;
-
-  &__intro--subtitle {
-    text-align: center;
-    font-size: 26px;
-    line-height: 1.4;
-    font-weight: bold;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    position: relative;
-  }
-
-  &__intro--subtitle::after {
-    content: "";
-    width: 70px;
-    height: 4px;
-    @include BGcolor;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .ULreasonList {
-    text-align: center;
-    display: flex;
-    max-width: 1020px;
-    width: 100%;
-    margin: 0 auto;
-
-    .reason__list {
-      width: 30%;
-      margin: 16px 5% 0 0;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &--contents {
-        position: relative;
-        margin-bottom: 20px;
-
-        .number {
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 4%;
-          font-size: 30px;
-          text-align: center;
-          margin: 0 5px 0 0;
-          padding: 10px 20px;
-          @include BGcolor;
-          color: #fff;
-        }
-      }
-
-      .reason-img {
-        width: 300px;
-        height: 300px;
-      }
-    
-      &--text {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 50px;
-        margin: 0 0 0 2px;
-      }
-
-      &--text span {
-        @include Fcolor;
-      }
-
-      &--description {
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 16px 0 0;
-      }
-    }
-  }
-}
-
-/* 「会員数日本一位」帯部分*/
-.AppDL__second {
-  background-image: image-url("bg-topMiddleDl-pict.jpg");
-  background-position: bottom right;
-  height: 400px;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  
-  .AppDL__second--dl {
-    color: #fff;
-    text-shadow: 00 0 5px rgba(0,0,0,0.4);
-    text-align: left;
-    max-width: 1040px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .Toptitle-contents {
-    font-size: 27px;
-    font-weight: bold;
-     line-height: 1.4;
-     margin-bottom: 20px;
-  }
-
-  .Toptitlle-explan {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .store-btn-top {
-    margin-top: 30px;
-  }
-}
-
-
-
-/* FURIMAの特徴 */
-.Feature {
-  padding: 60px 20px;
-
-    .Feature__intro{
-
-      &--subtitle {
+    padding: 60px 20px;
+    &__intro--subtitle {
         text-align: center;
         font-size: 26px;
         line-height: 1.4;
@@ -183,9 +56,8 @@
         margin-bottom: 25px;
         padding-bottom: 15px;
         position: relative;
-      } 
-
-      &--subtitle::after {
+    }
+    &__intro--subtitle::after {
         content: "";
         width: 70px;
         height: 4px;
@@ -194,136 +66,242 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-      }
-
-      .ULFeatureList {
+    }
+    .ULreasonList {
         text-align: center;
         display: flex;
         max-width: 1020px;
         width: 100%;
         margin: 0 auto;
-
-        .Feature__list {
-          width: 30%;
-          margin: 16px 5% 0 0;
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          &--contents {
-            text-align: center;
-          }
-
-          .Feature__list--text {
-            font-weight: bold;
-            font-size: 19px;
-            margin: 38px 0 10px;
-          }
-
-          .Feature__list--description {
-            margin: 0 0 40px;
-            text-align: center;
-            font-size: 15px;
-          }
+        .reason__list {
+            width: 30%;
+            margin: 16px 5% 0 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--contents {
+                position: relative;
+                margin-bottom: 20px;
+                .number {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 4%;
+                    font-size: 30px;
+                    text-align: center;
+                    margin: 0 5px 0 0;
+                    padding: 10px 20px;
+                    @include BGcolor;
+                    color: #fff;
+                }
+            }
+            .reason-img {
+                width: 300px;
+                height: 300px;
+            }
+            &--text {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 50px;
+                margin: 0 0 0 2px;
+            }
+            &--text span {
+                @include Fcolor;
+            }
+            &--description {
+                font-size: 18px;
+                line-height: 1.5;
+                margin: 16px 0 0;
+            }
         }
-      }
     }
 }
 
+
+/* 「会員数日本一位」帯部分*/
+
+.AppDL__second {
+    background-image: image-url("bg-topMiddleDl-pict.jpg");
+    background-position: bottom right;
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    .AppDL__second--dl {
+        color: #fff;
+        text-shadow: 00 0 5px rgba(0, 0, 0, 0.4);
+        text-align: left;
+        max-width: 1040px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .Toptitle-contents {
+        font-size: 27px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    .Toptitlle-explan {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .store-btn-top {
+        margin-top: 30px;
+    }
+}
+
+
+/* FURIMAの特徴 */
+
+.Feature {
+    padding: 60px 20px;
+    .Feature__intro {
+        &--subtitle {
+            text-align: center;
+            font-size: 26px;
+            line-height: 1.4;
+            font-weight: bold;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            position: relative;
+        }
+        &--subtitle::after {
+            content: "";
+            width: 70px;
+            height: 4px;
+            @include BGcolor;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .ULFeatureList {
+            text-align: center;
+            display: flex;
+            max-width: 1020px;
+            width: 100%;
+            margin: 0 auto;
+            .Feature__list {
+                width: 30%;
+                margin: 16px 5% 0 0;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &--contents {
+                    text-align: center;
+                }
+                .Feature__list--text {
+                    font-weight: bold;
+                    font-size: 19px;
+                    margin: 38px 0 10px;
+                }
+                .Feature__list--description {
+                    margin: 0 0 40px;
+                    text-align: center;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
 /* ピックアップカテゴリー */
+
+
 /* ピックアップブランド */
+
+
 /* 共通 */
 
 .NewPickup {
-  padding: 80px 0 0;
-  padding-bottom: 40px;
-  background-color: #f8f8f8;
-  height: 100%;
-
-  &__tittle {
-    text-align: center;
-    font-size: 28px;
-    line-height: 1.4;
-    font-weight: bold;
-  }
-  .products__textarea {
-    text-align: center;
-    @include Fcolor;
-    font-size: 24px;
-    font-weight: bold;
-
-    .prodeucts__text {
-      font-weight: bold;
+    padding: 80px 0 0;
+    padding-bottom: 40px;
+    background-color: #f8f8f8;
+    height: 100%;
+    &__tittle {
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: bold;
     }
-  }
-  .products__textarea a {
-    color: #3ccace;
-  }
-
-  .products__container {
-    max-width: 1020px;
-    margin: 26px auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
+    .products__textarea {
+        text-align: center;
+        @include Fcolor;
+        font-size: 24px;
+        font-weight: bold;
+        .prodeucts__text {
+            font-weight: bold;
+        }
+    }
+    .products__textarea a {
+        color: #3ccace;
+    }
+    .products__container {
+        max-width: 1020px;
+        margin: 26px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 //コンテナのサンプル
 .container__sample {
-  padding: 10px;
-  width: 20%;
-  filter: drop-shadow(0px 5px 5px rgb(177, 176, 176))
-  
+    padding: 10px;
+    width: 20%;
+    filter: drop-shadow(0px 5px 5px rgb(177, 176, 176))
 }
 
 .container__sample:hover {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .product__sample--img {
-  width: 184px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  z-index: auto;
+    width: 184px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    z-index: auto;
 }
 
 .img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: auto;
-  height: 150px;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: auto;
+    height: 150px;
+    object-fit: cover;
 }
 
 .product__sample--text {
-  background-color: white;
-  color: #333;
-  padding: 16px;
+    background-color: white;
+    color: #333;
+    padding: 16px;
 }
 
 .Introduction {
-  overflow: hidden;
-  line-height: 1.5;
-  font-size: 16px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-break: break-all;
+    overflow: hidden;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
 }
 
 .details {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .details ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
