@@ -27,11 +27,15 @@
               - if user_signed_in?
                 - if current_user.id == @item.seller_id       
                   = link_to "商品を編集する", '#', class: "item__buy-button_link--edit" 
-                  = link_to "商品を削除する", '#', class: "item__buy-button_delete"
+                  = link_to "商品を削除する", item_path(@item), method: :delete, class: "item__buy-button_delete"
                 - else
-                  = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+                  - if @item.purchase == 0
+                    = link_to "購入画面へすすむ", '#', class: "item__buy-button_link"
+                  - else
+                    .item__buy-button--soldout 売り切れました
               - else
                 .no_by-button
+
             .item__text-box
               .item__text
                 = @item.explanation
@@ -42,7 +46,7 @@
                     %th 
                       出品者
                     %td 
-                      = link_to @item.seller.nickname, user_path, class: "#"
+                      = link_to @item.seller.nickname, "#", class: "#"
                   %tr
                     %th
                       カテゴリー

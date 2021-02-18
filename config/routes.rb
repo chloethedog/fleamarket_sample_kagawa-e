@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :items, only: [:index, :show, :new, :create, :edit, :update] do
+  resources :items do
     resources :purchases, only:[:index]
     resources :comments, only: :create
     namespace :api do
@@ -23,5 +23,4 @@ Rails.application.routes.draw do
   end
 
   resources :cards, only:[:new]
-
 end
