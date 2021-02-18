@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2021_02_16_151906) do
   end
 
   add_foreign_key "comments", "items"
+  add_foreign_key "comments", "users"
   add_foreign_key "deliveries", "users"
   add_foreign_key "item_photos", "items"
   add_foreign_key "items", "users", column: "buyer_id"
