@@ -1,3 +1,6 @@
+-# 現在は使っていないビュー
+
+
 .user
   = render "shared/header"
   .user__body
@@ -18,25 +21,3 @@
                 %icon.far.fa-credit-card
                 クレジットカード確認する
 
-  -#             = form_with url: new_card_path do
-  -#               <script type="text/javascript" src="https://js.pay.jp/"></script>
-  -#               :plain
-  -#                 <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
-  -#           %section.payment-method__section
-  -#             .credit-card
-  -#               %icon.fas.fa-check-circle
-  -#               .credit-card__card-detail
-  -#                 %P ************4242
-  -#                 %p 
-  -#                   有効期限
-  -#                   06 / 23
-  -#                 = image_tag 'visa-c.svg', class: "credit-card__company-image"
-  -#               = link_to "削除", "#", class: "credit-card__delete-btn"
-  -#           %section.payment-method__section.TAR
-  -#             = link_to "#" do
-  -#               %span 支払い方法について
-  -#               %icon.fas.fa-angle-right
-  -# = render "shared/footer"
-  -# .purchase-btn
-  -#   .purchase-btn--text 出品する
-  -#   = link_to (image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn--icon")

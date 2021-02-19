@@ -16,29 +16,29 @@
           %p.infomation__FeePrice
             %span.information__FeePrice--fee  
               = @item.delivery_fee.name
-            -# %span.information__FeePrice--price  ¥2,000
     %section.Main__three
       .PaymentAmount
         .--text  支払い金額
         #PaymentPrice 
-          = @item.price
-          円
+          = "¥   #{@item.price}"
     %section.Main__four
       .MethodOfPayment
-        .MethodOfPayment__top
-          .--way  支払い方法
-          .Creditcard
-            = "**** **** **** " + @card_information.last4
-            %p 
-              有効期限
-              - exp_month = @card_information.exp_month.to_s
-              - exp_year = @card_information.exp_year.to_s.slice(2,3)
-              = exp_month + " / " + exp_year
-        .MethodOfPayment__bottom
-          = link_to root_path do 
-            .fas.fa-plus-circle
-            %span.MethodOfPayment__text 
-              登録してください
+        - if current_user.id == @card.user_id
+          .MethodOfPayment__top
+            .--way  支払い方法
+            .Creditcard
+              = "**** **** **** " + @card_information.last4
+              %p 
+                有効期限
+                - exp_month = @card_information.exp_month.to_s
+                - exp_year = @card_information.exp_year.to_s.slice(2,3)
+                = exp_month + " / " + exp_year
+        - else
+          .MethodOfPayment__bottom
+            = link_to root_path do 
+              .fas.fa-plus-circle
+              %span.MethodOfPayment__text 
+                登録してください
     %section.Main__five
       .Address
         .AddressArea

@@ -4,9 +4,6 @@ class CardsController < ApplicationController
 
   def new
     @card = Card.new
-    # @card = Card.where(user_id: current_user.id).first
-    # redirect_to root_path, if card.present?
-  
     date = Date.today
     year = date.year
     after_year = year + 9
@@ -41,12 +38,9 @@ class CardsController < ApplicationController
 
 
   def show 
-    # binding.pry
-    if 
-      # @card = Card.where(user_id: current_user.id).first
-      # こちらでもいける
-      @card = Card.find_by(user_id: current_user.id)
-      @card.present?
+    @card = Card.find_by(user_id: current_user.id)
+    if @card.present?
+
       Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
@@ -68,22 +62,12 @@ class CardsController < ApplicationController
       # end
 
     else 
-      redirect_to action: "new"
+      redirect_to action: "new", notice: 'カードを登録しましょう'
     end
-      #   Cardのデータpayjpに送り情報を取り出します
-  #   card = Card.where(user_id: current_user.id).first
-  #   if card.blank?
-  #     redirect_to action: "new" 
-  #   else
-  #     Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
-  #     customer = Payjp::Customer.retrieve(card.customer_id)
-  #     @default_card_information = customer.cards.retrieve(card.card_id)
-  #   end
-    end
+  end
   
 
-  def destroy #PayjpとCardデータベースを削除します
-    # @card = Card.find_by(user_id: current_user.id)
+  def destroy
     card = Card.where(user_id: current_user.id).first
     if card.blank?
     else
@@ -92,6 +76,6 @@ class CardsController < ApplicationController
       customer.delete
       card.delete
     end
-      redirect_to action: "new"
+      redirect_to action: "new", notice: 'カードを登録削除しました'
   end
 end

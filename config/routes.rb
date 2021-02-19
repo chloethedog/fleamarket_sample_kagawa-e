@@ -23,7 +23,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :cards
   
 
   resources :items do
@@ -34,5 +33,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :cards, only:[:new]
+  resources :cards, only:[:new, :create, :show, :destroy]
 end
