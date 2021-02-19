@@ -61,7 +61,11 @@ class ItemsController < ApplicationController
     selected_category=Category.find(params[:category_id])
     @category = selected_category.children
   end
-
+  
+  def search
+    @items = Item.search(params[:keyword])
+    @search = @items.size
+  end  
 
  private
   def item_params
