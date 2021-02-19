@@ -19,6 +19,7 @@ class PurchasesController < ApplicationController
 
   def pay
     @item = Item.find(params[:item_id])
+
     if @item.present?
       card = Card.where(user_id: current_user.id).first
       Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
@@ -31,7 +32,6 @@ class PurchasesController < ApplicationController
       @item.update(purchase: 1, buyer_id: current_user.id)
       redirect_to root_path,  notice: '商品を購入しました'
     else
-      binding.pry
 
       card = Card.where(user_id: current_user.id).first
       redirect_to item_purchases_path

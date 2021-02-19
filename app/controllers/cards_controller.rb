@@ -53,14 +53,13 @@ class CardsController < ApplicationController
 
   def destroy
     card = Card.where(user_id: current_user.id).first
-    if card.blank?
-    
+    if card.present?
       Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
       customer = Payjp::Customer.retrieve(card.customer_id)
       customer.delete
       card.delete
       redirect_to action: "new", notice: 'カードを登録削除しました'
-    end
+    else
 
     redirect_to action: "show"
   end
