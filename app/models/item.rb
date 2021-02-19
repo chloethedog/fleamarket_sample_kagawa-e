@@ -30,7 +30,7 @@ class Item < ApplicationRecord
     if search != ""
       Item.where('name LIKE(?)', "%#{search}%")
     else
-      redirect_to root_path    
+      Item.all
     end
   end
 end
