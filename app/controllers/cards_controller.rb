@@ -44,22 +44,6 @@ class CardsController < ApplicationController
       Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
-      # 《＋α》 登録しているカード会社のブランドアイコンを表示するためのコードです。---------
-      # @card_brand = @card_information.brand      
-      # case @card_brand
-      # when "Visa"
-      #   @card_src = "visa.svg"
-      # when "JCB"
-      #   @card_src = "jcb.svg"
-      # when "MasterCard"
-      #   @card_src = "master-card.svg"
-      # when "American Express"
-      #   @card_src = "american_express.svg"
-      # when "Diners Club"
-      #   @card_src = "dinersclub.svg"
-      # when "Discover"
-      #   @card_src = "discover.svg"
-      # end
 
     else 
       redirect_to action: "new", notice: 'カードを登録しましょう'
@@ -70,12 +54,14 @@ class CardsController < ApplicationController
   def destroy
     card = Card.where(user_id: current_user.id).first
     if card.blank?
-    else
+    
       Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
       customer = Payjp::Customer.retrieve(card.customer_id)
       customer.delete
       card.delete
-    end
       redirect_to action: "new", notice: 'カードを登録削除しました'
+    end
+
+    redirect_to action: "show"
   end
 end
