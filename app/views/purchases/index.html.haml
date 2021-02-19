@@ -10,8 +10,9 @@
           %figure.infomation__figurea
             = image_tag @item.item_photo.thumbnail.url,class: "figure-img"
         .infomation__middle
-          .infomation--product  
-            = @item.name
+          .infomation--product 
+            %p.infomation--product__name
+              = @item.name
           %p.infomation__FeePrice
             %span.information__FeePrice--fee  
               = @item.delivery_fee.name
@@ -21,6 +22,7 @@
         .--text  支払い金額
         #PaymentPrice 
           = @item.price
+          円
     %section.Main__four
       .MethodOfPayment
         .MethodOfPayment__top
@@ -61,6 +63,6 @@
 
             
 
-    -# %section.Main__six  カード情報を登録してください
-    = link_to '購入する', pay_item_purchases_path, class: 'paybtn' 
+    %section.Main__six 
+      = link_to '購入する', pay_item_purchases_path, class: 'paybtn' 
   = render "purchases/footer"

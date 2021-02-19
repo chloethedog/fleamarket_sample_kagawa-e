@@ -26,9 +26,9 @@ class PurchasesController < ApplicationController
     )
     
 
-      @item.update(purchase: 1)
+      @item.update(purchase: 1, buyer_id: current_user.id)
       binding.pry
-    redirect_to root_path,  notice: '商品を出品しました'
+    redirect_to root_path,  notice: '商品を購入しました'
     else
       @item = Item.find(params[:item_id])
       card = Card.where(user_id: current_user.id).first

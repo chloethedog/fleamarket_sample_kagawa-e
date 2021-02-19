@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :items, only: [:index, :show, :new, :create, :edit, :update,  :destroy] do
+  resources :items do
     resources :purchases, only:[:index,] do
       collection do
         get :pay
