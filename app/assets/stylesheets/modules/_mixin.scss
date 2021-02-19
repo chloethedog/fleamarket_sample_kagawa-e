@@ -239,6 +239,39 @@
   width: inherit;
 } 
 
+//商品検索ページで使用
+@mixin Search-box {
+  height: 48px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0 16px;
+  display: inline-flex;
+  width: 100%;
+  margin-top: 16px;
+}
+@mixin Search-btn {
+  height: 48px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0 16px;
+  display: inline-flex;
+  margin-top: 16px;
+  color: #fff;
+  font-size: 14px;      
+  width: 45%;
+  line-height: 48px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center; 
+  display: block;   
+}
 // 商品編集画面で使用
 @mixin edit-page-style {
   color: #00b0ff;

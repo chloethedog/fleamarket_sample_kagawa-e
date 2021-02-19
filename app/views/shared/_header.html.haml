@@ -1,11 +1,14 @@
 %body
   %header.TopHead
     .search__contents
-      = link_to image_tag("logo.png", class:"furima-icon"),root_path
-      %form.search-form{action: "#"}
-        %input.input-box{placeholder:  "キーワードから探す"}
-        %button.search-button
-          = link_to image_tag("icon-search 1.png", class:"search-icon"), "/"
+      %h1.search__contents__icon
+        = link_to image_tag("logo.png", class:"furima-icon"),root_path
+      .search__contents__form  
+        = form_with(class: "search-form",url: search_items_path , method: :get, local: true) do |f|
+          = f.text_field :keyword, placeholder: "キーワードから探す", class: "input-box"
+          %label.search-button{for: "search-btn"}
+            = image_tag("icon-search 1.png", class:"search-icon")
+            = f.submit class: "search-btn", id: "search-btn"
     - if user_signed_in?
       .header-main__bottom
         %ul.search-list
