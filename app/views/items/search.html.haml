@@ -77,7 +77,10 @@
     .SearchResults
       %section.DisplayResults
         %h2.DisplayResults__title 検索結果
-        .DisplayResults__count 1 - 2件表示
+        .DisplayResults__count
+          1 - 
+          = @search
+          件表示
         .DisplayItems
           - @items.each do |item| 
             %section.SelectionBox
