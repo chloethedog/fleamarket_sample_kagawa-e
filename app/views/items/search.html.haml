@@ -84,7 +84,7 @@
         .DisplayItems
           - @items.each do |item| 
             %section.SelectionBox
-              = link_to "#" do
+              = link_to item_path(item.id) do
                 %figure.SelectedPhoto 
                   = image_tag item.item_photo.thumbnail.url, claas: "search-item-image"
                   - if item.purchase == 1
@@ -96,6 +96,7 @@
                     = item.name
                   .SelectedItem__numbers
                     .NumbersPrice
+                      ¥
                       = item.price
                     .NumbersFav
                       %i.far.fa-star 
