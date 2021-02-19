@@ -24,3 +24,16 @@ Rails.application.routes.draw do
 
   resources :cards, only:[:new]
 end
+
+  # resources :items do
+  #   resources :purchases, only: [:index] do
+  #     collection do
+  #       get :pay
+  #       get :search
+  #     end
+  #   end
+  #   resources :comments,only: :create
+  #   namespace :api do
+  #     resources :comments, only: :index, default: {format: 'json' } 
+  #   end
+  # end
