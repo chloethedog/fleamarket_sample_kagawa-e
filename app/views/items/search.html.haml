@@ -1,0 +1,106 @@
+.SearchItems
+  .SearchItems__header
+    = render "shared/header"
+  .SearchItems__main
+    .SearchMethods
+      .SearchMethods__form
+        .ResultsOrder
+          %select.ResultsOrder__choice{name: ""} 
+        .AdvancedSearch
+          %h3.AdvancedSearch__title 詳細検索
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-plus
+              %span.SearchCategories キーワードを追加する
+            %input.Keywords{type: "search", placeholder: "例）値下げ", name: ""}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-list-ul
+              %span.SearchCategories カテゴリーを選択する
+            %select.CategorySelections{name: ""}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-coins
+              %span.SearchCategories 価格
+            %select.BudgetRange{name: ""}
+            .PriceRange
+              %input.PriceRange__box{type: "number", placeholder: "￥Min"}
+              %span 〜
+              %input.PriceRange__box{type: "number", placeholder: "￥Max"}
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-star
+              %span.SearchCategories 商品の状態
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 新品、未使用
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 未使用に近い
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 目立った傷や汚れなし
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} やや傷や汚れあり
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 傷や汚れあり
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 全体に状態が悪い
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-truck
+              %span.SearchCategories 配送料の負担
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 送料込み（出品者負担）
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 着払い（購入者負担）
+          .AdvancedSearch__box
+            %label
+              %i.fas.fa-shopping-cart
+              %span.SearchCategories 販売状況
+            .SearchCheck
+              %input{type: "hidden", value: "", name: "",} 
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} すべて
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 販売中
+              %input{type: "checkbox", value: "", name: "", id: ""} 
+              %label{for: ""} 売り切れ
+          .AdvancedSearch__decision
+            .AdvancedSearch__decision__clear クリア
+            %input.AdvancedSearch__decision__done{type: "submit", name: "", value: "完了"}
+    .SearchResults
+      %section.DisplayResults
+        %h2.DisplayResults__title 検索結果
+        .DisplayResults__count
+          1 - 
+          = @search
+          件表示
+        .DisplayItems
+          - @items.each do |item| 
+            %section.SelectionBox
+              = link_to item_path(item.id) do
+                %figure.SelectedPhoto 
+                  = image_tag item.item_photo.thumbnail.url, claas: "search-item-image"
+                  - if item.purchase == 1
+                    %figcaption
+                      .TriangleTag
+                      .SoldTag SOLD
+                .SelectedItem
+                  %h3.SelectedItem__name
+                    = item.name
+                  .SelectedItem__numbers
+                    .NumbersPrice
+                      ¥
+                      = item.price
+                    .NumbersFav
+                      %i.far.fa-star 
+                      %span 1
+  .SearchItems__footer
+    = render "shared/footer"
+    = render "shared/purchase_btn"

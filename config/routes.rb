@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   
   resources :items do
     resources :purchases, only:[:index]
+    collection do
+      get :search
+    end  
     resources :comments, only: :create
     namespace :api do
       resources :comments, only: :index, default: {format: 'json' } 
