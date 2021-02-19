@@ -1,3 +1,6 @@
+-# 現在は使っていないビュー
+
+
 .user
   = render "shared/header"
   .user__body
@@ -8,25 +11,12 @@
         .payment-method
           %section.payment-method__title
             %h2 支払い方法
-          -# 機能実装の際にカードの登録状況によってどちらのビューを呼び出すかの機能を追加する
           .payment-method__card-list
             %section.payment-method__section
               = link_to new_card_path, class: "payment-method__card-link" do
                 %icon.far.fa-credit-card
                 クレジットカードを追加する
-            %section.payment-method__section
-              .credit-card
-                %icon.fas.fa-check-circle
-                .credit-card__card-detail
-                  %P ************4242
-                  %p 
-                    有効期限
-                    06 / 23
-                  = image_tag 'visa-c.svg', class: "credit-card__company-image"
-                = link_to "削除", "#", class: "credit-card__delete-btn"
-            %section.payment-method__section.TAR
-              = link_to "#" do
-                %span 支払い方法について
-                %icon.fas.fa-angle-right
-  = render "shared/footer"
-  = render "shared/purchase_btn"
+              = link_to card_path, class: "payment-method__card-link" do
+                %icon.far.fa-credit-card
+                クレジットカード確認する
+
