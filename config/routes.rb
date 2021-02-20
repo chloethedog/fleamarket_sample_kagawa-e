@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :items do
     resources :purchases, only:[:index]
     resources :comments, only: :create
-    resources :favorites, only: :create
+    resources :favorites, only: [:create, :destroy]
     namespace :api do
       resources :comments, only: :index, default: {format: 'json' } 
     end
