@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :cards, only:[:new, :create, :show, :destroy]
   end
   resources :items do
-    resources :favorites, only: [:create, :destroy]
+    resources :favorites, only: :create
     collection do
       get :search
     end
