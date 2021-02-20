@@ -9,7 +9,8 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @comment = Comment.new
-    @items = Item.where(purchase: 0).order('created_at DESC').limit(10)
+    @items = Item.where(purchase: 0, seller_id: @item.seller).order('created_at DESC').limit(10)
+    @category = Item.where(purchase: 0, category_id: @item.category).order('created_at DESC').limit(10)
   end
 
   def new
