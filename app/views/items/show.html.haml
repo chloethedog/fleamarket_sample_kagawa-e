@@ -160,7 +160,7 @@
                             = "¥#{item.price}"
                           %li
                             %i.fa.fa-star
-                            0
+                              = item.favorites.size
                         %p (税込)
           .item__seller
             = link_to "カテゴリーその他のグッズ", "#", class: "other-item-title"
@@ -179,7 +179,7 @@
                             = "¥#{item.price}"
                           %li
                             %i.fa.fa-star
-                            0
+                              = item.favorites.size
                         %p (税込)
   = render "shared/footer"
   = render "shared/purchase_btn"

@@ -306,3 +306,11 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.fa.fa-star::before {
+    @include info;
+}
+
+.li {
+    @include info;
+}
