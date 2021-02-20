@@ -11,10 +11,12 @@ Rails.application.routes.draw do
   resources :users, only:[:show] do
     member do
       get :card
+      get :favorite
     end
     resources :cards, only:[:new, :create, :show, :destroy]
   end
   resources :items do
+    resources :favorites, only: :create
     collection do
       get :search
       get :userpage
@@ -24,11 +26,12 @@ Rails.application.routes.draw do
         get :pay
       end 
     end 
-      resources :comments, only: [:create] do
+    resources :comments, only: [:create] do
       namespace :api do
         resources :comments, only: :index, default: {format: 'json' } 
       end
-end
+    end
+  end
   #   resources :items do
   #     resources :purchases, only: [:index] do
   #       collection do
@@ -48,11 +51,6 @@ end
   #     end
   #   end
   #   resources :cards, only:[:new, :create, :show, :destroy]
-
-  end
-
-  
-
 
   resources :cards, only:[:new, :create, :show, :destroy]
 end
