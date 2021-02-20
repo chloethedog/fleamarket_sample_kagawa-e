@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @comment = Comment.new
+    @favorites = Favorite.where(item_id: @item.id)
   end
 
   def new
