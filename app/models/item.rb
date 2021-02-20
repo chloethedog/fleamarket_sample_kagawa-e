@@ -11,6 +11,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipment_date
   has_one :item_photo, dependent: :destroy
   has_many :comments
+  has_many :favorites
   accepts_nested_attributes_for :item_photo, allow_destroy: true
 
   with_options presence: true do

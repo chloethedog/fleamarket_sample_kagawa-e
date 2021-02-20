@@ -9,7 +9,7 @@
         .main-item-list
           .item
             %h2.item__name
-              = @item.name
+              = @item.name 
             .item-images
               .item-images__main
                 .item-images__main-image
@@ -95,13 +95,25 @@
                     %td
                       = @item.shipment_date.name
             .item__option
-              %ul
-                = link_to "#", method: :post, class: "favorite-link" do
+              - if user_signed_in?
+                %ul
                   %li.favorite-entp
-                    %i.fa.fa-star
+                    = link_to item_favorites_path(@item.id), method: :post , class: "favorite-link" do
+                      - if @favorites.find_by(user_id: current_user.id)
+                        %i.fa.fa-star.color-favorite__yes
+                        お気に入り
+                      - else
+                        %i.fa.fa-star.color-favorite__not
+                        お気に入り
+                      %span
+                        = @favorites.size
+              - else
+                %ul
+                  %li.favorite-entp
+                    %i.fa.fa-star.color-favorite__not
                     お気に入り
                     %span
-                      1
+                      = @favorites.size
               %ul
                 %li.report-entp
                   = link_to "#", class: "report-link"do

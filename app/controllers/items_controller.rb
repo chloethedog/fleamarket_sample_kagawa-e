@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
     @comment = Comment.new
     @items = Item.where(purchase: 0, seller_id: @item.seller).order('created_at DESC').limit(10)
     @category = Item.where(purchase: 0, category_id: @item.category).order('created_at DESC').limit(10)
+    @favorites = Favorite.where(item_id: @item.id)
   end
 
   def new
