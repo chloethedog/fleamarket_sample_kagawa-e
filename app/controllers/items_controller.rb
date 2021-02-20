@@ -3,17 +3,17 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-    @items = Item.where(purchase: 0)
+    @items = Item.where(purchase: 0).order('created_at DESC').limit(10)
   end
 
   def show
     @item = Item.find(params[:id])
     @comment = Comment.new
+    @items = Item.where(purchase: 0).order('created_at DESC').limit(10)
   end
 
   def new
     @item = Item.new
-    
     @item.build_item_photo
     @category = Category.roots
   end

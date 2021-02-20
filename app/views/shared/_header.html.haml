@@ -13,7 +13,7 @@
       .header-main__bottom
         %ul.search-list
           %li.search-list__category
-            = link_to '#', class: "search-list__category-link" do
+            = link_to user_path, class: "search-list__category-link" do
               %i.fas.fa-list
               %span カテゴリーから探す
           %li.search-list__brand
@@ -34,7 +34,7 @@
               %i.fas.fa-check
               %span やること一覧
           %li.contents-list__mypage
-            = link_to user_path(current_user), class: "contents-list__mypage-link" do
+            = link_to "user_path(current_user)", class: "contents-list__mypage-link" do
               = image_tag 'member_photo_noimage_thumb.png',class: "mypage-icon", alt: "icon"
               %span.mypage マイページ
     - else
