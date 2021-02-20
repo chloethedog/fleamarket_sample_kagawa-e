@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    
     @item.build_item_photo
     @category = Category.roots
   end
@@ -23,6 +24,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path, notice: '商品を出品しました'
     else
+      flash.now[:alert] = @item.errors.full_messages
       @category = Category.roots
       @item.build_item_photo
       flash.now[:alert] = @item.errors.full_messages
@@ -60,7 +62,11 @@ class ItemsController < ApplicationController
     selected_category=Category.find(params[:category_id])
     @category = selected_category.children
   end
-
+  
+  def search
+    @items = Item.search(params[:keyword])
+    @search = @items.size
+  end  
 
  private
   def item_params

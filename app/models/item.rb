@@ -26,4 +26,12 @@ class Item < ApplicationRecord
     validates :purchase
     validates :item_photo
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end
