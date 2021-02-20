@@ -45,8 +45,11 @@
                   %tr
                     %th 
                       出品者
-                    %td 
-                      = link_to @item.seller.nickname, "#", class: "#"
+                    %td
+                      - if user_signed_in?  
+                        = link_to @item.seller.nickname, "#", class: "#"
+                      - else
+                        = link_to @item.seller.nickname, new_user_registration_path, class: "#"
                   %tr
                     %th
                       カテゴリー
@@ -148,38 +151,40 @@
           .item__seller
             = link_to "出品者さんのその他の商品", "#", class: "other-item-title"
             .other-item-list
-              - 4.times do
-                -#後にeach doに変更する
+              - @items.each do |item|
                 .other-item
-                  = link_to "#" do
+                  = link_to item_path(item.id) do
                     %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
+                      = image_tag item.item_photo.thumbnail.url,class:"img"
                     .other-item__detail
                       %h3.other-item__name
+                        = item.name
                       .other-item__price
                         %ul
-                          %li ¥1000
+                          %li
+                            = "¥#{item.price}"
                           %li
                             %i.fa.fa-star
-                            4
-                        %p （税込）
-          .item-other__category
+                            0
+                        %p (税込)
+          .item__seller
             = link_to "カテゴリーその他のグッズ", "#", class: "other-item-title"
             .other-item-list
-              -#上と同じくeach doに変更する
-              - 4.times do
+              - @category.each do |item|
                 .other-item
-                  = link_to "#" do
+                  = link_to item_path(item.id) do
                     %figure.other-item__image
-                      = image_tag 'testtest.jpeg'
+                      = image_tag item.item_photo.thumbnail.url,class:"img"
                     .other-item__detail
                       %h3.other-item__name
+                        = item.name
                       .other-item__price
                         %ul
-                          %li ¥1000
+                          %li
+                            = "¥#{item.price}"
                           %li
                             %i.fa.fa-star
-                            4
-                        %p （税込）                       
+                            0
+                        %p (税込)
   = render "shared/footer"
   = render "shared/purchase_btn"
