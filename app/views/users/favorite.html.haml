@@ -4,19 +4,21 @@
     .userbody__main
       .userbody__main__left
         = render "users/left_navi"
-      .bodymain__right
-        %h2.favorite-title
+      .favorite
+        %h2.favorite__title
           お気に入り一覧
-        %ul
-          %li
-            = link_to "#", class: "favorite__link" do
-              %figure
-                
-              .favorite__detail
-                .favorite__name
-                  test
-                .favorite__price
-                  300¥
-            %i.fas.fa-chevron-right
+        %ul.favorite__each
+          - @favorites.each do |favorite|
+            %li
+              = link_to item_path(favorite.item.id), class: "favorite__link" do
+                %figure
+                  = image_tag favorite.item.item_photo.thumbnail.url, class: "favarite-item-image"
+                .favorite__detail
+                  .favorite__name
+                    = favorite.item.name
+                  .favorite__price
+                    = favorite.item.price
+                    ¥
+              %i.fas.fa-chevron-right
   = render "shared/footer"
   = render "shared/purchase_btn"
