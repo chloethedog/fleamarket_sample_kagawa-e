@@ -1,0 +1,22 @@
+.user
+  = render "shared/header"
+  .user__body
+    .userbody__main
+      .userbody__main__left
+        = render "users/left_navi"
+      .bodymain__right
+        %h2.favorite-title
+          お気に入り一覧
+        %ul
+          %li
+            = link_to "#", class: "favorite__link" do
+              %figure
+                
+              .favorite__detail
+                .favorite__name
+                  test
+                .favorite__price
+                  300¥
+            %i.fas.fa-chevron-right
+  = render "shared/footer"
+  = render "shared/purchase_btn"

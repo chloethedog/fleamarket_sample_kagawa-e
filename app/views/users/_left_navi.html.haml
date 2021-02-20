@@ -3,7 +3,7 @@
     %li.navi__me__contents  マイページ
     %li= link_to 'お知らせ', "#", class: "list"
     %li= link_to 'やることリスト', "#", class: "list" 
-    %li= link_to 'お気に入り一覧', "#", class: "list"
+    %li= link_to 'お気に入り一覧', favorite_user_path(current_user.id), class: "list"
     %li= link_to '出品する', "#", class: "list"
     %li= link_to '下書き一覧', "#", class: "list"
     %li= link_to '出品した商品・出品中', "#", class: "list"
