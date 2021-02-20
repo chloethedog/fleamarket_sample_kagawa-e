@@ -5,8 +5,6 @@
 @import "modules/mixin";
 @import "registration-new.scss";
 @import "items/purchases";
-@import "modules/footer";
-@import "modules/header";
 @import "items/purchases";
 @import "modules/purchases_footer";
 @import "modules/purchases_header";
@@ -17,10 +15,11 @@
 @import "sessions";
 @import "modules/sessions-detail";
 @import "_show.scss";
-@import "modules/_header_at_login";
 @import "cards";
 @import "users-show";
 @import "modules/search";
 @import "modules/flash";
 @import "modules/flash";
 @import "modules/edit";
+@import "modules/footer";
+@import "modules/header";
