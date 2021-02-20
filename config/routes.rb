@@ -8,12 +8,15 @@ Rails.application.routes.draw do
   end
   root 'items#index'
   get 'api/items/category',to: 'items#get_category'
+
   resources :users, only:[:show] do
     member do
       get :card
       get :favorite
+      get :seller
     end
     resources :cards, only:[:new, :create, :show, :destroy]
+    resources :sellers, only: [:show]
   end
   resources :items do
     resources :favorites, only: :create
@@ -31,38 +34,5 @@ Rails.application.routes.draw do
       end
     end
   end
-  #   resources :items do
-  #     resources :purchases, only: [:index] do
-  #       collection do
-  #         get :pay
-  #         get :search
-  #       end
-  #     end
-  #     resources :comments, only: [:create] do
-  #     namespace :api do
-  #       resources :comments, only: :index, default: {format: 'json' } 
-  #     end
-  #   end
-  # resources :items do
-  #   resources :purchases, only:[:index,] do
-  #     collection do
-  #       get :pay
-  #     end
-  #   end
-  #   resources :cards, only:[:new, :create, :show, :destroy]
-
   resources :cards, only:[:new, :create, :show, :destroy]
 end
-
-  # resources :items do
-  #   resources :purchases, only: [:index] do
-  #     collection do
-  #       get :pay
-  #       get :search
-  #     end
-  #   end
-  #   resources :comments,only: :create
-  #   namespace :api do
-  #     resources :comments, only: :index, default: {format: 'json' } 
-  #   end
-  # end
