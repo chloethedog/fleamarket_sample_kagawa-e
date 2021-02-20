@@ -47,7 +47,7 @@ Things you may want to cover:
 - belongs_to_active_hash :state, :delivery-fee, :delivery-area, :delivery-method, :shipment_date
 - has_many :comments
 - has_one :item_photo
-- has_many :favorite
+- has_many :favorites
 
 ## item_photosテーブル
 
@@ -88,7 +88,7 @@ Things you may want to cover:
 - has_one :card
 - has_many :items
 - has_many :comments
-- has_many :favorite
+- has_many :favorites
 
 ## deliveriesテーブル
 
