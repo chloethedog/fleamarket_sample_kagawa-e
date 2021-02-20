@@ -7,14 +7,14 @@ class FavoritesController < ApplicationController
         redirect_to item_path(@item)
       else
         flash.now[:alert] = 'お気に入りから削除できませんでした。'
-        redirect_to item_path(@item), flash: { error: @favorite.errors.full_messages }
+        redirect_to item_path(@item)
       end
     else
       if @item.favorites.create(favorite_params)
         redirect_to item_path(@item)
       else
         flash.now[:alert] = 'お気に入りに登録できませんでした。'
-        redirect_to item_path(@item), flash: { error: @favorite.errors.full_messages }
+        redirect_to item_path(@item)
       end
     end
   end
