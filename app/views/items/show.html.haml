@@ -92,22 +92,30 @@
                     %td
                       = @item.shipment_date.name
             .item__option
-              - if @favorites.find_by(user_id: current_user.id)
+              - if user_signed_in?
+                - if @favorites.find_by(user_id: current_user.id)
+                  %ul
+                    %li.favorite-entp
+                      = link_to item_favorite_path(@item.id) ,method: :delete, class: "favorite-link" do
+                        %i.fa.fa-star.color-favorite__yes
+                        お気に入り
+                        %span
+                          = @favorites.size
+                - else
+                  %ul
+                    %li.favorite-entp
+                      = link_to item_favorites_path(@item.id) ,method: :post, class: "favorite-link" do
+                        %i.fa.fa-star.color-favorite__not
+                        お気に入り
+                        %span
+                          = @favorites.size
+              - else 
                 %ul
                   %li.favorite-entp
-                    = link_to item_favorite_path(@item.id) ,method: :delete, class: "favorite-link" do
-                      %i.fa.fa-star.color-favorite__yes
-                      お気に入り
-                      %span
-                        = @favorites.size
-              - else
-                %ul
-                  %li.favorite-entp
-                    = link_to item_favorites_path(@item.id) ,method: :post, class: "favorite-link" do
-                      %i.fa.fa-star.color-favorite__not
-                      お気に入り
-                      %span
-                        = @favorites.size
+                    %i.fa.fa-star.color-favorite__not
+                    お気に入り
+                    %span
+                      = @favorites.size
               %ul
                 %li.report-entp
                   = link_to "#", class: "report-link"do
