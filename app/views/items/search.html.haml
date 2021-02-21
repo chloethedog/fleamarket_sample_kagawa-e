@@ -97,7 +97,7 @@
                   .SelectedItem__numbers
                     .NumbersPrice
                       ¥
-                      = item.price
+                      = item.price.to_s(:delimited)
                     .NumbersFav
                       - if user_signed_in?
                         - if item.favorites.find_by(user_id: current_user.id)
