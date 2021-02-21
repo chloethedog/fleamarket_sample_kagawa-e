@@ -161,8 +161,14 @@
                           %li
                             = "¥#{item.price.to_s(:delimited)}"
                           %li
-                            %i.fa.fa-star
-                              = item.favorites.size
+                            - if user_signed_in?
+                              -if item.favorites.find_by(user_id: current_user.id)
+                                %i.fa.fa-star.color-favorite__yes
+                              - else
+                                %i.fa.fa-star.color-favorite__not
+                            - else 
+                              %i.fa.fa-star.color-favorite__not
+                            = item.favorites.size
                         %p (税込)
           .item__seller
             = link_to "#", class: "other-item-title" do
@@ -182,8 +188,14 @@
                           %li
                             = "¥#{item.price.to_s(:delimited)}"
                           %li
-                            %i.fa.fa-star
-                              = item.favorites.size
+                            - if user_signed_in?
+                              -if item.favorites.find_by(user_id: current_user.id)
+                                %i.fa.fa-star.color-favorite__yes
+                              - else
+                                %i.fa.fa-star.color-favorite__not
+                            - else 
+                              %i.fa.fa-star.color-favorite__not
+                            = item.favorites.size
                         %p (税込)
   = render "shared/footer"
   = render "shared/purchase_btn"
