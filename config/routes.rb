@@ -13,10 +13,8 @@ Rails.application.routes.draw do
     member do
       get :card
       get :favorite
-      get :seller
     end
     resources :cards, only:[:new, :create, :show, :destroy]
-    resources :sellers, only: [:show]
   end
   resources :items do
     resources :favorites, only: :create
