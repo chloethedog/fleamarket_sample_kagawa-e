@@ -1,4 +1,5 @@
 class PurchasesController < ApplicationController
+  before_action :set_item 
 
   def index
 
@@ -44,4 +45,17 @@ class PurchasesController < ApplicationController
       redirect_to item_purchases_path
     end
   end
+
+private
+
+ def set_item
+  begin
+    @item = Item.find(params[:item_id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path, notice: "ご指定のアイテムが見つかりません。"
+  end
 end
+
+
+end
+
