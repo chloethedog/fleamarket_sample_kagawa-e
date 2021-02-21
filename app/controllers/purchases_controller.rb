@@ -1,7 +1,6 @@
 class PurchasesController < ApplicationController
-
+  before_action :authenticate_user!
   def index
-
     @card = Card.find_by(user_id: current_user.id)
     if  @card.blank?
       redirect_to new_card_path, notice: '商品を購入するには、カードを登録してください。'

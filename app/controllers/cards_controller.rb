@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
     require "date"
     require 'payjp'
-
+    before_action :authenticate_user!
     def new
       @card = Card.new
       date = Date.today
