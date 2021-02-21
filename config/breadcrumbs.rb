@@ -9,6 +9,6 @@ crumb :user do
 end
 
 crumb :item do
-  link Item.find(params[:id]).name, item_path
+  link Item.find_by(params[:id]).name, item_path
   parent :root
 end
