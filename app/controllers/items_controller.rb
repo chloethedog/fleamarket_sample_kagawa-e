@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :destroy]
   before_action :item_edit, only: [:edit, :update]
   before_action :authenticate_user!, except: [:show, :index]
-
+  
   def index
     @items = Item.where(purchase: 0).order('created_at DESC').limit(10)
   end
@@ -88,4 +89,13 @@ class ItemsController < ApplicationController
     @category = Category.roots
     @photo = @item.item_photo
   end
+
+  def set_item
+    begin
+      @item = Item.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path,notice: "ご指定のアイテムが見つかりません。"  
+    end
+  end
+  
 end
