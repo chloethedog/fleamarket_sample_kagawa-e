@@ -46,10 +46,6 @@
         .Details
           %p.Details__title 商品の詳細
           .Categories
-            .es
-              = @item_category.id
-              = @item_category_parent.id
-              = @item_category_root.id
             %label{for: ""} カテゴリー
             %span.Required 必須
             = f.collection_select :category_id,@category, :id, :name,{include_blank: "選んで下さい ", selected: @item_category_root.id},{class:"form-pull-down select-category"}

@@ -98,7 +98,7 @@
                   .details
                     %ul
                       %li
-                        = "¥#{item.price}"
+                        = "¥#{item.price.to_s(:delimited)}"
                       %li
                         - if user_signed_in?
                           -if item.favorites.find_by(user_id: current_user.id)
@@ -128,7 +128,7 @@
                     .details
                       %ul
                         %li
-                          = "¥#{item.price}"
+                          = "¥#{item.price.to_s(:delimited)}"
                         %li
                           %i.fa.fa-star
                             = item.favorites.size

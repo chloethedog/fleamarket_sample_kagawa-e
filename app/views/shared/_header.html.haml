@@ -22,7 +22,7 @@
               %span ブランドから探す
         %ul.contents-list
           %li.contents-list__favorites
-            = link_to '#', class: "contents-list__favorites-link" do
+            = link_to favorite_user_path(current_user.id), class: "contents-list__favorites-link" do
               %i.fas.fa-star
               お気に入り一覧
           %li.contents-list__news

@@ -20,7 +20,7 @@
       .PaymentAmount
         .--text  支払い金額
         #PaymentPrice 
-          = "¥   #{@item.price}"
+          = "¥   #{@item.price.to_s(:delimited)}"
     %section.Main__four
       .MethodOfPayment
         - if current_user.id == @card.user_id

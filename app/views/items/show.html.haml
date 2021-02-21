@@ -19,7 +19,7 @@
                   = image_tag @item.item_photo.thumbnail.url, class: "small-image"
             .item__price
               %span.item__price-fee
-                = "¥#{@item.price}"
+                = "¥#{@item.price.to_s(:delimited)}"
               .item__price-detail
                 %span (税込)
                 %span 送料込み
@@ -144,7 +144,9 @@
                 = f.submit "コメントする", class: "comment__submit" do
                   %icon.fa.fa-comment 
           .item__seller
-            = link_to "出品者さんのその他の商品", "#", class: "other-item-title"
+            = link_to  "#", class: "other-item-title" do
+              = @item.seller.nickname
+              さんのその他の商品
             .other-item-list
               - @items.each do |item|
                 .other-item
@@ -157,13 +159,21 @@
                       .other-item__price
                         %ul
                           %li
-                            = "¥#{item.price}"
+                            = "¥#{item.price.to_s(:delimited)}"
                           %li
-                            %i.fa.fa-star
-                              = item.favorites.size
+                            - if user_signed_in?
+                              -if item.favorites.find_by(user_id: current_user.id)
+                                %i.fa.fa-star.color-favorite__yes
+                              - else
+                                %i.fa.fa-star.color-favorite__not
+                            - else 
+                              %i.fa.fa-star.color-favorite__not
+                            = item.favorites.size
                         %p (税込)
           .item__seller
-            = link_to "カテゴリーその他のグッズ", "#", class: "other-item-title"
+            = link_to "#", class: "other-item-title" do
+              = @item.category.name
+              その他のグッズ
             .other-item-list
               - @category.each do |item|
                 .other-item
@@ -176,10 +186,16 @@
                       .other-item__price
                         %ul
                           %li
-                            = "¥#{item.price}"
+                            = "¥#{item.price.to_s(:delimited)}"
                           %li
-                            %i.fa.fa-star
-                              = item.favorites.size
+                            - if user_signed_in?
+                              -if item.favorites.find_by(user_id: current_user.id)
+                                %i.fa.fa-star.color-favorite__yes
+                              - else
+                                %i.fa.fa-star.color-favorite__not
+                            - else 
+                              %i.fa.fa-star.color-favorite__not
+                            = item.favorites.size
                         %p (税込)
   = render "shared/footer"
   = render "shared/purchase_btn"

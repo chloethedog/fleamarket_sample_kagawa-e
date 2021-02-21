@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
-    require "date"
     require 'payjp'
+    require "date"
+    before_action :authenticate_user!
 
     def new
       @card = Card.new
