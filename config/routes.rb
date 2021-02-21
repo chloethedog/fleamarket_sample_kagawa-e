@@ -28,10 +28,9 @@ Rails.application.routes.draw do
         get :pay
       end 
     end 
-    resources :comments, only: [:create] do
-      namespace :api do
-        resources :comments, only: :index, default: {format: 'json' } 
-      end
+    resources :comments, only: [:create] 
+    namespace :api do
+      resources :comments, only: :index, default: {format: 'json' } 
     end
   end
   resources :cards, only:[:new, :create, :show, :destroy]
