@@ -29,6 +29,7 @@ $(function() {
           alert("登録に成功しました");
         } else {
           alert("カード情報が正しくありません");
+          document.location.reload();
         }
       });
     }
