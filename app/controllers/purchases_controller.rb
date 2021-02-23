@@ -5,21 +5,26 @@ class PurchasesController < ApplicationController
 
     @item = Item.find(params[:item_id])
     if @item.purchase == 0
-       @card = Card.find_by(user_id: current_user.id)
 
-      if  @card.blank?
-        redirect_to new_card_path, notice: '商品を購入するには、カードを登録してください。'
-      
-      else
-        @user = current_user
-        @item = Item.find(params[:item_id])
-        @delivery = Delivery.where(user_id: current_user.id).first
-        @prefecture = Prefecture.find(@delivery.prefectures_id)
-        Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
-        customer = Payjp::Customer.retrieve(@card.customer_id)
-        @card_information = customer.cards.retrieve(@card.card_id)
+      if @item.seller_id != current_user.id
+         @card = Card.find_by(user_id: current_user.id)
+
+        if  @card.blank?
+          redirect_to new_card_path, notice: '商品を購入するには、カードを登録してください。'
+        
+        else
+          @user = current_user
+          @item = Item.find(params[:item_id])
+          @delivery = Delivery.where(user_id: current_user.id).first
+          @prefecture = Prefecture.find(@delivery.prefectures_id)
+          Payjp.api_key = Rails.application.credentials[:payjp][:sk_test_key]
+          customer = Payjp::Customer.retrieve(@card.customer_id)
+          @card_information = customer.cards.retrieve(@card.card_id)
+        end
+
+      else 
+        redirect_to root_path, notice: '自分の商品は購入できません'
       end
-    
     else
       redirect_to root_path, notice: '売り切れている商品です。'
     end
