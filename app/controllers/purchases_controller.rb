@@ -23,7 +23,7 @@ class PurchasesController < ApplicationController
         end
 
       else 
-        redirect_to root_path, notice: '自分の商品は購入できません'
+        redirect_to item_path(@item), notice: '自分の商品は購入できません'
       end
     else
       redirect_to root_path, notice: '売り切れている商品です。'
