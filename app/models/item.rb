@@ -16,7 +16,7 @@ class Item < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :price
+    validates :price, numericality: {greater_than: 299, less_than: 10000000}
     validates :explanation
     validates :state_id
     validates :delivery_fee_id
