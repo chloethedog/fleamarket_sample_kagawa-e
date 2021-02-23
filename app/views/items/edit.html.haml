@@ -101,7 +101,7 @@
               %label{for: ""} 販売価格
               %span.Required 必須
             %span.YenMark ¥
-            = f.number_field :price, class:"Prices__pricing__right", min: 300, max: 999999, placeholder: "--"
+            = f.number_field :price, class:"Prices__pricing__right", min: 300, max: 9999999, placeholder: "--"
           .Prices__salesCommission
             .Prices__salesCommission__left 販売手数料（10%）
             %span.Prices__salesCommission__right ー
